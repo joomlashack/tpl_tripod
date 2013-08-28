@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Wright
+ * @package     Tripod
  * @subpackage  TemplateBase
  *
  * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
@@ -14,5 +14,5 @@ require_once(dirname(__FILE__).'/wright/template/wrighttemplatebase.php');
 
 // WrightTemplate class, for special settings on Wright
 class WrightTemplate extends WrightTemplateBase {
-	public $templateName = 'js_wright';
+	public $templateName = 'js_tripod';
 }

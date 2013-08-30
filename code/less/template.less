@@ -5,3 +5,165 @@
 body{
 	font-weight: 300;
 }
+
+.nav-tabs{
+	border-bottom: 0;
+	&.nav{
+		background-color: @color_two;
+	}
+	dt{
+		h3{
+			margin-top: 0;
+		}
+	}
+	h3 , p {
+		a{
+			border: 0;
+			border-radius: 0;
+			color: @color_one;
+			display: block;
+			font-family: @sansFontFamilyTwo;
+			font-size: 13px;
+			font-weight: 400;
+			padding: 1em;
+			text-transform: uppercase;
+			&:hover{
+				background-position: 0 0 , right top;
+				background-repeat: no-repeat , no-repeat;
+				text-decoration: none;
+			}
+		}
+	}
+	>.open {
+		h3 , p {
+			a{
+				background-color: @color_two;
+				background-position: 0 0 , right top;
+				background-repeat: no-repeat , no-repeat;
+				border: 0;
+				color: @color_one !important;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+dd.nav.nav-tabs{
+	background-color: transparent;
+}
+// Navbs
+// ------------------------
+.nav-list>li>a, .nav-list .nav-header{
+	text-shadow: none;
+}
+// Headings
+// ------------------------
+h1{
+	font-size: 2.3em;
+}
+h2{
+	font-size: 1.8em;
+}
+h3{
+	font-size: 1.6em;
+}
+h4{
+	font-size: 1.4em;
+}
+h5{
+	font-size: 1.2em;
+}
+h6{
+	font-size: 1.1em;
+}
+
+h1, h2, h3 {
+	margin: 10px 0;
+}
+h1, h2{
+	line-height: 40px;
+}
+// h2 in article
+.item-page{
+	.page-header{
+		color: @color_two;
+	}
+}
+// For Documentation
+// ------------------------
+
+.bs-docs-example:after{
+	background-color: @color_two;
+	color: @color_one;
+}
+// code
+
+code {
+	background-color: transparent;
+	border: 0;
+	color: @textColor;
+	font-family: @sansFontFamily;
+	font-size: @baseFontSize;
+	font-weight: 700;
+}
+
+code , pre{
+	border-radius: 0 0 0 0;
+}
+body {
+	.prettyprint{
+		background-color: @color_three;
+		border: 0;
+	}
+	.kwd, .prettyprint .tag{
+		color: @textColor;
+	}
+	.typ, .atn, .dec, .var,
+	.pln,
+	.str, .atv{
+		color: darken(@color_four, 25%)
+	}
+	.prettyprint.linenums{
+		box-shadow :inset 40px 0 0 darken(@color_three, 3%), inset 41px 0 0 darken(@color_three, 2%);
+	}
+}
+
+// Breadcrumb
+// ------------------------
+
+.breadcrumb{
+	background-color: transparent;
+	min-height: 40px;
+	padding: 0;
+	> li {
+		height: 40px;
+		padding-left: 0.7em;
+		padding-right: 0.7em;
+		text-shadow: none;
+
+		span{
+			display: inline-block;
+			.ie7-inline-block;
+			line-height: 40px;
+			color: @color_two;
+		}
+		> .divider{
+			.icon-caret-right{
+				display: none;
+				&:before{
+					content: none;
+				}
+			}
+		}
+		&:first-child{display: none;}
+
+		&:last-child{
+			background-position: left top, right top;
+			background-repeat: no-repeat, no-repeat;
+		}
+	}
+}
+// ------------------------
+hr{
+	border-bottom-color: @color_three;
+}

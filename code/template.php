@@ -23,7 +23,7 @@ defined('_JEXEC') or die('Restricted access');
 <body class="<?php echo $responsive ?>">
     <?php if ($this->countModules('toolbar')) : ?>
     <!-- menu -->
-	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
     <?php endif; ?>
     <div class="<?php echo $containerClass ?>">
         <!-- header -->

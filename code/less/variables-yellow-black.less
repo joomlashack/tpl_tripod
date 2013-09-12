@@ -95,24 +95,24 @@
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
-@tableBorder:                       #ddd; // table and cell border
+@tableBackgroundAccent:             transparent; // for striping
+@tableBackgroundHover:              transparent; // for hover
+@tableBorder:                       @color_two; // table and cell border
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         #ccc;
+@btnBackground:                     #FFDD77;
+@btnBackgroundHighlight:            #FFDD77;
+@btnBorder:                         #FFDD77;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackground:              @color_two;
+@btnPrimaryBackgroundHighlight:     @color_two;
 
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackground:                 @blue;
+@btnInfoBackgroundHighlight:        @blue;
 
 @btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackgroundHighlight:     #62c462;
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
@@ -126,7 +126,7 @@
 
 // Forms
 // -------------------------
-@inputBackground:               @white;
+@inputBackground:               darken(@color_two, 10%);
 @inputBorder:                   #ccc;
 @inputBorderRadius:             @baseBorderRadius;
 @inputDisabledBackground:       @grayLighter;
@@ -248,19 +248,19 @@
 // Form states and alerts
 // -------------------------
 @warningText:             #c09853;
-@warningBackground:       #fcf8e3;
+@warningBackground:       darken(#fcf8e3, 53%);
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
 @errorText:               #b94a48;
-@errorBackground:         #f2dede;
+@errorBackground:         @red;
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
 @successText:             #468847;
-@successBackground:       #dff0d8;
+@successBackground:       darken(@green, 23%);
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
 @infoText:                #3a87ad;
-@infoBackground:          #d9edf7;
+@infoBackground:          @blue;
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 

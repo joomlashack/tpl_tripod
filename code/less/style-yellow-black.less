@@ -30,3 +30,24 @@
 		}
 	}
 }
+
+blockquote{
+	background-image: url(../../images/yellow-black/blockquote.png);
+}
+
+.table {
+	&.table-striped{
+		tbody>tr:nth-child(even){
+			>td, >th{
+				background-image: url(../../images/yellow-black/table-striped.png);
+			}
+		}
+	}
+	&.table-hover{
+		tbody tr:hover{
+			>td, >th{
+				background-image: url(../../images/yellow-black/table-striped.png);
+			}
+		}
+	}
+}

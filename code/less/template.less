@@ -58,35 +58,24 @@ dd.nav.nav-tabs{
 }
 // Headings
 // ------------------------
-h1{
-	font-size: 2.3em;
-}
-h2{
-	font-size: 1.8em;
-}
-h3{
-	font-size: 1.6em;
-}
-h4{
-	font-size: 1.4em;
-}
-h5{
-	font-size: 1.2em;
-}
-h6{
-	font-size: 1.1em;
-}
+h1{	font-size: 2.3em; }
+h2{	font-size: 1.8em; }
+h3{ font-size: 1.6em; }
+h4{	font-size: 1.4em; }
+h5{	font-size: 1.2em; }
+h6{	font-size: 1.1em; }
 
-h1, h2, h3 {
-	margin: 10px 0;
-}
-h1, h2{
-	line-height: 40px;
-}
-// h2 in article
+h1, h2, h3 {  margin: 10px 0; }
+
+h1, h2{ line-height: 40px; }
+
 .item-page{
-	.page-header{
+	overflow: visible;
+	.clearfix();
+	> .page-header{
 		color: @color_two;
+		margin-left: -20px;
+		padding-left: 20px;
 	}
 }
 // For Documentation
@@ -125,6 +114,12 @@ body {
 	}
 	.prettyprint.linenums{
 		box-shadow :inset 40px 0 0 darken(@color_three, 3%), inset 41px 0 0 darken(@color_three, 2%);
+	}
+}
+.bs-docs-example{
+	pre{
+		background-color: @color_three;
+		color: @white;
 	}
 }
 
@@ -166,4 +161,39 @@ body {
 // ------------------------
 hr{
 	border-bottom-color: @color_three;
+}
+
+blockquote{
+	background-image: url(../../images/blockquote.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	border-left: 0;
+	padding-left: 30px;
+	p{
+		font-size: 1.1em;
+	}
+	small{
+		color: @color_two;
+	}
+	&.pull-right{
+		background-position: right top;
+		border-right: 0;
+		padding-left: 0;
+		padding-right: 30px;
+	}
+}
+
+// Tables
+// ------------------------
+.table {
+	thead{
+		th{
+			background-color: @color_two;
+			color: @color_one;
+		}
+	}
+	th, td{
+		line-height: 34px;
+		text-align: center;
+	}
 }

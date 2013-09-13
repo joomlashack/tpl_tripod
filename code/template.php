@@ -22,18 +22,18 @@ defined('_JEXEC') or die('Restricted access');
 </head>
 <body class="<?php echo $responsive ?>">
     <?php if ($this->countModules('toolbar')) : ?>
-    <!-- menu -->
-    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+        <!-- menu -->
+        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
     <?php endif; ?>
+    <!-- header -->
+    <header id="header" class="clearfix">
+        <w:logo />
+        <?php if ($this->countModules('top')) : ?>
+            <div class="clear"></div>
+            <w:module type="none" name="top" chrome="xhtml" />
+        <?php endif; ?>
+    </header>
     <div class="<?php echo $containerClass ?>">
-        <!-- header -->
-        <header id="header" class="clearfix">
-            <w:logo />
-            <?php if ($this->countModules('top')) : ?>
-                <div class="clear"></div>
-                <w:module type="none" name="top" chrome="xhtml" />
-            <?php endif; ?>
-        </header>
         <?php if ($this->countModules('menu')) : ?>
         <!-- menu -->
         <w:nav name="menu" />

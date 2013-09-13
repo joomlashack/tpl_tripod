@@ -6,56 +6,6 @@ body{
 	font-weight: 300;
 }
 
-.nav-tabs{
-	border-bottom: 0;
-	&.nav{
-		background-color: @color_two;
-	}
-	dt{
-		h3{
-			margin-top: 0;
-		}
-	}
-	h3 , p {
-		a{
-			border: 0;
-			border-radius: 0;
-			color: @color_one;
-			display: block;
-			font-family: @sansFontFamilyTwo;
-			font-size: 13px;
-			font-weight: 400;
-			padding: 1em;
-			text-transform: uppercase;
-			&:hover{
-				background-position: 0 0 , right top;
-				background-repeat: no-repeat , no-repeat;
-				text-decoration: none;
-			}
-		}
-	}
-	>.open {
-		h3 , p {
-			a{
-				background-color: @color_two;
-				background-position: 0 0 , right top;
-				background-repeat: no-repeat , no-repeat;
-				border: 0;
-				color: @color_one !important;
-				font-weight: 700;
-			}
-		}
-	}
-}
-
-dd.nav.nav-tabs{
-	background-color: transparent;
-}
-// Navbs
-// ------------------------
-.nav-list>li>a, .nav-list .nav-header{
-	text-shadow: none;
-}
 // Headings
 // ------------------------
 h1{	font-size: 2.3em; }
@@ -114,6 +64,10 @@ body {
 	}
 	.prettyprint.linenums{
 		box-shadow :inset 40px 0 0 darken(@color_three, 3%), inset 41px 0 0 darken(@color_three, 2%);
+	}
+
+	ol.linenums li{
+		text-shadow: none;
 	}
 }
 .bs-docs-example{
@@ -195,5 +149,265 @@ blockquote{
 	th, td{
 		line-height: 34px;
 		text-align: center;
+	}
+}
+
+// Forms
+// ------------------------
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input ,
+legend,
+select{
+	color : @white;
+}
+.input-append ,
+.input-prepend {
+	.add-on{
+		background-color: @wellBackground;
+		border-color: @wellBackground;
+	}
+	.btn{
+		border-bottom-width: 1px;
+	}
+}
+.form-actions{
+	border-top-color: @grayDarker;
+}
+// Buttons
+// ------------------------
+
+.btn{
+	border-bottom: 3px solid @btnBackground;
+	border-left: 0;
+	border-radius: 0 0 0 0;
+	border-right: 0;
+	box-shadow: none;
+	color : @black;
+	font-family: @sansFontFamilyTwo;
+	font-size: 13px;
+	font-weight: 700;
+	text-shadow: none;
+	text-transform: uppercase;
+	&:hover{
+		background-color: #FDFDFD;
+		background-image: none;
+		color: @black;
+		filter:none;
+	}
+	&.btn-primary{
+		border-bottom-color: @btnPrimaryBackground;
+		&:hover{
+			background-color: #FFDD77;
+		}
+		.caret{
+			border-top-color: @black;
+			border-bottom-color: @black;
+		}
+	}
+	&.btn-info{
+		border-bottom-color: @btnInfoBackground;
+		border-top-color: @btnInfoBackground ;
+		color : @white;
+		&:hover{
+			background-color: #77A0B5;
+			border-top-color: #77A0B5;
+			color : @black;
+		}
+	}
+	&.btn-success{
+		border-bottom-color: @btnSuccessBackground;
+		&:hover{
+			background-color: #B7D2BC;
+		}
+		.caret{
+			border-top-color: @black;
+			border-bottom-color: @black;
+		}
+	}
+	&.btn-warning{
+		border-bottom-color: @btnWarningBackground;
+		&:hover{
+			background-color: #DCCD82;
+		}
+		.caret{
+			border-top-color: @black;
+			border-bottom-color: @black;
+		}
+	}
+	&.btn-danger{
+		border-bottom-color: @btnDangerBackground;
+		&:hover{
+			background-color: #F6968D;
+		}
+		.caret{
+			border-top-color: @black;
+			border-bottom-color: @black;
+		}
+	}
+	&.btn-inverse{
+		border-bottom-color: @btnInverseBackground;
+		border-top-color: @btnInverseBackground;
+		color : @white;
+		&:hover{
+			background-color: #9B9B9B;
+			color : @black;
+		}
+	}
+	&.btn-link{
+		border: 0;
+		color : @linkColor;
+		&:hover{
+			background-color: transparent;
+		}
+	}
+}
+
+// Pager
+// ------------------------
+
+.pager li>a, .pager li>span{
+	background-color: darken(@bodyBackground, 10%);
+	border-color: @grayDarker;
+}
+
+// Images
+// ------------------------
+.img-polaroid{
+	background-color: @bodyBackground;
+	border-color: #ccc;
+}
+
+// Navs
+// ------------------------
+
+.nav>li>a:hover, .nav>li>a:focus{
+	background-color: lighten(@color_one, 7%);
+	color : @color_two;
+}
+.nav-pills {
+	li {
+		a{
+			font-weight: 700;
+		}
+	}
+}
+
+.nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus{
+	color : @color_one;
+}
+.nav-list{
+	li{
+		a{
+			font-weight: 700;
+			text-transform: uppercase;
+			text-shadow: none;
+			&:hover{
+				background-color: lighten(@color_one, 7%);
+			}
+		}
+	}
+	.nav-header{
+		text-shadow: none;
+	}
+	.divider{
+		background-color: @grayDarker;
+		border-bottom: 0;
+	}
+}
+.nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus{
+	text-shadow: none;
+	color : @color_one;
+}
+
+// ------------------------
+.nav-tabs{
+	border-bottom: 0;
+	margin-bottom: 0;
+	&.nav{
+		background-color: @color_two;
+	}
+	dt{
+		h3{
+			margin-top: 0;
+		}
+	}
+	h3 , p, > li {
+		> a{
+			border: 0;
+			border-radius: 0;
+			color: @color_one;
+			display: block;
+			font-family: @sansFontFamilyTwo;
+			font-size: 13px;
+			font-weight: 400;
+			padding: 1em;
+			text-transform: uppercase;
+			&:hover{
+				background-color: transparent;
+				background-position: 0 0 , right top;
+				background-repeat: no-repeat , no-repeat;
+				color: @color_one;
+				text-decoration: none;
+			}
+		}
+	}
+	>.open  {
+		h3 , p {
+			a{
+				background-color: @color_two;
+				background-position: 0 0 , right top;
+				background-repeat: no-repeat , no-repeat;
+				border: 0;
+				color: @color_one !important;
+				font-weight: 700;
+			}
+		}
+		.dropdown-toggle{
+			background-color: transparent;
+			background-position: 0 0 , right top;
+			background-repeat: no-repeat , no-repeat;
+			color: @color_one !important;
+		}
+	}
+	> .active {
+		> a{
+			background-color: @color_two;
+			background-position: 0 0 , right top;
+			background-repeat: no-repeat , no-repeat;
+			border: 0;
+			color: @color_one !important;
+			font-weight: 700;
+			&:hover{
+				background-color: transparent;
+				border: 0;
+			}
+		}
+	}
+	> li{
+		margin-bottom: 0;
+	}
+	&.nav-stacked>li>a{
+		border: 0;
+	}
+	+ .current , + .tab-content{
+		border: 1px solid @color_two;
+		border-top: 0;
+	}
+}
+
+.tabs-below	>.nav-tabs{border-top: 0;}
+.tabs-left{
+	>.nav-tabs{
+		border-right: 0;
+		li a{
+			text-align: center;
+		}
+	}
+}
+.tabs-right{
+	>.nav-tabs{
+		border-left: 0;
+		li a{
+			text-align: center;
+		}
 	}
 }

@@ -101,9 +101,9 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     #FFDD77;
-@btnBackgroundHighlight:            #FFDD77;
-@btnBorder:                         #FFDD77;
+@btnBackground:                     darken(@white, 10%);
+@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBorder:                         darken(@white, 10%);
 
 @btnPrimaryBackground:              @color_two;
 @btnPrimaryBackgroundHighlight:     @color_two;
@@ -111,26 +111,26 @@
 @btnInfoBackground:                 @blue;
 @btnInfoBackgroundHighlight:        @blue;
 
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #62c462;
+@btnSuccessBackground:              @successBackground;
+@btnSuccessBackgroundHighlight:     @successBackground;
 
-@btnWarningBackground:              lighten(@orange, 15%);
-@btnWarningBackgroundHighlight:     @orange;
+@btnWarningBackground:              @warningBackground;
+@btnWarningBackgroundHighlight:     @warningBackground;
 
-@btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
+@btnDangerBackground:               @errorBackground;
+@btnDangerBackgroundHighlight:      @errorBackground;
 
 @btnInverseBackground:              #444;
-@btnInverseBackgroundHighlight:     @grayDarker;
+@btnInverseBackgroundHighlight:     #444;
 
 
 // Forms
 // -------------------------
-@inputBackground:               darken(@color_two, 10%);
-@inputBorder:                   #ccc;
+@inputBackground:               @grayDarker;
+@inputBorder:                   @grayDarker;
 @inputBorderRadius:             @baseBorderRadius;
-@inputDisabledBackground:       @grayLighter;
-@formActionsBackground:         #f5f5f5;
+@inputDisabledBackground:       @black;
+@formActionsBackground:         @wellBackground;
 @inputHeight:                   @baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 
 
@@ -174,7 +174,7 @@
 
 // Input placeholder text color
 // -------------------------
-@placeholderText:         @grayLight;
+@placeholderText:         darken(@white, 20%);
 
 
 // Hr border color
@@ -189,7 +189,7 @@
 
 // Wells
 // -------------------------
-@wellBackground:                  #f5f5f5;
+@wellBackground:                  @gray;
 
 
 // Navbar
@@ -233,14 +233,14 @@
 
 // Pagination
 // -------------------------
-@paginationBackground:                #fff;
-@paginationBorder:                    #ddd;
-@paginationActiveBackground:          #f5f5f5;
+@paginationBackground:                @color_two;
+@paginationBorder:                    @color_two;
+@paginationActiveBackground:          @grayDarker;
 
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @grayLighter;
+@heroUnitBackground:              @color_two;
 @heroUnitHeadingColor:            inherit;
 @heroUnitLeadColor:               inherit;
 

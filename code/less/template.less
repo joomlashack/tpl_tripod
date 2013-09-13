@@ -531,10 +531,25 @@ span.content_rating{
 
 .navbar {
 	.nav {
+		display: table;
+		float: none;
+		margin: 0 auto;
 		> li {
 			> a{
+				background-position: 0 0, right top;
+				background-repeat: no-repeat, no-repeat;
 				font-weight: 700;
+				line-height: 27px;
+				margin-left: 1.6em;
+				margin-right: 1.6em;
+				min-height: 27px;
 			}
 		}
+		>.active>a, >.active>a:hover, >.active>a:focus{
+			box-shadow: none;
+		}
 	}
+}
+.navbar-inner{
+	border: 0;
 }

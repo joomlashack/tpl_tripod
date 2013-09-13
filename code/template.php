@@ -17,8 +17,19 @@ defined('_JEXEC') or die('Restricted access');
 <doctype>
 <html>
 <head>
-
-<w:head />
+    <w:head />
+    <script type="text/javascript">
+        var parallaxeffect = <?php echo ($this->params->get("parallaxEffect","1") == "1" ? "true" : "false"); ?>;
+        var singlescrollingpage = <?php echo ($this->params->get("singleScrollingPage","1") == "1" ? "true" : "false"); ?>;
+        var parallax_titles = new Array();
+        parallax_titles['top'] = '<?php echo $this->params->get('navmenu_top','' ); ?>';
+        parallax_titles['featured'] = '<?php echo $this->params->get('navmenu_featured','' ); ?>';
+        parallax_titles['category_description'] = '<?php echo $this->params->get('navmenu_category_description','' ); ?>';
+        parallax_titles['more_articles'] = '<?php echo $this->params->get('navmenu_more_articles','' ); ?>';
+        parallax_titles['subcategories'] = '<?php echo $this->params->get('navmenu_subcategories','' ); ?>';
+        parallax_titles['bottom'] = '<?php echo $this->params->get('navmenu_bottom','' ); ?>';
+        var parallax_navmenu_scroll_speed = '<?php echo $this->params->get('navmenu_scroll_speed','2000' ); ?>';
+    </script>
 </head>
 <body class="<?php echo $responsive ?>">
     <?php if ($this->countModules('toolbar')) : ?>
@@ -118,6 +129,8 @@ defined('_JEXEC') or die('Restricted access');
         <!-- bottom-menu -->
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
     <?php endif; ?>
+
+    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_tripod/js/tripod.js'></script>
 
     <!-- footer -->
     <div class="wrapper-footer">

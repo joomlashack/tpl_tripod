@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.1_beta1</version>
+	<version>1.0.1_beta1.1</version>
     <description>TPL_JS_TRIPOD_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -105,6 +105,36 @@
 				</field>
                 <!-- End of default Wright params -->
 			</fieldset>
+			<fieldset name="TPL_JS_TRIPOD_OPTIONS">
+	            <field name="backgroundImage" filter="([^?#]*\.(?:jpg|jpeg|png|JPG|JPEG|PNG))" type="imagelist" default="" directory="/images" label="TPL_JS_TRIPOD_BACKGROUND_IMAGE" description="TPL_JS_TRIPOD_BACKGROUND_IMAGE_DESC" />
+
+	            <field name="TRIPODImage1" filter="([^?#]*\.(?:jpg|jpeg|png|JPG|JPEG|PNG))" type="imagelist" default="" directory="/images" label="TPL_JS_TRIPOD_TRIPOD_IMAGE_1" description="TPL_JS_TRIPOD_TRIPOD_IMAGE_1_DESC" />
+	            <field name="TRIPODImage2" filter="([^?#]*\.(?:jpg|jpeg|png|JPG|JPEG|PNG))" type="imagelist" default="" directory="/images" label="TPL_JS_TRIPOD_TRIPOD_IMAGE_2" description="TPL_JS_TRIPOD_TRIPOD_IMAGE_2_DESC" />
+	            <field name="TRIPODImage3" filter="([^?#]*\.(?:jpg|jpeg|png|JPG|JPEG|PNG))" type="imagelist" default="" directory="/images" label="TPL_JS_TRIPOD_TRIPOD_IMAGE_3" description="TPL_JS_TRIPOD_TRIPOD_IMAGE_3_DESC" />
+			</fieldset>
+
+		    <fieldset name="TPL_JS_TRIPOD_SINGLESCROLLING_OPTIONS">
+	            <field name="singleScrollingPage" type="list" default="1" label="TPL_JS_TRIPOD_SINGLE_SCROLLING_PAGE" description="TPL_JS_TRIPOD_SINGLE_SCROLLING_PAGE_DESC">
+	                    <option value="1">JYES</option>
+	                    <option value="0">JNO</option>
+	            </field>
+	            <field name="singleScrollingMenuWidth" type="list" default="2" label="TPL_JS_TRIPOD_SCROLLING_MENU_WIDTH" description="TPL_JS_TRIPOD_SCROLLING_MENU_WIDTH_DESC">
+	                    <option value="0">0 (no menu)</option>
+	                    <option value="1">1</option>
+	                    <option value="2">2</option>
+	                    <option value="3">3</option>
+	                    <option value="4">4</option>
+	                    <option value="5">5</option>
+	                    <option value="6">6</option>
+	            </field>
+			    <field name="navmenu_top" type="text" default="Top" label="TPL_JS_TRIPOD_NAVMENU_TOP" description="TPL_JS_TRIPOD_NAVMENU_TOP_DESC" />
+			    <field name="navmenu_featured" type="text" default="Featured" label="TPL_JS_TRIPOD_NAVMENU_FEATURED" description="TPL_JS_TRIPOD_NAVMENU_FEATURED_DESC" />
+			    <field name="navmenu_category_description" type="text" default="Category description" label="TPL_JS_TRIPOD_NAVMENU_CATDESC" description="TPL_JS_TRIPOD_NAVMENU_CATDESC_DESC" />
+			    <field name="navmenu_more_articles" type="text" default="More articles" label="TPL_JS_TRIPOD_NAVMENU_MOREARTICLES" description="TPL_JS_TRIPOD_NAVMENU_MOREARTICLES_DESC" />
+			    <field name="navmenu_subcategories" type="text" default="Subcategories" label="TPL_JS_TRIPOD_NAVMENU_SUBCATS" description="TPL_JS_TRIPOD_NAVMENU_SUBCATS_DESC" />
+			    <field name="navmenu_bottom" type="text" default="Bottom" label="TPL_JS_TRIPOD_NAVMENU_BOTTOM" description="TPL_JS_TRIPOD_NAVMENU_BOTTOM_DESC" />
+			    <field name="navmenu_scroll_speed" type="text" default="2000" label="TPL_JS_TRIPOD_NAVMENU_SPEED" description="TPL_JS_TRIPOD_NAVMENU_SPEED_DESC" />
+		    </fieldset>
 		</fields>
 	</config>
 </extension>

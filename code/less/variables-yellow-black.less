@@ -242,24 +242,24 @@
 // -------------------------
 @heroUnitBackground:              @color_two;
 @heroUnitHeadingColor:            inherit;
-@heroUnitLeadColor:               inherit;
+@heroUnitLeadColor:               @color_one;
 
 
 // Form states and alerts
 // -------------------------
-@warningText:             #c09853;
+@warningText:             @black;
 @warningBackground:       darken(#fcf8e3, 53%);
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
-@errorText:               #b94a48;
+@errorText:               @white;
 @errorBackground:         @red;
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             #468847;
+@successText:             @white;
 @successBackground:       darken(@green, 23%);
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                #3a87ad;
+@infoText:                @white;
 @infoBackground:          @blue;
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 

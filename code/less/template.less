@@ -176,6 +176,7 @@ select{
 // ------------------------
 
 .btn{
+	border-color: @btnBackground;
 	border-bottom: 3px solid @btnBackground;
 	border-left: 0;
 	border-radius: 0 0 0 0;
@@ -194,7 +195,7 @@ select{
 		filter:none;
 	}
 	&.btn-primary{
-		border-bottom-color: @btnPrimaryBackground;
+		border-color: @btnPrimaryBackground;
 		&:hover{
 			background-color: #FFDD77;
 		}
@@ -204,8 +205,7 @@ select{
 		}
 	}
 	&.btn-info{
-		border-bottom-color: @btnInfoBackground;
-		border-top-color: @btnInfoBackground ;
+		border-color: @btnInfoBackground;
 		color : @white;
 		&:hover{
 			background-color: #77A0B5;
@@ -214,7 +214,7 @@ select{
 		}
 	}
 	&.btn-success{
-		border-bottom-color: @btnSuccessBackground;
+		border-color: @btnSuccessBackground;
 		&:hover{
 			background-color: #B7D2BC;
 		}
@@ -224,7 +224,7 @@ select{
 		}
 	}
 	&.btn-warning{
-		border-bottom-color: @btnWarningBackground;
+		border-color: @btnWarningBackground;
 		&:hover{
 			background-color: #DCCD82;
 		}
@@ -234,7 +234,7 @@ select{
 		}
 	}
 	&.btn-danger{
-		border-bottom-color: @btnDangerBackground;
+		border-color: @btnDangerBackground;
 		&:hover{
 			background-color: #F6968D;
 		}
@@ -244,8 +244,7 @@ select{
 		}
 	}
 	&.btn-inverse{
-		border-bottom-color: @btnInverseBackground;
-		border-top-color: @btnInverseBackground;
+		border-color: @btnInverseBackground;
 		color : @white;
 		&:hover{
 			background-color: #9B9B9B;
@@ -273,7 +272,7 @@ select{
 // ------------------------
 .img-polaroid{
 	background-color: @bodyBackground;
-	border-color: #ccc;
+	border-color: @gray;
 }
 
 // Navs
@@ -391,23 +390,151 @@ select{
 	+ .current , + .tab-content{
 		border: 1px solid @color_two;
 		border-top: 0;
+		padding: 1em;
 	}
+	dd{margin-left: 0;}
 }
 
-.tabs-below	>.nav-tabs{border-top: 0;}
+.tabs-below{
+	>.nav-tabs{
+		border-top: 0;
+		>li>a{
+			border-radius: 0 0 0 0;
+		}
+	}
+	.tab-content{
+		border: 1px solid @color_two;
+		border-bottom: 0;
+		padding: 1em;
+	}
+}
 .tabs-left{
+	display: table-row;
 	>.nav-tabs{
 		border-right: 0;
-		li a{
+		margin-right: 0;
+		display: table-cell;
+		> li > a{
+			border-radius: 0 0 0 0;
 			text-align: center;
 		}
+	}
+	.tab-content{
+		border-left: 0;
+		border-top: 1px solid @color_two;
+		display: table-cell;
+		padding: 1em;
+		vertical-align: top;
 	}
 }
 .tabs-right{
 	>.nav-tabs{
 		border-left: 0;
-		li a{
+		margin-left: 0;
+		> li > a{
+			border-radius: 0 0 0 0;
 			text-align: center;
+		}
+	}
+	.tab-content{
+		border-right: 0;
+		border-top: 1px solid @color_two;
+		padding: 1em;
+	}
+}
+// Modules
+// ------------------------
+
+.hero-unit{
+	border-radius: 0 0 0 0;
+	font-weight: 300;
+}
+
+.thumbnail {
+	border-color: @gray;
+	.caption{
+		color : @textColor;
+	}
+}
+
+// Alerts
+// ------------------------
+
+.alert{
+	font-weight: 400;
+	text-shadow: none;
+}
+
+// Labels
+
+.label-success, .badge-success{	background-color: @successBackground; }
+.label-important, .badge-important{ background-color: @errorBackground;}
+.label-info, .badge-info{background-color: @infoBackground;}
+
+// warning
+.control-group.warning .control-label, .control-group.warning .help-block, .control-group.warning .help-inline{
+	color : @warningBackground;
+}
+.control-group.warning input, .control-group.warning select, .control-group.warning textarea{
+	border-color: @warningBackground;
+}
+// error
+.control-group.error .control-label, .control-group.error .help-block, .control-group.error .help-inline{
+	color : @errorBackground;
+}
+.control-group.error input, .control-group.error select, .control-group.error textarea{
+	border-color: @errorBackground;
+}
+// info
+.control-group.info .control-label, .control-group.info .help-block, .control-group.info .help-inline{
+	color : @infoBackground;
+}
+.control-group.info input, .control-group.info select, .control-group.info textarea{
+	border-color: @infoBackground;
+}
+// success
+.control-group.success .control-label, .control-group.success .help-block, .control-group.success .help-inline{
+	color : @successBackground;
+}
+.control-group.success input, .control-group.success select, .control-group.success textarea{
+	border-color: @successBackground;
+}
+
+// Articles
+// ------------------------
+dl.article-info{
+	color : @color_two;
+	font-size: 20px;
+	font-style: italic;
+	line-height: 25px;
+	margin-bottom: 10px;
+	dd{
+		margin-left: 2px;
+		margin-right: 2px;
+		text-decoration: underline;
+		[class^="icon-"],  [class*=" icon-"]{
+			margin-right: 3px;
+			text-decoration: none;
+			width: auto;
+		}
+	}
+	dd > div:hover, dd:hover{
+		background-color: transparent;
+	}
+}
+span.content_rating{
+	font-size: 0.9em;
+}
+
+// Navbar
+// ------------------------
+
+.navbar {
+	.nav {
+		> li {
+			> a{
+				font-weight: 700;
+			}
 		}
 	}
 }

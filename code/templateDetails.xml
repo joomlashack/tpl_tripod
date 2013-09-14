@@ -106,6 +106,10 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_TRIPOD_OPTIONS">
+	            <field name="parallaxEffect" type="list" default="1" label="TPL_JS_PARALLAX_PARALLAX_EFFECT" description="TPL_JS_PARALLAX_PARALLAX_EFFECT_DESC">
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
 	            <field name="backgroundImage" filter="([^?#]*\.(?:jpg|jpeg|png|JPG|JPEG|PNG))" type="imagelist" default="" directory="/images" label="TPL_JS_TRIPOD_BACKGROUND_IMAGE" description="TPL_JS_TRIPOD_BACKGROUND_IMAGE_DESC" />
 
 	            <field name="TRIPODImage1" filter="([^?#]*\.(?:jpg|jpeg|png|JPG|JPEG|PNG))" type="imagelist" default="" directory="/images" label="TPL_JS_TRIPOD_TRIPOD_IMAGE_1" description="TPL_JS_TRIPOD_TRIPOD_IMAGE_1_DESC" />

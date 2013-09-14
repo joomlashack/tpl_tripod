@@ -615,3 +615,35 @@ span.content_rating{
 	padding: @paddingLarge;
 	text-align: center;
 }
+
+// Scrolling menu
+
+#nav_parallax_pagefirst, #nav_parallax_pagelast, #nav_parallax_catdesc, #nav_parallax_morearticles, #nav_parallax_subcategories {
+	display: none;
+}
+
+div#parallax_blog_titles {
+	display: none;
+}
+
+div#parallax_blog_titles_wrapper.affix {
+	top: 40px;
+	position: fixed;
+}
+
+div#blog_titles {
+	bottom: 20px;
+}
+div#parallax_blog_titles_wrapper ul.scrolling {
+	list-style: none;
+}
+div#parallax_blog_titles_wrapper ul.scrolling li {
+	margin-bottom: 10px;
+}
+div#parallax_blog_titles_wrapper ul.scrolling a {
+	text-transform: uppercase;
+	font-size:16px;
+}
+div#parallax_blog_titles_wrapper ul.scrolling .active a{
+	text-decoration: underline;
+}

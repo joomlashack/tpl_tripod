@@ -613,7 +613,32 @@ span.content_rating{
 #header{
 	margin: 10px 0;
 	padding: @paddingLarge;
+	position: relative;
 	text-align: center;
+	.bg-wrapp{
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		.bg-wrapp-inner{
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			#bg-header{
+				display: block;
+				left: 0;
+				position: absolute;
+				top: 0;
+			}
+		}
+	}
+	.header-inner{
+		position: relative;
+		z-index: 2;
+	}
 }
 
 // Scrolling menu
@@ -621,16 +646,13 @@ span.content_rating{
 #nav_parallax_pagefirst, #nav_parallax_pagelast, #nav_parallax_catdesc, #nav_parallax_morearticles, #nav_parallax_subcategories {
 	display: none;
 }
-
 div#parallax_blog_titles {
 	display: none;
 }
-
 div#parallax_blog_titles_wrapper.affix {
 	top: 40px;
 	position: fixed;
 }
-
 div#blog_titles {
 	bottom: 20px;
 }

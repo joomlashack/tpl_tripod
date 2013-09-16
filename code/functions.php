@@ -44,9 +44,6 @@ function checkImage($img, $default) {
 
 $user = JFactory::getUser();
 
-$bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_parallax/images/default-bg.jpg");
+$bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_tripod/images/default-bg.jpg");
 
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
-if ($pimg1 != "-1") $pimg1 = str_replace(JPATH_BASE, '', $pimg1);
-if ($pimg2 != "-1") $pimg2 = str_replace(JPATH_BASE, '', $pimg2);
-if ($pimg3 != "-1") $pimg3 = str_replace(JPATH_BASE, '', $pimg3);

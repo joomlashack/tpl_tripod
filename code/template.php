@@ -38,11 +38,24 @@ defined('_JEXEC') or die('Restricted access');
 
     <!-- header -->
     <header id="header" class="clearfix">
-        <w:logo />
-        <?php if ($this->countModules('top')) : ?>
-            <div class="clear"></div>
-            <w:module type="none" name="top" chrome="xhtml" />
-        <?php endif; ?>
+
+        <?php if ($bg != '-1') : ?>
+            <div class="bg-wrapp">
+                <div class="bg-wrapp-inner">
+                    <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
+                </div>
+            </div>
+        <?php endif ?>
+
+       <div class="header-inner">
+            <w:logo />
+
+            <?php if ($this->countModules('top')) : ?>
+                <div class="clear"></div>
+                <w:module type="none" name="top" chrome="xhtml" />
+            <?php endif; ?>
+        </div>
+
     </header>
 
     <?php if ($this->countModules('menu')) : ?>

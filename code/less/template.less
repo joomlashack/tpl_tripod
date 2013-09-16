@@ -612,7 +612,7 @@ span.content_rating{
 // Header
 #header{
 	margin: 10px 0;
-	padding: @paddingLarge;
+	padding: 20px;
 	position: relative;
 	text-align: center;
 	.bg-wrapp{
@@ -635,27 +635,36 @@ span.content_rating{
 			}
 		}
 	}
+	.bg-filter{
+		background-color: rgba(0, 0, 0, 0.7);
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
 	.header-inner{
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 	}
 }
 
 // Scrolling menu
 
-#nav_parallax_pagefirst, #nav_parallax_pagelast, #nav_parallax_catdesc, #nav_parallax_morearticles, #nav_parallax_subcategories {
+#nav_singlepage_pagefirst, #nav_singlepage_pagelast, #nav_singlepage_catdesc, #nav_singlepage_morearticles, #nav_singlepage_subcategories {
 	display: none;
 }
-div#parallax_blog_titles {
+div#singlepage_blog_titles {
 	display: none;
 }
-div#parallax_blog_titles_wrapper.affix {
+div#singlepage_blog_titles_wrapper.affix {
 	top: 40px;
 	position: fixed;
 }
 div#blog_titles {
 	bottom: 20px;
 }
-div#parallax_blog_titles_wrapper ul.scrolling {
+div#singlepage_blog_titles_wrapper ul.scrolling {
 	list-style: none;
 }

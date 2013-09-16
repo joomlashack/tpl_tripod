@@ -20,14 +20,14 @@ defined('_JEXEC') or die('Restricted access');
     <w:head />
     <script type="text/javascript">
         var singlescrollingpage = <?php echo ($this->params->get("singleScrollingPage","1") == "1" ? "true" : "false"); ?>;
-        var parallax_titles = new Array();
-        parallax_titles['top'] = '<?php echo $this->params->get('navmenu_top','' ); ?>';
-        parallax_titles['featured'] = '<?php echo $this->params->get('navmenu_featured','' ); ?>';
-        parallax_titles['category_description'] = '<?php echo $this->params->get('navmenu_category_description','' ); ?>';
-        parallax_titles['more_articles'] = '<?php echo $this->params->get('navmenu_more_articles','' ); ?>';
-        parallax_titles['subcategories'] = '<?php echo $this->params->get('navmenu_subcategories','' ); ?>';
-        parallax_titles['bottom'] = '<?php echo $this->params->get('navmenu_bottom','' ); ?>';
-        var parallax_navmenu_scroll_speed = '<?php echo $this->params->get('navmenu_scroll_speed','2000' ); ?>';
+        var singlepage_titles = new Array();
+        singlepage_titles['top'] = '<?php echo $this->params->get('navmenu_top','' ); ?>';
+        singlepage_titles['featured'] = '<?php echo $this->params->get('navmenu_featured','' ); ?>';
+        singlepage_titles['category_description'] = '<?php echo $this->params->get('navmenu_category_description','' ); ?>';
+        singlepage_titles['more_articles'] = '<?php echo $this->params->get('navmenu_more_articles','' ); ?>';
+        singlepage_titles['subcategories'] = '<?php echo $this->params->get('navmenu_subcategories','' ); ?>';
+        singlepage_titles['bottom'] = '<?php echo $this->params->get('navmenu_bottom','' ); ?>';
+        var singlepage_navmenu_scroll_speed = '<?php echo $this->params->get('navmenu_scroll_speed','2000' ); ?>';
     </script>
 </head>
 <body class="<?php echo $responsive ?>" id="skrollr-body">
@@ -45,6 +45,7 @@ defined('_JEXEC') or die('Restricted access');
                     <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
                 </div>
             </div>
+            <div class="bg-filter"></div>
         <?php endif ?>
 
        <div class="header-inner">
@@ -70,7 +71,7 @@ defined('_JEXEC') or die('Restricted access');
         <div id="spanRestScrollingMenuWrapper">
 
             <?php if ($this->countModules('featured') || $this->countModules('grid-top') || $this->countModules('grid-top2')) : ?>
-                <div id="parallax_pagefirst">
+                <div id="singlepage_pagefirst">
                     <?php if ($this->countModules('featured')) : ?>
                         <!-- featured -->
                         <div id="featured" class="<?php echo $containerClass; ?>">
@@ -138,7 +139,7 @@ defined('_JEXEC') or die('Restricted access');
 
 
             <?php if ($this->countModules('grid-bottom') || $this->countModules('grid-bottom2')) : ?>
-                <div id="parallax_pagelast">
+                <div id="singlepage_pagelast">
 
                     <?php if ($this->countModules('grid-bottom')) : ?>
                         <!-- grid-bottom -->

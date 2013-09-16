@@ -104,7 +104,7 @@ body {
 				}
 			}
 		}
-		&:first-child{display: none;}
+		&:first-child{display: none; + li {padding-left: 0; padding-right: 0;}}
 
 		&:last-child{
 			background-position: left top, right top;
@@ -647,6 +647,17 @@ span.content_rating{
 	.header-inner{
 		position: relative;
 		z-index: 3;
+	}
+	#logo{
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		+ div{
+			margin-top: 15px;
+		}
+	}
+	.moduletable,.module, .moduletext{
+		margin-bottom: 0;
 	}
 }
 

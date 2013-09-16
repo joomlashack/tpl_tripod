@@ -52,7 +52,6 @@ defined('_JEXEC') or die('Restricted access');
             <w:logo />
 
             <?php if ($this->countModules('top')) : ?>
-                <div class="clear"></div>
                 <w:module type="none" name="top" chrome="xhtml" />
             <?php endif; ?>
         </div>

@@ -460,8 +460,13 @@ select{
 	border-bottom-width: 10px;
 	font-size: 70px;
 	font-weight: 700;
+	line-height: 80px;
 	margin-top: 0;
 	text-transform: uppercase;
+}
+.big-text(){
+	font-size: 24px;
+	line-height: 30px;
 }
 
 .hero-unit{
@@ -469,7 +474,6 @@ select{
 	font-weight: 300;
 	h1{
 		.big-heading();
-		line-height: normal;
 	}
 }
 
@@ -480,6 +484,7 @@ select{
 	}
 }
 .module_ms1, .moduletable_ms1, .moduletext_ms1{
+	.big-text();
 	> h3{
 		.big-heading();
 		border-bottom-color: @color_two;
@@ -487,12 +492,39 @@ select{
 	}
 }
 .module_ms2, .moduletable_ms2, .moduletext_ms2{
-	padding: @paddingSmall;
+	.big-text();
 	background-color: @color_two;
+	color : @color_one;
+	padding: @paddingSmall;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 	> h3{
 		.big-heading();
 		border-bottom-color: @color_one;
-		color : @color_one;
+	}
+}
+.module_ms3, .moduletable_ms3, .moduletext_ms3{
+	font-size: 20px;
+	line-height: 26px;
+	> h3{
+		border-bottom: 1px solid @white;
+		color : @color_two;
+		font-size: 30px;
+		line-height: 40px;
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+.module_ms4, .moduletable_ms4, .moduletext_ms4{
+	> h3{
+		border-bottom: 1px solid @white;
+		color : @color_two;
+		font-family: @sansFontFamily;
+		font-size: 20px;
+		line-height: 40px;
+		font-weight: 400;
+		text-align: right;
 	}
 }
 
@@ -654,7 +686,7 @@ span.content_rating{
 // Header
 #header{
 	margin: 10px 0;
-	padding: 20px;
+	padding: @paddingLarge;
 	position: relative;
 	text-align: center;
 	.bg-wrapp{
@@ -742,11 +774,23 @@ div:first-child+.panel{
 		border-radius: 0 0 0 0;
 	}
 }
-.list-striped li:nth-child(odd), .list-striped dd:nth-child(odd), .row-striped .row:nth-child(odd), .row-striped .row-fluid:nth-child(odd){
-	background-color: @color_three;
+.list-striped,.row-striped {
+	border: 0;
 }
-.list-striped li:hover, .list-striped dd:hover, .row-striped .row:hover, .row-striped .row-fluid:hover{
-	background-color: lighten(@color_three, 5%);
+.list-striped li,.list-striped dd,.row-striped .row,.row-striped .row-fluid{
+	border-bottom-color: @gray;
+	&:nth-child(odd){
+		background-color: @color_three;
+	}
+	&:hover{
+		background-color: lighten(@color_three, 5%);
+	}
+}
+.search, .finder{
+	label,input{
+		margin-left: 3px;
+		margin-right: 3px;
+	}
 }
 // Pagination
 // ------------------------

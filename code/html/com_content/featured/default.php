@@ -48,16 +48,17 @@ if (sizeof($this->intro_items)) {
 
 ?>
         <div id="parallax_blog_titles">
-            <ul class="scrolling hidden-phone nav">
-                <li id="nav_parallax_top">
-                        <a href="#" rel="top">Top</a>
-                </li>
-                <li id="nav_parallax_pagefirst">
-                        <a href="#" rel="parallax_pagefirst">Featured</a>
-                </li>
-                <li id="nav_parallax_catdesc">
-                        <a href="#" rel="parallax_catdesc">Category description</a>
-                </li>
+            <div class="navbar-inner menu-big-items">
+                <ul class="scrolling hidden-phone nav">
+                    <li id="nav_parallax_top">
+                            <a href="#" rel="top">Top</a>
+                    </li>
+                    <li id="nav_parallax_pagefirst">
+                            <a href="#" rel="parallax_pagefirst">Featured</a>
+                    </li>
+                    <li id="nav_parallax_catdesc">
+                            <a href="#" rel="parallax_catdesc">Category description</a>
+                    </li>
 <?php
         $i = 0;
         foreach ($titles as $title) :
@@ -71,16 +72,17 @@ if (sizeof($this->intro_items)) {
                 $i++;
         endforeach;
 ?>
-                <li id="nav_parallax_morearticles">
-                        <a href="#" rel="parallax_morearticles">More articles</a>
-                </li>
-                <li id="nav_parallax_subcategories">
-                        <a href="#" rel="parallax_subcategories">Subcategories</a>
-                </li>
-                <li id="nav_parallax_pagelast">
-                        <a href="#" rel="parallax_pagelast">Bottom</a>
-                </li>
+                    <li id="nav_parallax_morearticles">
+                            <a href="#" rel="parallax_morearticles">More articles</a>
+                    </li>
+                    <li id="nav_parallax_subcategories">
+                            <a href="#" rel="parallax_subcategories">Subcategories</a>
+                    </li>
+                    <li id="nav_parallax_pagelast">
+                            <a href="#" rel="parallax_pagelast">Bottom</a>
+                    </li>
                 </ul>
+            </div>
         </div>
 <?php
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');

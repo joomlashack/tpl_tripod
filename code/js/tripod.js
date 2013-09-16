@@ -25,8 +25,8 @@
 
                                         jQuery('<div/>', {
                                                 id: 'parallax_blog_titles_wrapper',
+                                                class: 'navbar',
                                                 html: $('div#parallax_blog_titles').html(),
-                                                width: $('#spanScrollingMenuWrapper').width()
                                         })
                                                 .appendTo('#spanScrollingMenuWrapper');
 
@@ -38,10 +38,6 @@
                                         $('ul li#nav_parallax_morearticles a').html(parallax_titles['more_articles']);
                                         $('ul li#nav_parallax_subcategories a').html(parallax_titles['subcategories']);
                                         $('ul li#nav_parallax_pagelast a').html(parallax_titles['bottom']);
-
-                                        $('#parallax_blog_titles_wrapper').affix({
-                                                offset: htop - (htoolbar == null ? 30 : 20)
-                                        });
 
                                         if ($('#parallax_pagefirst').length) {
                                                 $('#nav_parallax_pagefirst').css('display','block');

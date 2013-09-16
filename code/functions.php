@@ -46,8 +46,6 @@ $user = JFactory::getUser();
 
 $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_parallax/images/default-bg.jpg");
 
-$scrollingMenuWidth = $this -> params -> get("singleScrollingMenuWidth", "2");
-
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
 if ($pimg1 != "-1") $pimg1 = str_replace(JPATH_BASE, '', $pimg1);
 if ($pimg2 != "-1") $pimg2 = str_replace(JPATH_BASE, '', $pimg2);

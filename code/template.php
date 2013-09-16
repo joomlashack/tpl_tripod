@@ -53,36 +53,39 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
 
-    <div class="<?php echo $gridMode; ?>">
-        <div class="span12" id="spanRestScrollingMenuWrapper" rel="span<?php echo 12-$scrollingMenuWidth ?>">
+        <div id="spanScrollingMenuWrapper" style="display:none">
+        </div>
+        <div id="spanRestScrollingMenuWrapper">
 
             <?php if ($this->countModules('featured') || $this->countModules('grid-top') || $this->countModules('grid-top2')) : ?>
-            <div id="parallax_pagefirst">
-                <?php if ($this->countModules('featured')) : ?>
-                    <!-- featured -->
-                    <div id="featured" class="<?php echo $containerClass; ?>">
-                        <div class="<?php echo $gridMode; ?>">
-                            <w:module type="none" name="featured" chrome="xhtml" />
+                <div id="parallax_pagefirst">
+                    <?php if ($this->countModules('featured')) : ?>
+                        <!-- featured -->
+                        <div id="featured" class="<?php echo $containerClass; ?>">
+                            <div class="<?php echo $gridMode; ?>">
+                                <div class="span12">
+                                    <w:module type="none" name="featured" chrome="xhtml" />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-top')) : ?>
-                    <!-- grid-top -->
-                    <div id="grid-top" class="<?php echo $containerClass; ?>">
-                        <div class="<?php echo $gridMode; ?>">
-                            <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+                    <?php endif; ?>
+                    <?php if ($this->countModules('grid-top')) : ?>
+                        <!-- grid-top -->
+                        <div id="grid-top" class="<?php echo $containerClass; ?>">
+                            <div class="<?php echo $gridMode; ?>">
+                                <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+                            </div>
                         </div>
-                    </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-top2')) : ?>
-                    <!-- grid-top2 -->
-                    <div id="grid-top2" class="<?php echo $containerClass; ?>">
-                        <div class="<?php echo $gridMode; ?>">
-                            <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+                    <?php endif; ?>
+                    <?php if ($this->countModules('grid-top2')) : ?>
+                        <!-- grid-top2 -->
+                        <div id="grid-top2" class="<?php echo $containerClass; ?>">
+                            <div class="<?php echo $gridMode; ?>">
+                                <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+                            </div>
                         </div>
-                    </div>
-                <?php endif; ?>
-            </div>
+                    <?php endif; ?>
+                </div>
             <?php endif; ?>
 
             <div class="<?php echo $containerClass ?>">
@@ -142,9 +145,6 @@ defined('_JEXEC') or die('Restricted access');
             <?php endif; ?>
 
         </div>
-        <div class="span<?php echo $scrollingMenuWidth ?>" id="spanScrollingMenuWrapper" style="display:none">
-        </div>
-    </div>
 
     <?php if ($this->countModules('bottom-menu')) : ?>
         <!-- bottom-menu -->

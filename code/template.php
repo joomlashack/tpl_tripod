@@ -19,7 +19,6 @@ defined('_JEXEC') or die('Restricted access');
 <head>
     <w:head />
     <script type="text/javascript">
-        var parallaxeffect = <?php echo ($this->params->get("parallaxEffect","1") == "1" ? "true" : "false"); ?>;
         var singlescrollingpage = <?php echo ($this->params->get("singleScrollingPage","1") == "1" ? "true" : "false"); ?>;
         var parallax_titles = new Array();
         parallax_titles['top'] = '<?php echo $this->params->get('navmenu_top','' ); ?>';

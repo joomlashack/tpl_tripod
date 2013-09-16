@@ -132,42 +132,7 @@
 
                 }
 
-                if (parallaxeffect) {
-                        var h = jQuery('body').height();
-
-                        setParallax(false);
-                }
 
         });
-
-        function setParallax(init) {
-                if (parallaxeffect) {
-                        var h = jQuery('body').height();
-                        if (jQuery('#parallaxbg1')) {
-                                jQuery('#parallaxbg1').attr('data-0','background-position:0px 0px')
-                                                                                .attr('data-end','background-position:-500px ' + (h*2) + 'px');
-                        }
-                        if (jQuery('#parallaxbg2')) {
-                                jQuery('#parallaxbg2').attr('data-0','background-position:0px 0px')
-                                                                                .attr('data-end','background-position:-500px ' + (h) + 'px');
-                        }
-                        if (jQuery('#parallaxbg3')) {
-                                jQuery('#parallaxbg3').attr('data-0','background-position:0px 0px')
-                                                                                .attr('data-end','background-position:-500px ' + (h/3) + 'px');
-                        }
-
-                        if (init) {
-                                skrollr.init({
-                            smoothScrolling: true,
-                            forceHeight: false
-                                });
-                        }
-                        else {
-                                skrollr.get().refresh();
-                        }
-                }
-        }
-
-        setParallax(true);
 
 })(jQuery);

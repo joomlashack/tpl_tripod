@@ -18,9 +18,6 @@
 		<!-- es-ES -->
 		<language tag="es-ES">es-ES/es-ES.tpl_js_tripod.ini</language>
 		<language tag="es-ES">es-ES/es-ES.tpl_js_tripod.sys.ini</language>
-		<!-- de-DE -->
-		<language tag="de-DE">de-DE/de-DE.tpl_js_tripod.ini</language>
-		<language tag="de-DE">de-DE/de-DE.tpl_js_tripod.sys.ini</language>
 	</languages>
 
 	<files>
@@ -66,7 +63,7 @@
 				<field name="helper" type="help" label="TPL_JS_WRIGHT_FIELD_NEED_HELP_LABEL" description="TPL_JS_WRIGHT_FIELD_NEED_HELP_DESC"/>
 				<field name="rebrand" type="rebrand" default="no" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC" />
 				<field name="style" type="styles" default="yellow-black" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
-				<field name="mootools" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MOOTOOLS_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MOOTOOLS_DESC">
+				<field name="modal" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>

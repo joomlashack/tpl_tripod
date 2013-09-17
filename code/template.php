@@ -163,7 +163,6 @@ defined('_JEXEC') or die('Restricted access');
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
     <?php endif; ?>
 
-    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_tripod/js/skrollr.min.js'></script>
     <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_tripod/js/tripod.js'></script>
 
     <!-- footer -->

@@ -349,6 +349,9 @@ select{
 				color: @color_one;
 				text-decoration: none;
 			}
+			&.hide-text{
+				padding: 13px;
+			}
 		}
 	}
 	>.open  {
@@ -640,6 +643,14 @@ span.content_rating{
 }
 .navbar-inner{
 	border: 0;
+	&.nav{
+		padding-left: 0;
+		padding-right: 0;
+		> li {
+			margin-left: 1.2em;
+			margin-right: 1.2em;
+		}
+	}
 }
 // Menu Big Items
 // ------------------------
@@ -817,4 +828,17 @@ div:first-child+.panel{
 		margin-bottom: 0;
 		min-height: 30px;
 	}
+}
+#sidebar1 , #sidebar2{
+	+ #main {
+		.item-page{
+			> .page-header{
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+.hide-text [class^="icon-"], .hide-text [class*=" icon-"]{
+	line-height: 17px;
 }

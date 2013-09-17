@@ -268,6 +268,9 @@ select{
 .pager li>a, .pager li>span{
 	background-color: darken(@bodyBackground, 10%);
 	border-color: @grayDarker;
+	&:hover{
+		background-color: darken(@bodyBackground, 20%);
+	}
 }
 
 // Images
@@ -597,7 +600,11 @@ dl.article-info{
 	}
 	dd > div:hover, dd:hover{
 		background-color: transparent;
+		> i {
+			font-size: 1.2em;
+		}
 	}
+
 }
 span.content_rating{
 	font-size: 0.9em;
@@ -829,6 +836,7 @@ div:first-child+.panel{
 		min-height: 30px;
 	}
 }
+// ------------------------
 #sidebar1 , #sidebar2{
 	+ #main {
 		.item-page{
@@ -841,4 +849,24 @@ div:first-child+.panel{
 }
 .hide-text [class^="icon-"], .hide-text [class*=" icon-"]{
 	line-height: 17px;
+}
+// ------------------------
+#footer{
+	background-color: @color_two;
+	background-image: none;
+	color : @color_one;
+	filter:none;
+	padding-top: 10px;
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	a{
+		color : @color_one;
+	}
+	&.sticky{
+		bottom: 10px !important;
+	}
+}
+.wrapper-footer{
+	padding-top: 10px;
 }

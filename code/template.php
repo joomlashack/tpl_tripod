@@ -96,8 +96,8 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             <?php endif; ?>
 
-            <div class="<?php echo $containerClass ?>">
-                <div id="main-content" class="<?php echo $gridMode; ?>">
+            <div class="<?php echo $mainContainer ?>">
+                <div id="main-content" class="<?php echo $mainGridMode; ?>">
                     <!-- sidebar1 -->
                     <aside id="sidebar1">
                         <w:module name="sidebar1" chrome="xhtml" />

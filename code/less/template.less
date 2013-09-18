@@ -896,6 +896,12 @@ div:first-child+.panel{
 .color_two{
 	background-color: @color_two;
 }
+
+[class*="leading-"]{
+	&:nth-child(even){
+		.color_two;
+	}
+}
 // Category Module
 // ------------------------
 .mod-articles-category-date{

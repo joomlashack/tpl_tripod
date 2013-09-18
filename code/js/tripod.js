@@ -68,14 +68,24 @@ jQuery(function() {
 
             var ppost = 0;
             jQuery(resizeClass2).each(function (post) {
+                if (ppost%2 == 0)
+                    class2 = 'color_one';
+                else
+                    class2 = 'color_two';
                 jQuery(this).attr('id','singlepage_post_' + ppost)
-                        .addClass('singlepage_section');
+                        .addClass('singlepage_section')
+                        .addClass(class2);
                 ppost++;
             });
 
             jQuery(resizeClass3).each(function (post) {
+                if (ppost%2 == 0)
+                    class2 = 'color_one';
+                else
+                    class2 = 'color_two';
                 jQuery(this).attr('id','singlepage_post_' + ppost)
-                        .addClass('singlepage_section');
+                        .addClass('singlepage_section')
+                        .addClass(class2);
                 ppost++;
             });
 

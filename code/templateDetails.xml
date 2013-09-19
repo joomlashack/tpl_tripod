@@ -103,8 +103,12 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_TRIPOD_OPTIONS">
+	            <field name="enableSlideshow" type="list" default="0" label="TPL_JS_TRIPOD_ENABLE_SLIDESHOW" description="TPL_JS_TRIPOD_ENABLE_SLIDESHOW_DESC">
+	                    <option value="1">JYES</option>
+	                    <option value="0">JNO</option>
+	            </field>
+	            <field name="slideshowFolder" type="folderlist" default="images" directory="images" label="FOLDER" description="TPL_JS_TRIPOD_FOLDER_DESC" />
 	            <field name="backgroundImage" filter="([^?#]*\.(?:jpg|jpeg|png|JPG|JPEG|PNG))" type="imagelist" default="" directory="/images" label="TPL_JS_TRIPOD_BACKGROUND_IMAGE" description="TPL_JS_TRIPOD_BACKGROUND_IMAGE_DESC" />
-
 
 			</fieldset>
 

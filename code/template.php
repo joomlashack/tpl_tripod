@@ -160,7 +160,7 @@ defined('_JEXEC') or die('Restricted access');
 
     <?php if ($this->countModules('bottom-menu')) : ?>
         <!-- bottom-menu -->
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
+        <w:nav containerClass="bottom-menu" name="bottom-menu" />
     <?php endif; ?>
 
     <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_tripod/js/tripod.js'></script>

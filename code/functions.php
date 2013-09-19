@@ -71,3 +71,5 @@ if ($tripodFullWidthBg && $sidebarExists == '') {
     $mainComplementGridMode = $gridMode;
     $mainComplementSpan = 'span12';
 }
+$tripodSlideshow = ($this->params->get('enableSlideshow', '0') == '1' ? true : false);
+$tripodSlideshowFolder = $this->params->get('slideshowFolder', '');

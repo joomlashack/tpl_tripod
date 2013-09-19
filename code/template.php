@@ -29,6 +29,7 @@ defined('_JEXEC') or die('Restricted access');
         singlepage_titles['bottom'] = '<?php echo $this->params->get('navmenu_bottom','' ); ?>';
         var singlepage_navmenu_scroll_speed = '<?php echo $this->params->get('navmenu_scroll_speed','2000' ); ?>';
     </script>
+
 </head>
 <body class="<?php echo $responsive ?>" id="skrollr-body">
     <?php if ($this->countModules('toolbar')) : ?>
@@ -39,18 +40,27 @@ defined('_JEXEC') or die('Restricted access');
     <!-- header -->
     <header id="header" class="clearfix">
 
-        <?php if ($bg != '-1') : ?>
             <div class="bg-wrapp">
                 <div class="bg-wrapp-inner">
-                    <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
+                    <?php if ($bg != '-1' && !$tripodSlideshow) : ?>
+                        <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
+                    <?php endif ?>
+                    <?php if ($tripodSlideshow) : ?>
+                        <div id="wrapper-slideshow">
+                                lorem
+                        </div>
+                    <?php endif ?>
                 </div>
             </div>
             <div class="bg-filter"></div>
-        <?php endif ?>
-
-       <div class="header-inner">
+        <a href="" class="tripod-slideshow-nav-prev">
+            <i class="icon-angle-left"></i>
+        </a>
+        <a href="" class="tripod-slideshow-nav-next">
+            <i class="icon-angle-right"></i>
+        </a>
+        <div class="header-inner">
             <w:logo />
-
             <?php if ($this->countModules('top')) : ?>
                 <w:module type="none" name="top" chrome="xhtml" />
             <?php endif; ?>

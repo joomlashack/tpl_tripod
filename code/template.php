@@ -40,30 +40,43 @@ defined('_JEXEC') or die('Restricted access');
     <!-- header -->
     <header id="header" class="clearfix">
 
-            <div class="bg-wrapp">
-                <div class="bg-wrapp-inner">
-                    <?php if ($bg != '-1' && !$tripodSlideshow) : ?>
-                        <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
-                    <?php endif ?>
-                    <?php if ($tripodSlideshow) : ?>
-                        <div id="wrapper-slideshow">
-                                lorem
-                        </div>
-                    <?php endif ?>
-                </div>
+        <div class="bg-wrapp">
+            <div class="bg-wrapp-inner">
+                <?php if ($bg != '-1' && !$tripodSlideshow) : ?>
+                    <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
+                <?php endif ?>
+                <?php if ($tripodSlideshow) : ?>
+                    <div id="wrapper-slideshow">
+                            lorem
+                    </div>
+                <?php endif ?>
             </div>
+        </div>
+        <?php if ($bg != '-1' && !$tripodSlideshow) : ?>
             <div class="bg-filter"></div>
-        <a href="" class="tripod-slideshow-nav-prev">
-            <i class="icon-angle-left"></i>
-        </a>
-        <a href="" class="tripod-slideshow-nav-next">
-            <i class="icon-angle-right"></i>
-        </a>
+        <?php endif ?>
+
+        <?php if ($tripodSlideshow) : ?>
+            <a href="" class="tripod-slideshow-nav-prev"></a>
+            <a href="" class="tripod-slideshow-nav-next"></a>
+        <?php endif ?>
+
         <div class="header-inner">
             <w:logo />
             <?php if ($this->countModules('top')) : ?>
                 <w:module type="none" name="top" chrome="xhtml" />
             <?php endif; ?>
+            <?php if ($tripodSlideshow) : ?>
+                <div class="tripod-slideshow-wrapper-icons">
+                    <div class="tripod-slideshow-icon">
+                        icon
+                    </div>
+                </div>
+            <?php endif; ?>
+            <div class="tripod-slideshow-wrapper-icons">
+                <div class="tripod-slideshow-icon"></div>
+                <div class="tripod-slideshow-icon"></div>
+            </div>
         </div>
 
     </header>

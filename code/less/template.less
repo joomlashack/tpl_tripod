@@ -278,6 +278,9 @@ select{
 .img-polaroid{
 	background-color: @bodyBackground;
 	border-color: @gray;
+	-webkit-box-sizing: border-box;
+   	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 // Navs
@@ -762,22 +765,38 @@ span.content_rating{
 
 	// Slideshow menu
 	.tripod-slideshow-nav-prev{
+		background-image: url(../../images/yellow-black/slideshow-nav-prev.png);
 		left: 0;
-		background-image: url(../../images/yellow-black/tripod-slideshow-nav-prev.png);
 	}
 	.tripod-slideshow-nav-prev,
 	.tripod-slideshow-nav-next{
-		background-color: @color_one;
-		font-size: 60px;
+		background-repeat: no-repeat;
 		height: 168px;
-		line-height: 168px;
 		position: absolute;
 		top: ~"calc(50% - 84px)";
-		width: 62px;
+		width: 63px;
 		z-index: 5;
 	}
 	.tripod-slideshow-nav-next{
+		background-image: url(../../images/yellow-black/slideshow-nav-next.png);
 		right: 0;
+	}
+	.tripod-slideshow-wrapper-icons{
+		display: table;
+		margin: 0 auto;
+		.tripod-slideshow-icon{
+			display: inline-block;
+			margin-right: 20px;
+			background-color: rgba(0, 0, 0, 0.7);
+			height: 140px;
+			line-height: 140;
+			text-align: center;
+			width: 140px;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+					box-sizing: border-box;
+			.ie7-inline-block();
+		}
 	}
 }
 
@@ -888,8 +907,11 @@ div:first-child+.panel{
 	-webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
 			box-sizing: border-box;
-	a{
-		color : @color_one;
+	.footer-content{
+		font-size: 12px;
+		a{
+			color : @color_one;
+		}
 	}
 	&.sticky{
 		bottom: 10px !important;
@@ -951,13 +973,13 @@ div:first-child+.panel{
 		border-bottom: 0;
 		padding: 0;
 		h1,h2,h3,h4,h5,h6{
-			display: inline-block;;
+			float: left;;
 			font-weight: 400;
 			margin-bottom: 0;
 			margin-top: 10px;
 			text-align: left;
 			+ .mod-articles-category-date{
-				display: inline-block;
+				float: right;
 				margin-top: 10px;
 			}
 		}
@@ -967,6 +989,28 @@ div:first-child+.panel{
 		&:nth-child(odd), &:hover{
 			background-color: transparent;
 		}
+		.mod-articles-category-introtext{
+			clear: both;
+		}
+	}
+}
+[class*="newsflash"]{
+	font-size: 14px;
+	h1,h2,h3,h4,h5,h6{
+		color : @color_two;
+		font-family: @sansFontFamily;
+		font-weight: 600;
+	}
+	[class*="newsflash-title"]{
+		font-size: 18px;
+		.page-header{
+			border-bottom: 0;
+			margin: 0;
+		}
+	}
+	[class*="img-intro"]{
+		padding: 5px;
+		.img-polaroid;
 	}
 }
 // slideshow

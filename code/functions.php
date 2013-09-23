@@ -71,5 +71,21 @@ if ($tripodFullWidthBg && $sidebarExists == '') {
     $mainComplementGridMode = $gridMode;
     $mainComplementSpan = 'span12';
 }
+
+// Slideshow
 $tripodSlideshow = ($this->params->get('enableSlideshow', '0') == '1' ? true : false);
-$tripodSlideshowFolder = $this->params->get('slideshowFolder', '');
+$slideshowImageOne = checkImage($this->params->get("slideshowImageOne", ""), "templates/js_tripod/images/default-bg-one.jpg");
+$slideshowImageTwo = checkImage($this->params->get("slideshowImageTwo", ""), "templates/js_tripod/images/default-bg-two.jpg");
+$slideshowImageThree = checkImage($this->params->get("slideshowImageThree", ""), "templates/js_tripod/images/default-bg-three.jpg");
+$slideshowImageFour = checkImage($this->params->get("slideshowImageFour", ""), "templates/js_tripod/images/default-bg-four.jpg");
+
+function slideshowSetRutDefult($slideItem){
+    $slideItemRute = str_replace(JPATH_BASE. "/","",$slideItem);
+    return $slideItemRute;
+}
+
+$slideshowImageOneRute = slideshowSetRutDefult($slideshowImageOne);
+$slideshowImageTwoRute = slideshowSetRutDefult($slideshowImageTwo);
+$slideshowImageThreeRute = slideshowSetRutDefult($slideshowImageThree);
+$slideshowImageFourRute = slideshowSetRutDefult($slideshowImageFour);
+

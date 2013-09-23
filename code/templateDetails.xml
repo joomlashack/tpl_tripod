@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta1.7</version>
+	<version>1.0.0_beta1.8</version>
     <description>TPL_JS_TRIPOD_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -103,12 +103,22 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_TRIPOD_OPTIONS">
-	            <field name="slideshowFolder" type="folderlist" default="" directory="images" label="FOLDER" description="TPL_JS_TRIPOD_FOLDER_DESC" />
+
 	            <field name="enableSlideshow" type="list" default="0" label="TPL_JS_TRIPOD_ENABLE_SLIDESHOW" description="TPL_JS_TRIPOD_ENABLE_SLIDESHOW_DESC">
 	                    <option value="1">JYES</option>
 	                    <option value="0">JNO</option>
 	            </field>
+
+	            <field name="slideshowImageOne" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_ONE" description="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_ONE_DESC" />
+
+	            <field name="slideshowImageTwo" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_TWO" description="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_TWO_DESC" />
+
+	            <field name="slideshowImageThree" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_THREE" description="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_THREE_DESC" />
+
+	            <field name="slideshowImageFour" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_FOUR" description="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_FOUR_DESC" />
+
 	            <field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_BACKGROUND_IMAGE" description="TPL_JS_TRIPOD_BACKGROUND_IMAGE_DESC" />
+
 		    </fieldset>
 
 		    <fieldset name="TPL_JS_TRIPOD_SINGLESCROLLING_OPTIONS">

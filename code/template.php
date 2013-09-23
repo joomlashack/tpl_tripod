@@ -196,7 +196,7 @@ defined('_JEXEC') or die('Restricted access');
 
 
             <?php if ($this->countModules('grid-bottom') || $this->countModules('grid-bottom2')) : ?>
-                <div id="singlepage_pagelast">
+                <div id="singlepage_pagelast" class="bottom-page">
 
                     <?php if ($this->countModules('grid-bottom')) : ?>
                         <!-- grid-bottom -->

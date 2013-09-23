@@ -88,4 +88,14 @@ $slideshowImageOneRute = slideshowSetRutDefult($slideshowImageOne);
 $slideshowImageTwoRute = slideshowSetRutDefult($slideshowImageTwo);
 $slideshowImageThreeRute = slideshowSetRutDefult($slideshowImageThree);
 $slideshowImageFourRute = slideshowSetRutDefult($slideshowImageFour);
+//Icons
+
+$iconOne = checkImage($this->params->get("iconOne", ""), "templates/js_tripod/images/icon-default-one.png");
+$iconTwo = checkImage($this->params->get("iconTwo", ""), "templates/js_tripod/images/icon-default-two.png");
+$iconThree = checkImage($this->params->get("iconThree", ""), "templates/js_tripod/images/icon-default-three.png");
+$iconFour = checkImage($this->params->get("iconFour", ""), "templates/js_tripod/images/icon-default-four.png");
+$iconOne = slideshowSetRutDefult($iconOne);
+$iconTwo = slideshowSetRutDefult($iconTwo);
+$iconThree = slideshowSetRutDefult($iconThree);
+$iconFour = slideshowSetRutDefult($iconFour);
 

@@ -777,7 +777,7 @@ span.content_rating{
 		margin: 0 auto;
 		.tripod-slideshow-icon{
 			display: inline-block;
-			margin-right: 20px;
+			margin-left: 18px;
 			background-color: rgba(0, 0, 0, 0.7);
 			height: 140px;
 			line-height: 140px;
@@ -787,6 +787,9 @@ span.content_rating{
 			   -moz-box-sizing: border-box;
 					box-sizing: border-box;
 			.ie7-inline-block();
+			&:first-child{
+				margin-left: 0;
+			}
 		}
 	}
 }

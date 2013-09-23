@@ -71,7 +71,6 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
     <!-- header -->
     <header id="header" class="clearfix">
-    <?php echo  $slideshowImageOneRute ?>
         <?php if ($bg != '-1' && !$tripodSlideshow) : ?>
             <div class="bg-wrapp">
                 <div class="bg-wrapp-inner">
@@ -85,8 +84,6 @@ defined('_JEXEC') or die('Restricted access');
             <!--Arrow Navigation-->
             <a id="prevslide" class="load-item"></a>
             <a id="nextslide" class="load-item"></a>
-            <a href="" class="tripod-slideshow-nav-prev"></a>
-            <a href="" class="tripod-slideshow-nav-next"></a>
         <?php endif ?>
 
         <div class="header-inner">
@@ -96,9 +93,26 @@ defined('_JEXEC') or die('Restricted access');
             <?php endif; ?>
             <?php if ($tripodSlideshow) : ?>
                 <div class="tripod-slideshow-wrapper-icons">
+                <?php if ($iconOne != "-1") : ?>
                     <div class="tripod-slideshow-icon">
-                        icon
+                        <img src="<?php  echo $iconOne; ?>" alt="">
                     </div>
+                <?php endif; ?>
+                <?php if ($iconTwo != "-1") : ?>
+                    <div class="tripod-slideshow-icon">
+                        <img src="<?php  echo $iconTwo; ?>" alt="">
+                    </div>
+                <?php endif; ?>
+                <?php if ($iconThree != "-1") : ?>
+                    <div class="tripod-slideshow-icon">
+                        <img src="<?php  echo $iconThree; ?>" alt="">
+                    </div>
+                <?php endif; ?>
+                <?php if ($iconFour != "-1") : ?>
+                    <div class="tripod-slideshow-icon">
+                        <img src="<?php  echo $iconFour; ?>" alt="">
+                    </div>
+                <?php endif; ?>
                 </div>
             <?php endif; ?>
 

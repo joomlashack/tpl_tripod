@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Parallax
+ * @package     Tripod
  * @subpackage  Overrider
  *
  * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
@@ -19,9 +19,7 @@ $wright_joomla_content_category_blog_nocols = false;
 
 // get titles
 $titles = Array();
-$parallax_sp = Array();
 $i = 0;
-
 
 $arItems = Array();
 
@@ -47,24 +45,24 @@ if (sizeof($this->intro_items)) {
 
 
 ?>
-        <div id="parallax_blog_titles">
+        <div id="singlepage_blog_titles">
             <div class="navbar-inner menu-big-items">
                 <ul class="scrolling hidden-phone nav">
-                    <li id="nav_parallax_top">
+                    <li id="nav_singlepage_top">
                             <a href="#" rel="top">Top</a>
                     </li>
-                    <li id="nav_parallax_pagefirst">
-                            <a href="#" rel="parallax_pagefirst">Featured</a>
+                    <li id="nav_singlepage_pagefirst">
+                            <a href="#" rel="singlepage_pagefirst">Featured</a>
                     </li>
-                    <li id="nav_parallax_catdesc">
-                            <a href="#" rel="parallax_catdesc">Category description</a>
+                    <li id="nav_singlepage_catdesc">
+                            <a href="#" rel="singlepage_catdesc">Category description</a>
                     </li>
 <?php
         $i = 0;
         foreach ($titles as $title) :
 ?>
                         <li>
-                                <a rel="parallax_post_<?php echo $i ?>" href='#'>
+                                <a rel="singlepage_post_<?php echo $i ?>" href='#'>
                                         <?php echo $title ?>
                                 </a>
                         </li>
@@ -72,14 +70,14 @@ if (sizeof($this->intro_items)) {
                 $i++;
         endforeach;
 ?>
-                    <li id="nav_parallax_morearticles">
-                            <a href="#" rel="parallax_morearticles">More articles</a>
+                    <li id="nav_singlepage_morearticles">
+                            <a href="#" rel="singlepage_morearticles">More articles</a>
                     </li>
-                    <li id="nav_parallax_subcategories">
-                            <a href="#" rel="parallax_subcategories">Subcategories</a>
+                    <li id="nav_singlepage_subcategories">
+                            <a href="#" rel="singlepage_subcategories">Subcategories</a>
                     </li>
-                    <li id="nav_parallax_pagelast">
-                            <a href="#" rel="parallax_pagelast">Bottom</a>
+                    <li id="nav_singlepage_pagelast">
+                            <a href="#" rel="singlepage_pagelast">Bottom</a>
                     </li>
                 </ul>
             </div>

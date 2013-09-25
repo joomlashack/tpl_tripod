@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta1.11</version>
+	<version>1.0.0_beta1.12</version>
     <description>TPL_JS_TRIPOD_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -103,6 +103,7 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_TRIPOD_OPTIONS">
+
 	            <field name="enableSlideshow" type="list" default="0" label="TPL_JS_TRIPOD_ENABLE_SLIDESHOW" description="TPL_JS_TRIPOD_ENABLE_SLIDESHOW_DESC">
 	                    <option value="1">JYES</option>
 	                    <option value="0">JNO</option>
@@ -123,6 +124,10 @@
 		    </fieldset>
 
 		    <fieldset name="TPL_JS_TRIPOD_SINGLESCROLLING_OPTIONS">
+			    <field name="singleScrollingPage" type="list" default="1" label="TPL_JS_TRIPOD_SINGLE_SCROLLING_PAGE" description="TPL_JS_TRIPOD_SINGLE_SCROLLING_PAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			    <field name="navmenu_top" type="text" default="Top" label="TPL_JS_TRIPOD_NAVMENU_TOP" description="TPL_JS_TRIPOD_NAVMENU_TOP_DESC" />
 			    <field name="navmenu_featured" type="text" default="Featured" label="TPL_JS_TRIPOD_NAVMENU_FEATURED" description="TPL_JS_TRIPOD_NAVMENU_FEATURED_DESC" />
 			    <field name="navmenu_category_description" type="text" default="Category description" label="TPL_JS_TRIPOD_NAVMENU_CATDESC" description="TPL_JS_TRIPOD_NAVMENU_CATDESC_DESC" />

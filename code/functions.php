@@ -102,3 +102,6 @@ $iconFour = slideshowSetRutDefult($iconFour);
 
 $tripodToolbarDisplayed = ($this->params->get('tripod_toolbar_displayed','1') == '1' ? true : false);
 
+if (!$tripodToolbarDisplayed){
+    $tripodToolbarDisplayedClass = " tollbarNoDisplayed";
+}

@@ -64,7 +64,7 @@ defined('_JEXEC') or die('Restricted access');
         </script>
     <?php endif; ?>
 </head>
-<body class="<?php echo $responsive . $tripodFtBlogClass?>" id="skrollr-body">
+<body class="<?php echo $responsive . $tripodFtBlogClass . $tripodToolbarDisplayedClass?>" id="skrollr-body">
     <?php if ($this->countModules('toolbar')) : ?>
             <!-- toolbar -->
             <div class="toolbar <?php echo ($tripodToolbarDisplayed ? '' : 'collapse'); ?>">
@@ -138,7 +138,8 @@ defined('_JEXEC') or die('Restricted access');
             <w:nav name="menu" />
         </div>
     <?php endif; ?>
-
+        <div id="spanScrollingMenuWrapper" style="display:none">
+        </div>
         <div id="spanRestScrollingMenuWrapper">
 
             <?php if ($this->countModules('featured') || $this->countModules('grid-top') || $this->countModules('grid-top2')) : ?>

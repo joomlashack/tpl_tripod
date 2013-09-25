@@ -185,7 +185,7 @@ defined('_JEXEC') or die('Restricted access');
                         <?php endif; ?>
                         <?php if ($this->countModules('breadcrumbs')) : ?>
                         <!-- breadcrumbs -->
-                        <div id="breadcrumbs">
+                        <div id="breadcrumbs" class="<?php echo $containerClass; ?>">
                                 <w:module type="single" name="breadcrumbs" chrome="none" />
                         </div>
                         <?php endif; ?>

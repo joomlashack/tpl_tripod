@@ -473,6 +473,10 @@ select{
 	margin-bottom: 15px;
 	margin-top: 0;
 	text-transform: uppercase;
+	@media (max-width:767px) {
+		font-size: 38px;
+		line-height: 48px;
+	}
 }
 .big-text(){
 	font-size: 24px;
@@ -542,6 +546,9 @@ select{
 }
 #grid-bottom{
 	background-color: @color_three;
+	margin-bottom: 0;
+}
+#grid-bottom2{
 	margin-bottom: 0;
 }
 .share-with-us{
@@ -643,8 +650,8 @@ span.content_rating{
 				background-position: 0 0, right top;
 				background-repeat: no-repeat, no-repeat;
 				font-weight: 700;
-				line-height: 27px;
-				min-height: 27px;
+				line-height: 26px;
+				min-height: 26px;
 			}
 			.dropdown-menu{
 				border: 0;
@@ -694,6 +701,26 @@ span.content_rating{
 				margin-top: 14px;
 			}
 		}
+	}
+}
+// Single page menu space
+// ------------------------
+.tripodFtBlog {
+	.wrapper-menu{
+		.navbar{
+			margin-bottom: 0;
+		}
+	}
+	#spanRestScrollingMenuWrapper{
+		background-color: @color_one;
+		padding-top: 20px;
+	}
+	#menu{
+		margin-bottom: 0;
+	}
+	#bottom-menu{
+		background-color: @color_one;
+		padding-bottom: 10px;
 	}
 }
 // Dropdown Menu
@@ -939,6 +966,7 @@ div:first-child+.panel{
 //Portfolio
 // ------------------------
 .tripod-portfolio{
+	.clearfix();
 	[class*="span"]{
 		margin-left: 0 !important;
 	}
@@ -1107,3 +1135,52 @@ div:first-child+.panel{
 #supersized li.image-loading { background:#111; width:100%; height:100%; }
 #supersized li.image-loading img{ visibility:hidden; }
 #supersized li.prevslide img, #supersized li.activeslide img{ display:block; }
+
+.toolbar-collapse-btn{
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	height: 20px;
+	padding: 10px;
+	position: fixed;
+	right: 20px;
+	top: 0px;
+	width: 20px;
+	z-index: 1031;
+	.icon-bar{
+		background-color: #8f6b00;
+		display: block;
+		height: 2px;
+		margin-top: 2px;
+		width: 100%;
+	}
+}
+// .collapsedToolbar .navbar-inner .collapsedToolbarInner {
+// 	height: 0;
+// 	overflow: hidden;
+// }
+// .toolbar.collapsedToolbar .navbar-inner {
+// 	min-height: 20px;
+// }
+
+.toolbar.collapse{
+
+	.navbar-fixed-top{
+		position: static;
+	}
+	&.in{
+		.navbar-fixed-top{
+			position: fixed;
+		}
+	}
+	// .collapsedToolbarInner{
+	// 	height: 0;
+	// 	overflow: hidden;
+	// }
+	// &.in{
+	// 	.collapsedToolbarInner{
+	// 		height: auto;
+	// 		overflow: visible;
+	// 	}
+	// }
+}

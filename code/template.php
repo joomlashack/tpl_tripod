@@ -66,8 +66,20 @@ defined('_JEXEC') or die('Restricted access');
 </head>
 <body class="<?php echo $responsive . $tripodFtBlogClass?>" id="skrollr-body">
     <?php if ($this->countModules('toolbar')) : ?>
-        <!-- menu -->
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+            <!-- toolbar -->
+            <div class="toolbar <?php echo ($tripodToolbarDisplayed ? '' : 'collapse'); ?>">
+                <w:nav containerClass="<?php echo $containerClass ?> tripod-toolbar-container<?php echo ($tripodToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+            </div>
+
+            <?php if (!$tripodToolbarDisplayed) : ?>
+                <div class="visible-desktop" data-toggle="collapse" data-target=".toolbar">
+                    <div class="btn btn-primary toolbar-collapse-btn">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </div>
+                </div>
+            <?php endif; ?>
     <?php endif; ?>
     <!-- header -->
     <header id="header" class="clearfix">
@@ -127,8 +139,6 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
 
-        <div id="spanScrollingMenuWrapper" style="display:none">
-        </div>
         <div id="spanRestScrollingMenuWrapper">
 
             <?php if ($this->countModules('featured') || $this->countModules('grid-top') || $this->countModules('grid-top2')) : ?>

@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta1.10</version>
+	<version>1.0.0_beta1.11</version>
     <description>TPL_JS_TRIPOD_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -117,7 +117,10 @@
 	            <field name="iconThree" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_THREE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
 				<field name="iconFour" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_FOUR" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
 	            <field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_BACKGROUND_IMAGE" description="TPL_JS_TRIPOD_BACKGROUND_IMAGE_DESC" />
-
+				<field name="tripod_toolbar_displayed" type="radio" default="1" label="TPL_JS_TRIPOD_TOOLBAR_DISPLAYED" description="TPL_JS_TRIPOD_TOOLBAR_DISPLAYED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
 		    </fieldset>
 
 		    <fieldset name="TPL_JS_TRIPOD_SINGLESCROLLING_OPTIONS">

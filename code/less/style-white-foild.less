@@ -1,0 +1,123 @@
+
+// Tripod
+// ------------------------
+
+.nav-tabs{
+	h3 , p , > li {
+		a{
+			&:hover{
+				background-image: url(../../images/white-foild/nav-tabs-item-hover-left.png),url(../../images/white-foild/nav-tabs-item-hover-right.png);
+			}
+		}
+	}
+	>.open {
+		h3 , p {
+			a{
+				background-image: url(../../images/white-foild/nav-tabs-item-hover-left.png),url(../../images/white-foild/nav-tabs-item-hover-right.png);
+			}
+		}
+		.dropdown-toggle{
+			background-image: url(../../images/white-foild/nav-tabs-item-hover-left.png),url(../../images/white-foild/nav-tabs-item-hover-right.png);
+		}
+	}
+	> .active{
+		a{
+			background-image: url(../../images/white-foild/nav-tabs-item-hover-left.png),url(../../images/white-foild/nav-tabs-item-hover-right.png);
+		}
+	}
+}
+
+
+// Breadcrumb
+// ------------------------
+
+.breadcrumb{
+	> li {
+		&:last-child{
+			background-image: url(../../images/white-foild/breadcrumb-item-active-left.png),url(../../images/white-foild/breadcrumb-item-active-right.png);
+		}
+	}
+}
+
+blockquote{
+	background-image: url(../../images/white-foild/blockquote.png);
+}
+
+.table {
+	&.table-striped{
+		tbody>tr:nth-child(even){
+			>td, >th{
+				background-image: url(../../images/white-foild/table-striped.png);
+			}
+		}
+	}
+	&.table-hover{
+		tbody tr:hover{
+			>td, >th{
+				background-image: url(../../images/white-foild/table-striped.png);
+			}
+		}
+	}
+}
+
+// Navbar
+.navbar {
+	.nav {
+		> li:hover {
+			> a{
+				background-image: url(../../images/white-foild/nav-tabs-item-hover-left.png),url(../../images/white-foild/nav-tabs-item-hover-right.png);
+			}
+		}
+		>.active>a, >.active>a:hover, >.active>a:focus{
+			background-image: url(../../images/white-foild/nav-tabs-item-hover-left.png),url(../../images/white-foild/nav-tabs-item-hover-right.png);
+		}
+	}
+}
+// mod-articles-category-date
+.mod-articles-category-date{
+	background-image: url(../../images/white-foild/breadcrumb-item-active-left.png),url(../../images/white-foild/breadcrumb-item-active-right.png);
+}
+// slideshow
+#nextslide{
+	background-image: url(../../images/white-foild/slideshow-nav-next.png);
+}
+#prevslide {
+	background-image: url(../../images/white-foild/slideshow-nav-prev.png);
+}
+.toolbar-collapse-btn .icon-bar {
+	background-color: #BFB0A3;
+}
+.btn{
+	&.btn-primary{
+		&:hover{
+			background-color: #CABEB2;
+		}
+	}
+}
+.color_one{
+	[class*="category-module"]{
+		li a{
+			color : #313140;
+		}
+	}
+}
+#footer {
+	.footer-content{
+		a{
+			color : @color_five;
+		}
+	}
+}
+#header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon,.tripodFtBlog #header #logo{
+	background-color: rgba(142, 115, 89,0.3);
+}
+.module_ms3, .moduletable_ms3, .moduletext_ms3{
+	> h3{
+		border-bottom-color:#313140;
+	}
+}
+.module_ms4, .moduletable_ms4, .moduletext_ms4{
+	> h3{
+		border-bottom-color:#313140;
+	}
+}

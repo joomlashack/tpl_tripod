@@ -82,7 +82,7 @@ defined('_JEXEC') or die('Restricted access');
             <?php endif; ?>
     <?php endif; ?>
     <!-- header -->
-    <header id="header" class="clearfix">
+    <header id="header" class="clearfix <?php echo (!$tripodSlideshow ? '' : 'tripodSlideshow');  ?>">
         <?php if ($bg != '-1' && !$tripodSlideshow) : ?>
             <div class="bg-wrapp">
                 <div class="bg-wrapp-inner">

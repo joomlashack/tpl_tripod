@@ -1102,9 +1102,14 @@ div:first-child+.panel{
 	#main-content{
 		margin-bottom: 0;
 	}
-	#header{
+}
+.bottom-page{
+	background-color: @color_three;
+}
+#header{
+	&.tripodSlideshow{
 		padding-bottom: 150px;
-		padding-top: 150px;
+		padding-top: 160px;
 		#logo{
 			background-color: rgba(0,0,0,0.7);
 			display: table;
@@ -1112,11 +1117,7 @@ div:first-child+.panel{
 			width: auto;
 		}
 	}
-	.bottom-page{
-		background-color: @color_three;
-	}
 }
-
 
 #supersized-loader { position:fixed; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em;}
 

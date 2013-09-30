@@ -709,10 +709,15 @@ span.content_rating{
 // Single page menu space
 // ------------------------
 .tripodFtBlog {
+	height: 100%;
 	.wrapper-menu{
 		.navbar{
 			margin-bottom: 0;
 		}
+	}
+	.wrapper-footer{
+		padding-top: 0;
+		border-top: 10px solid @color_one;
 	}
 	#menu{
 		margin-bottom: 0;
@@ -720,6 +725,15 @@ span.content_rating{
 	#bottom-menu{
 		background-color: @color_one;
 		padding-bottom: 10px;
+	}
+	#header{
+		height: 100%;
+		margin-bottom: 0;
+		.box-sizing(border-box);
+	}
+	#footer.sticky{
+		position: static !important;
+		bottom: auto;
 	}
 }
 #spanRestScrollingMenuWrapper{
@@ -1131,18 +1145,27 @@ div:first-child+.panel{
 	width:100%;
 	z-index:-999;
 }
-#supersized img {width:auto; height:auto; position:relative; display:none; outline:none; border:none; left: 0 !important; }
+#supersized img {
+	width:auto; 
+	height:auto; 
+	position:relative; 
+	display:none; 
+	outline:none; 
+	border:none; 
+	left: 0;
+	max-width: inherit;
+}
 #supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }	/*Speed*/
 #supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }			/*Quality*/
 
 #supersized li {
 	display:block;
-	height:90%;
+	height:97%;
 	left:0;
 	list-style:none;
 	overflow:hidden;
 	position:fixed;
-	top:8%;
+	top:10px;
 	width:100%;
 	z-index:-30;
 }

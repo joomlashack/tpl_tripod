@@ -1,14 +1,6 @@
 @media (max-width: 979px) {
 
 	.navbar{
-		.btn-navbar{
-			border: 0;
-			.icon-bar{
-				background-color: #8F6B00;
-				box-shadow: none;
-				width: 27px;
-			}
-		}
 		.nav{
 			display: block;
 			> li > a{
@@ -23,7 +15,6 @@
 	}
 
 	.wrapper-toolbar{
-
 		.navbar .btn-navbar{
 			height: 19px;
 			margin: 0;
@@ -32,11 +23,12 @@
 			right: 20px;
 			width: 28px;
 			z-index: 4;
+			border-radius: 3px;
 		}
 
 		.nav-collapse{
 			&.in.collapse{
-			 	margin-top: 40px;
+			 	padding-top: 40px;
 			}
 		}
 		#toolbar .navbar-inner .collapsedToolbarInner {
@@ -69,6 +61,22 @@
 			background-image: none;
 			filter: none;
 			padding-top: 10px;
+		}
+	}
+
+	.tripodFtBlog {
+		.toolbar{
+			.navbar{
+				.navbar-inner{
+					background-image: none;
+					filter:none;
+					background-color: transparent;
+					padding-top: 0;
+					.nav-collapse{
+						background-color: @navbarBackground;
+					}
+				}
+			}
 		}
 	}
 

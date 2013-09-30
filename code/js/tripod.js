@@ -103,46 +103,5 @@ jQuery(function() {
         }
     }
 
-    function doSinglePageResize() {
-        var htoolbar = jQuery('div.wrapper-toolbar').height();
-        var hbottommenu = jQuery('div.wrapper-bottom-menu').height();
-        var hfooter = jQuery('div.wrapper-footer').height();
-
-        var ho = jQuery(window).height() - htoolbar;
-        var c = jQuery('.singlepage_section').length;
-        if (c > 0) {
-            jQuery('.singlepage_section').each(function (i) {
-                if (i == c-1) {
-                    jQuery(this).css('min-height');
-                    jQuery(this).css('padding-top');
-                    var hf = ho - hbottommenu - hfooter;
-                    if (hf > 0 && jQuery(this).height() < ho) {
-                        var divp = (hf - jQuery(this).height()) / 2;
-                        var divh = hf - divp;
-                        jQuery(this).css('min-height',divh).css('padding-top',divp);
-                    }
-                }
-                else {
-                    jQuery(this).css('min-height');
-                    var s = ho-jQuery(this).height();
-                    if (jQuery(this).height() < ho) {
-                        var divp = s / 2;
-                        var divh = ho - divp;
-                        jQuery(this).css('min-height',divh).css('padding-top',divp);
-                    }
-                }
-            });
-        }
-    }
-
-    jQuery(window).resize(function() {
-        doSinglePageResize();
-    }).trigger("resize");
-
-    jQuery(document).load(function() {
-        doSinglePageResize();
-    });
-
     setSinglePageTitles();
-    doSinglePageResize();
 });

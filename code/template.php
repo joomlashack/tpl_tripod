@@ -18,53 +18,8 @@ defined('_JEXEC') or die('Restricted access');
 <html>
 <head>
     <w:head />
-    <script type="text/javascript">
-        var singlescrollingpage = <?php echo ($this->params->get("singleScrollingPage","1") == "1" ? "true" : "false"); ?>;
-        var singlepage_titles = new Array();
-        singlepage_titles['top'] = '<?php echo $this->params->get('navmenu_top','' ); ?>';
-        singlepage_titles['featured'] = '<?php echo $this->params->get('navmenu_featured','' ); ?>';
-        singlepage_titles['category_description'] = '<?php echo $this->params->get('navmenu_category_description','' ); ?>';
-        singlepage_titles['more_articles'] = '<?php echo $this->params->get('navmenu_more_articles','' ); ?>';
-        singlepage_titles['subcategories'] = '<?php echo $this->params->get('navmenu_subcategories','' ); ?>';
-        singlepage_titles['bottom'] = '<?php echo $this->params->get('navmenu_bottom','' ); ?>';
-        var singlepage_navmenu_scroll_speed = '<?php echo $this->params->get('navmenu_scroll_speed','2000' ); ?>';
-    </script>
-
-    <?php if ($tripodSlideshow) : ?>
-        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_tripod/js/jquery.easing.min.js"></script>
-
-        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_tripod/js/supersized.3.2.7.min.js"></script>
-        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_tripod/js/supersized.shutter.min.js"></script>
-
-        <script type="text/javascript">
-
-            jQuery(function($){
-
-                $.supersized({
-
-
-                    // Functionality
-                    slide_interval          :   3000,       // Length between transitions
-                    transition              :   1,          // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-                    transition_speed        :   700,        // Speed of transition
-
-                    // Components
-                    slide_links             :   'blank',    // Individual links for each slide (Options: false, 'num', 'name', 'blank')
-                    slides                  :   [           // Slideshow Images
-                                                        {image : '<?php echo $slideshowImageOneRute; ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo $slideshowImageTwoRute; ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo $slideshowImageThreeRute ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo $slideshowImageFourRute ?>', title : 'Image Title', thumb : '', url : ''},
-                                                ]
-
-
-                });
-            });
-
-        </script>
-    <?php endif; ?>
 </head>
-<body class="<?php echo $responsive . $tripodFtBlogClass . $tripodToolbarDisplayedClass?>" id="skrollr-body">
+<body class="<?php echo $responsive . $tripodFtBlogClass . $tripodToolbarDisplayedClass?>">
     <?php if ($this->countModules('toolbar')) : ?>
             <!-- toolbar -->
             <div class="toolbar <?php echo ($tripodToolbarDisplayed ? '' : 'collapse'); ?>">
@@ -105,26 +60,26 @@ defined('_JEXEC') or die('Restricted access');
             <?php endif; ?>
             <?php if ($tripodSlideshow) : ?>
                 <div class="tripod-slideshow-wrapper-icons">
-                <?php if ($iconOne != "-1") : ?>
-                    <div class="tripod-slideshow-icon">
-                        <img src="<?php  echo $iconOne; ?>" alt="">
-                    </div>
-                <?php endif; ?>
-                <?php if ($iconTwo != "-1") : ?>
-                    <div class="tripod-slideshow-icon">
-                        <img src="<?php  echo $iconTwo; ?>" alt="">
-                    </div>
-                <?php endif; ?>
-                <?php if ($iconThree != "-1") : ?>
-                    <div class="tripod-slideshow-icon">
-                        <img src="<?php  echo $iconThree; ?>" alt="">
-                    </div>
-                <?php endif; ?>
-                <?php if ($iconFour != "-1") : ?>
-                    <div class="tripod-slideshow-icon">
-                        <img src="<?php  echo $iconFour; ?>" alt="">
-                    </div>
-                <?php endif; ?>
+                    <?php if ($iconOne != "-1") : ?>
+                        <div class="tripod-slideshow-icon">
+                            <img src="<?php  echo $iconOne; ?>" alt="">
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($iconTwo != "-1") : ?>
+                        <div class="tripod-slideshow-icon">
+                            <img src="<?php  echo $iconTwo; ?>" alt="">
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($iconThree != "-1") : ?>
+                        <div class="tripod-slideshow-icon">
+                            <img src="<?php  echo $iconThree; ?>" alt="">
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($iconFour != "-1") : ?>
+                        <div class="tripod-slideshow-icon">
+                            <img src="<?php  echo $iconFour; ?>" alt="">
+                        </div>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
 
@@ -236,8 +191,6 @@ defined('_JEXEC') or die('Restricted access');
         <w:nav containerClass="bottom-menu" name="bottom-menu" />
     <?php endif; ?>
 
-    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_tripod/js/tripod.js'></script>
-
     <!-- footer -->
     <div class="wrapper-footer">
         <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
@@ -249,6 +202,73 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </footer>
     </div>
+
+
+    <?php if ($tripodSlideshow) : ?>
+        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_tripod/js/supersized.min.js"></script>
+        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_tripod/js/jquery.easing.min.js"></script>
+
+
+        <script type="text/javascript">
+
+            jQuery(function(){
+                jQuery.supersized({
+                    // Functionality
+                    slideshow : 1, // Slideshow on/off
+                    autoplay : 1, // Slideshow starts playing automatically
+                    start_slide : 1, // Start slide (0 is random)
+                    stop_loop : 0, // Pauses slideshow on last slide
+                    random : 0, // Randomize slide order (Ignores start slide)
+                    slide_interval : 12000, // Length between transitions
+                    transition : 2, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+                    transition_speed : 300, // Speed of transition
+                    new_window : 1, // Image links open in new window/tab
+                    pause_hover : 0, // Pause slideshow on hover
+                    keyboard_nav : 1, // Keyboard navigation on/off
+                    performance : 1, // 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+                    image_protect : 1, // Disables image dragging and right click with Javascript
+                    // Size & Position
+                    min_width : 0, // Min width allowed (in pixels)
+                    min_height : 0, // Min height allowed (in pixels)
+                    vertical_center : 1, // Vertically center background
+                    horizontal_center : 1, // Horizontally center background
+                    fit_always : 0, // Image will never exceed browser width or height (Ignores min. dimensions)
+                    fit_portrait : 1, // Portrait images will not exceed browser height
+                    fit_landscape : 0, // Landscape images will not exceed browser width
+                    // Components
+                    slide_links : 'blank', // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+                    thumb_links : 0, // Individual thumb links for each slide
+                    thumbnail_navigation : 0, // Thumbnail navigation
+                    slides                  :   [           // Slideshow Images
+                                                        {image : '<?php echo $slideshowImageOneRute; ?>', title : 'Image Title', thumb : '', url : ''},
+                                                        {image : '<?php echo $slideshowImageTwoRute; ?>', title : 'Image Title', thumb : '', url : ''},
+                                                        {image : '<?php echo $slideshowImageThreeRute ?>', title : 'Image Title', thumb : '', url : ''},
+                                                        {image : '<?php echo $slideshowImageFourRute ?>', title : 'Image Title', thumb : '', url : ''},
+                                                ]
+
+
+                });
+            });
+
+
+        </script>
+    <?php endif; ?>
+
+
+
+       <script type="text/javascript">
+        var singlescrollingpage = <?php echo ($this->params->get("singleScrollingPage","1") == "1" ? "true" : "false"); ?>;
+        var singlepage_titles = new Array();
+        singlepage_titles['top'] = '<?php echo $this->params->get('navmenu_top','' ); ?>';
+        singlepage_titles['featured'] = '<?php echo $this->params->get('navmenu_featured','' ); ?>';
+        singlepage_titles['category_description'] = '<?php echo $this->params->get('navmenu_category_description','' ); ?>';
+        singlepage_titles['more_articles'] = '<?php echo $this->params->get('navmenu_more_articles','' ); ?>';
+        singlepage_titles['subcategories'] = '<?php echo $this->params->get('navmenu_subcategories','' ); ?>';
+        singlepage_titles['bottom'] = '<?php echo $this->params->get('navmenu_bottom','' ); ?>';
+        var singlepage_navmenu_scroll_speed = '<?php echo $this->params->get('navmenu_scroll_speed','2000' ); ?>';
+    </script>
+
+    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_tripod/js/tripod.js'></script>
 
 </body>
 </html>

@@ -484,6 +484,10 @@ select{
 .big-text(){
 	font-size: 24px;
 	line-height: 30px;
+	@media (max-width:767px) {
+		font-size: 21px;
+		line-height: 27px;
+	}
 }
 
 .hero-unit{
@@ -1157,12 +1161,12 @@ div:first-child+.panel{
 	z-index:-999;
 }
 #supersized img {
-	width:auto; 
-	height:auto; 
-	position:relative; 
-	display:none; 
-	outline:none; 
-	border:none; 
+	width:auto;
+	height:auto;
+	position:relative;
+	display:none;
+	outline:none;
+	border:none;
 	left: 0;
 	max-width: inherit;
 }
@@ -1176,7 +1180,7 @@ div:first-child+.panel{
 	list-style:none;
 	overflow:hidden;
 	position:fixed;
-	top:10px;
+	top:10px !important;
 	width:100%;
 	z-index:-30;
 }

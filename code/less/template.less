@@ -579,9 +579,25 @@ select{
 .label{
 	border-radius: 0 0 0 0;
 }
-.label-success, .badge-success{	background-color: @successBackground; }
-.label-important, .badge-important{ background-color: @errorBackground;}
-.label-info, .badge-info{background-color: @infoBackground;}
+.label-success, .badge-success{
+	background-color: @successBackground;
+	&[href]{
+		background-color: @successBackground;
+	}
+}
+.label-important, .badge-important{
+	background-color: @errorBackground;
+	&[href]{
+		background-color: @errorBackground;
+	}
+}
+
+.label-info, .badge-info{
+	background-color: @infoBackground;
+	&[href]{
+		background-color: @infoBackground;
+	}
+}
 
 // warning
 .control-group.warning .control-label, .control-group.warning .help-block, .control-group.warning .help-inline{
@@ -1075,6 +1091,7 @@ div:first-child+.panel{
 }
 [class*="newsflash"]{
 	font-size: 14px;
+	.clearfix();
 	h1,h2,h3,h4,h5,h6{
 		color : @color_two;
 		font-family: @sansFontFamily;
@@ -1228,4 +1245,7 @@ div:first-child+.panel{
 			position: fixed;
 		}
 	}
+}
+.stats-module{
+	.clearfix();
 }

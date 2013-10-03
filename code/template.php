@@ -27,7 +27,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
 
             <?php if (!$tripodToolbarDisplayed) : ?>
-                <div class="visible-desktop" data-toggle="collapse" data-target=".toolbar">
+                <div class="visible-desktop top-menu-toggler" data-toggle="collapse" data-target=".toolbar">
                     <div class="btn btn-primary toolbar-collapse-btn">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>

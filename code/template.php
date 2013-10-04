@@ -240,10 +240,10 @@ defined('_JEXEC') or die('Restricted access');
                     thumb_links : 0, // Individual thumb links for each slide
                     thumbnail_navigation : 0, // Thumbnail navigation
                     slides                  :   [           // Slideshow Images
-                                                        {image : '<?php echo $slideshowImageOneRute; ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo $slideshowImageTwoRute; ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo $slideshowImageThreeRute ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo $slideshowImageFourRute ?>', title : 'Image Title', thumb : '', url : ''},
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>', title : 'Image Title', thumb : '', url : ''},
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>', title : 'Image Title', thumb : '', url : ''},
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>', title : 'Image Title', thumb : '', url : ''},
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>', title : 'Image Title', thumb : '', url : ''},
                                                 ]
 
 

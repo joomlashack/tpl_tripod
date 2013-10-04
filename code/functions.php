@@ -80,7 +80,7 @@ $slideshowImageThree = checkImage($this->params->get("slideshowImageThree", ""),
 $slideshowImageFour = checkImage($this->params->get("slideshowImageFour", ""), "templates/js_tripod/images/default-bg-four.jpg");
 
 function slideshowSetRutDefult($slideItem){
-    $slideItemRute = str_replace(JPATH_BASE. "/","",$slideItem);
+    $slideItemRute = str_replace(JPATH_BASE,'',$slideItem);
     return $slideItemRute;
 }
 

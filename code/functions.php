@@ -54,6 +54,15 @@ $tripodFtBlogClass = ($tripodFullWidthBg ? ' tripodFtBlog' : '');
 
 $sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));  // check if there's a sidebar at all
 
+$blog = (JRequest::getVar('view','') == 'category' ? JRequest::getVar('view','') : '');
+$blogFt = (JRequest::getVar('view','') == 'featured' ? JRequest::getVar('view','') : '');
+
+$blogs = false;
+if ($blog == 'category' or $blogFt == 'featured'){
+    $blogs = true;
+}
+
+
 $mainContainer = $containerClass;
 $mainGridMode = $gridMode;
 $mainSpan = 'span12';
@@ -62,7 +71,7 @@ $mainComplementContainer = '';
 $mainComplementGridMode = '';
 $mainComplementSpan = '';
 $wrightTemplate = WrightTemplate::getInstance();
-if ($tripodFullWidthBg && $sidebarExists == '') {
+if ($tripodFullWidthBg && $sidebarExists == '' && $blogs) {
     $mainContainer = '';
     $mainGridMode = '';
     $wrightTemplate->useMainSpans = false;

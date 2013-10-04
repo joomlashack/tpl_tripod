@@ -3,12 +3,10 @@ jQuery(function() {
     if (singlescrollingpage) {
         var resizeClass = "div.blog > div.category-desc";
         var resizeClass2 = "div.blog > div.items-leading > [class^=leading-]";
-        var resizeClass3 = "div.blog > *:not(.clearfix)*:not(.pagination)*:not(h1)*:not(h2)*:not(.items-leading)*:not(.category-desc)*:not(.page-header)*:not(.items-more)*:not(.cat-children)";
 
         if (!jQuery('div.blog').length) {
             resizeClass = "div.blog-featured > div.category-desc";
             resizeClass2 = "div.blog-featured > div.items-leading > [class^=leading-]";
-            resizeClass3 = "div.blog-featured > *:not(.clearfix)*:not(.pagination)*:not(h1)*:not(h2)*:not(.items-leading)*:not(.category-desc)*:not(.page-header)*:not(.items-more)*:not(.cat-children)";
         }
     }
 
@@ -16,11 +14,10 @@ jQuery(function() {
         var htoolbar = jQuery('div.wrapper-toolbar').height();
         var htop = jQuery('#header').height() + jQuery('div.wrapper-toolbar').height();
 
-        var c = jQuery(resizeClass).length + jQuery(resizeClass2).length + jQuery(resizeClass3).length;
+        var c = jQuery(resizeClass).length + jQuery(resizeClass2).length;
 
         console.log(jQuery(resizeClass));
         console.log(jQuery(resizeClass2));
-        console.log(jQuery(resizeClass3));
 
         if (c > 0) {
             var elems = [];
@@ -68,17 +65,6 @@ jQuery(function() {
 
             var ppost = 0;
             jQuery(resizeClass2).each(function (post) {
-                if (ppost%2 == 0)
-                    class2 = 'color_one';
-                else
-                    class2 = 'color_two';
-                jQuery(this).attr('id','singlepage_post_' + ppost)
-                        .addClass('singlepage_section')
-                        .addClass(class2);
-                ppost++;
-            });
-
-            jQuery(resizeClass3).each(function (post) {
                 if (ppost%2 == 0)
                     class2 = 'color_one';
                 else

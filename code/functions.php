@@ -54,11 +54,11 @@ $tripodFtBlogClass = ($tripodFullWidthBg ? ' tripodFtBlog' : '');
 
 $sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));  // check if there's a sidebar at all
 
-$blog = (JRequest::getVar('view','') == 'category' ? JRequest::getVar('view','') : '');
+$blog = (JRequest::getVar('layout','') == 'blog' ? JRequest::getVar('layout','') : '');
 $blogFt = (JRequest::getVar('view','') == 'featured' ? JRequest::getVar('view','') : '');
 
 $blogs = false;
-if ($blog == 'category' or $blogFt == 'featured'){
+if ($blog == 'blog' or $blogFt == 'featured'){
     $blogs = true;
 }
 

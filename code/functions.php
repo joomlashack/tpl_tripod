@@ -49,8 +49,6 @@ $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_tripod
 
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
 
-$tripodFullWidthBg = ($this->params->get('singleScrollingPage','1') == '1' ? true : false);
-$tripodFtBlogClass = ($tripodFullWidthBg ? ' tripodFtBlog' : '');
 
 $sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));  // check if there's a sidebar at all
 
@@ -71,6 +69,12 @@ if ($blog == 'blog' || $blogFt){
     $blogs = true;
 }
 
+$tripodFullWidthBg = ($this->params->get('singleScrollingPage','1') == '1' ? true : false);
+$tripodFtBlogClass = '';
+
+if ($blogs && $tripodFullWidthBg){
+    $tripodFtBlogClass = ' tripodFtBlog';
+}
 
 $mainContainer = $containerClass;
 $mainGridMode = $gridMode;

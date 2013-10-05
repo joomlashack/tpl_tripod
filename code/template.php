@@ -38,7 +38,7 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
     <!-- header -->
     <header id="header" class="clearfix <?php echo (!$tripodSlideshow ? '' : 'tripodSlideshow');  ?>">
-        <?php if ($bg != '-1' && !$tripodSlideshow) : ?>
+        <?php if ($bg && !$tripodSlideshow) : ?>
             <div class="bg-wrapp">
                 <div class="bg-wrapp-inner">
                         <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
@@ -140,7 +140,12 @@ defined('_JEXEC') or die('Restricted access');
                         <?php endif; ?>
                         <?php if ($this->countModules('breadcrumbs')) : ?>
                             <!-- breadcrumbs -->
-                            <div id="breadcrumbs" <?php echo (!$blogs ? '' : 'class="$containerClass"'); ?>>
+                            <?php
+                                if ($blogs) {
+                                   $breadcrumbsClass = $containerClass;
+                                }
+                             ?>
+                            <div id="breadcrumbs" class="<?php echo $breadcrumbsClass;?>">
                                 <w:module type="single" name="breadcrumbs" chrome="none" />
                             </div>
                         <?php endif; ?>

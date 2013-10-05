@@ -753,11 +753,6 @@ span.content_rating{
 		background-color: @color_one;
 		margin-bottom: 0;
 	}
-	#header{
-		height: 100%;
-		margin-bottom: 0;
-		.box-sizing(border-box);
-	}
 	#footer.sticky{
 		position: static !important;
 		bottom: auto;
@@ -1167,6 +1162,9 @@ p.img_caption{
 }
 #header{
 	&.tripodSlideshow{
+		.box-sizing(border-box);
+		height: 100%;
+		margin-bottom: 0;
 		padding-bottom: 150px;
 		padding-top: 160px;
 		#logo{

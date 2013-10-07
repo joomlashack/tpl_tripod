@@ -254,8 +254,11 @@ defined('_JEXEC') or die('Restricted access');
                                                         {image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>', title : 'Image Title', thumb : '', url : ''},
                                                         {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>', title : 'Image Title', thumb : '', url : ''},
                                                         {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>', title : 'Image Title', thumb : '', url : ''},
-                                                ]
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>', title : 'Image Title', thumb : '', url : ''}
+                                                ],
+                    // Theme Options
+                    progress_bar            :   0,          // Timer for each slide
+                    mouse_scrub             :   0
 
 
                 });

@@ -5,28 +5,15 @@
 .nav-tabs{
 	h3 , p , > li {
 		a{
-			&:hover{
-				background-image: url(../../images/yellow-black/nav-tabs-item-hover-left.png),url(../../images/yellow-black/nav-tabs-item-hover-right.png);
+			&:before{
+				background-image: url(../../images/yellow-black/nav-tabs-item-hover-left.png);
 			}
-		}
-	}
-	>.open {
-		h3 , p {
-			a{
-				background-image: url(../../images/yellow-black/nav-tabs-item-hover-left.png),url(../../images/yellow-black/nav-tabs-item-hover-right.png);
+			&:after{
+				background-image: url(../../images/yellow-black/nav-tabs-item-hover-right.png);
 			}
-		}
-		.dropdown-toggle{
-			background-image: url(../../images/yellow-black/nav-tabs-item-hover-left.png),url(../../images/yellow-black/nav-tabs-item-hover-right.png);
-		}
-	}
-	> .active{
-		a{
-			background-image: url(../../images/yellow-black/nav-tabs-item-hover-left.png),url(../../images/yellow-black/nav-tabs-item-hover-right.png);
 		}
 	}
 }
-
 
 // Breadcrumb
 // ------------------------
@@ -34,7 +21,12 @@
 .breadcrumb{
 	> li {
 		&:last-child{
-			background-image: url(../../images/yellow-black/breadcrumb-item-active-left.png),url(../../images/yellow-black/breadcrumb-item-active-right.png);
+			&:before{
+				background-image: url(../../images/yellow-black/breadcrumb-item-active-left.png);
+			}
+			&:after{
+				background-image: url(../../images/yellow-black/breadcrumb-item-active-right.png);
+			}
 		}
 	}
 }
@@ -63,17 +55,24 @@ blockquote{
 // Navbar
 .navbar {
 	.nav {
-		> li:hover {
+		> li {
 			> a{
-				background-image: url(../../images/yellow-black/nav-tabs-item-hover-left.png),url(../../images/yellow-black/nav-tabs-item-hover-right.png);
+				&:before{
+					background-image: url(../../images/yellow-black/nav-tabs-item-hover-left.png);
+				}
+				&:after{
+					background-image: url(../../images/yellow-black/nav-tabs-item-hover-right.png);
+				}
 			}
-		}
-		>.active>a, >.active>a:hover, >.active>a:focus{
-			background-image: url(../../images/yellow-black/nav-tabs-item-hover-left.png),url(../../images/yellow-black/nav-tabs-item-hover-right.png);
 		}
 	}
 }
 // mod-articles-category-date
 .mod-articles-category-date{
-	background-image: url(../../images/yellow-black/breadcrumb-item-active-left.png),url(../../images/yellow-black/breadcrumb-item-active-right.png);
+	&:before{
+		background-image: url(../../images/yellow-black/breadcrumb-item-active-left.png);
+	}
+	&:after{
+		background-image: url(../../images/yellow-black/breadcrumb-item-active-right.png);
+	}
 }

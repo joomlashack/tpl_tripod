@@ -251,10 +251,10 @@ defined('_JEXEC') or die('Restricted access');
                     thumbnail_navigation    :   0,          // Thumbnail navigation
 
                     slides                  :   [           // Slideshow Images
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>', title : 'Image Title', thumb : '', url : ''},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>', title : 'Image Title', thumb : '', url : ''}
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>'},
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>'},
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>'},
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>'}
                                                 ],
                     // Theme Options
                     progress_bar            :   0,          // Timer for each slide

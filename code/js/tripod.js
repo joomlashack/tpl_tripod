@@ -25,7 +25,7 @@ jQuery(function() {
 
             jQuery('<div/>', {
                     id: 'singlepage_blog_titles_wrapper',
-                    class: 'navbar',
+                    addClass: 'navbar',
                     html: jQuery('div#singlepage_blog_titles').html(),
             })
                     .appendTo('#spanScrollingMenuWrapper');

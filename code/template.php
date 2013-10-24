@@ -59,8 +59,11 @@ defined('_JEXEC') or die('Restricted access');
         <div class="header-inner">
             <w:logo />
             <?php if ($this->countModules('top')) : ?>
-                <w:module type="none" name="top" chrome="xhtml" />
+                <div class="top-position">
+                    <w:module type="none" name="top" chrome="xhtml" />
+                </div>
             <?php endif; ?>
+
             <?php if ($tripodSlideshow) : ?>
                 <div class="tripod-slideshow-wrapper-icons">
                     <?php if ($iconOne != "-1") : ?>

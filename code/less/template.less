@@ -1012,7 +1012,7 @@ span.content_rating{
 		}
 	}
 	.bg-filter{
-		background-color: @black;
+		background-color: @color_one;
 		height: 100%;
 		left: 0;
 		position: absolute;
@@ -1040,7 +1040,7 @@ span.content_rating{
 	// Slideshow menu
 	.tripod-slideshow-wrapper-icons{
 		display: table;
-		margin: 0 auto;
+		margin: 10px auto 0;
 		.tripod-slideshow-icon{
 			display: inline-block;
 			margin-left: 18px;
@@ -1057,6 +1057,13 @@ span.content_rating{
 				margin-left: 0;
 			}
 		}
+	}
+	.top-position{
+		color: @color_two;
+		font-size: @baseFontSize + 5;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1em;
 	}
 }
 
@@ -1392,6 +1399,10 @@ mod-articles-category-introtext{
 			display: table;
 			padding: 40px 120px;
 			width: auto;
+		}
+		.top-position{
+			background-color: rgba(0,0,0,0.7);
+			display: table;
 		}
 	}
 }

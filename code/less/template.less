@@ -1168,23 +1168,28 @@ div:first-child+.panel{
 	line-height: 17px;
 }
 // ------------------------
+.wrapper-footer{
+	border-bottom: 10px solid @bodyBackground;
+	border-top: 10px solid @bodyBackground;
+}
 #footer{
 	background-color: @color_two;
 	background-image: none;
 	color : @color_five;
 	filter:none;
-	padding-top: 10px;
 	-webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
 			box-sizing: border-box;
 	.footer-content{
 		font-size: 12px;
+		padding-top: 10px;
 		a{
 			color : @color_five;
 		}
 	}
 	&.sticky{
 		border-bottom: 10px solid @bodyBackground;
+		border-top: 10px solid @bodyBackground;
 	}
 	.navbar{
 		.nav {
@@ -1207,10 +1212,6 @@ div:first-child+.panel{
 			}
 		}
 	}
-}
-.wrapper-footer{
-	border-bottom: 10px solid @color_one;
-	border-top: 10px solid @color_one;
 }
 
 //Portfolio

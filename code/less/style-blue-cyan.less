@@ -120,3 +120,50 @@ blockquote{
 		color : @textColor;
 	}
 }
+
+#header{
+	.bg-filter{
+		background-color: fade(@color_one, 50%);
+	}
+	.tripod-slideshow-wrapper-icons{
+		.tripod-slideshow-icon{
+			background-color: fade(@color_one, 50%);
+		}
+	}
+}
+#header{
+	&.tripodSlideshow{
+		#logo{
+			background-color: fade(@color_one, 50%);
+		}
+		.top-position{
+			background-color: fade(@color_one, 50%);
+		}
+	}
+	.top-position{
+		color: @textColor;
+	}
+}
+
+.is_internet.v_8{
+	#header{
+		.bg-filter{
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7F004D75', endColorstr='#7F004D75');
+		}
+		.tripod-slideshow-wrapper-icons{
+			.tripod-slideshow-icon{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7F004D75', endColorstr='#7F004D75');
+			}
+		}
+	}
+	#header{
+		&.tripodSlideshow{
+			#logo{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7F004D75', endColorstr='#7F004D75');
+			}
+			.top-position{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7F004D75', endColorstr='#7F004D75');
+			}
+		}
+	}
+}

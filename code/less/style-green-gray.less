@@ -127,3 +127,54 @@ blockquote{
 legend{
 	color: @textColor;
 }
+
+#header{
+	.bg-filter{
+		background-color: fade(@color_one, 50%);
+	}
+	.tripod-slideshow-wrapper-icons{
+		.tripod-slideshow-icon{
+			background-color: fade(@color_one, 50%);
+		}
+	}
+}
+
+#header{
+	&.tripodSlideshow{
+		#logo{
+			background-color: fade(@color_one, 50%);
+		}
+		.top-position{
+			background-color: fade(@color_one, 50%);
+		}
+	}
+}
+
+.is_internet.v_8{
+	#header{
+		.bg-filter{
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7FC0D8C5', endColorstr='#7FC0D8C5');
+		}
+		.tripod-slideshow-wrapper-icons{
+			.tripod-slideshow-icon{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7FC0D8C5', endColorstr='#7FC0D8C5');
+			}
+		}
+	}
+	#header{
+		&.tripodSlideshow{
+			#logo{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7FC0D8C5', endColorstr='#7FC0D8C5');
+			}
+			.top-position{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#7FC0D8C5', endColorstr='#7FC0D8C5');
+			}
+		}
+	}
+}
+::selection{
+	color: @color_one;
+}
+::-moz-selection{
+	color: @color_one;
+}

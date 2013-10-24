@@ -101,3 +101,48 @@ blockquote{
 		color : @white;
 	}
 }
+
+#header{
+	.bg-filter{
+		background-color: fade(@black, 70%);
+	}
+	.tripod-slideshow-wrapper-icons{
+		.tripod-slideshow-icon{
+			background-color: fade(@black, 70%);
+		}
+	}
+}
+
+#header{
+	&.tripodSlideshow{
+		#logo{
+			background-color: fade(@black, 70%);
+		}
+		.top-position{
+			background-color: fade(@black, 70%);
+		}
+	}
+}
+
+.is_internet.v_8{
+	#header{
+		.bg-filter{
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B2000000', endColorstr='#B2000000');
+		}
+		.tripod-slideshow-wrapper-icons{
+			.tripod-slideshow-icon{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B2000000', endColorstr='#B2000000');
+			}
+		}
+	}
+	#header{
+		&.tripodSlideshow{
+			#logo{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B2000000', endColorstr='#B2000000');
+			}
+			.top-position{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B2000000', endColorstr='#B2000000');
+			}
+		}
+	}
+}

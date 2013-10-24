@@ -104,9 +104,53 @@ blockquote{
 		}
 	}
 }
-#header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon,#header.tripodSlideshow #logo{
-	background-color: rgba(255, 255, 255,0.6);
+#header{
+	.bg-filter{
+		background-color: rgba(255, 255, 255,0.6);
+	}
+	.tripod-slideshow-wrapper-icons{
+		.tripod-slideshow-icon{
+			background-color: rgba(255, 255, 255,0.6);
+		}
+	}
 }
+#header{
+	&.tripodSlideshow{
+		#logo{
+			background-color: rgba(255, 255, 255,0.6);
+		}
+		.top-position{
+			background-color: rgba(255, 255, 255,0.6);
+		}
+	}
+	.top-position{
+		color: @grayDark - 111;
+	}
+}
+
+.is_internet.v_8{
+	#header{
+		.bg-filter{
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4CFFFFFF', endColorstr='#4CFFFFFF');
+		}
+		.tripod-slideshow-wrapper-icons{
+			.tripod-slideshow-icon{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4CFFFFFF', endColorstr='#4CFFFFFF');
+			}
+		}
+	}
+	#header{
+		&.tripodSlideshow{
+			#logo{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4CFFFFFF', endColorstr='#4CFFFFFF');
+			}
+			.top-position{
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4CFFFFFF', endColorstr='#4CFFFFFF');
+			}
+		}
+	}
+}
+
 .pager li>a, .pager li>span{
 	border-color: @color_three;
 	color : @white;

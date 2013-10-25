@@ -91,25 +91,4 @@ jQuery(function() {
 
     setSinglePageTitles();
 
-    var theWindow        = jQuery(window),
-        $bg              = jQuery("#bg-header"),
-        aspectRatio      = $bg.width() / $bg.height();
-
-    function resizeBg() {
-        if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-            $bg
-                .removeClass()
-                .addClass('bgheight');
-        } else {
-            $bg
-                .removeClass()
-                .addClass('bgwidth');
-        }
-    }
-    resizeBg();
-
-    theWindow.resize(function() {
-        resizeBg();
-    }).trigger("resize");
-
 });

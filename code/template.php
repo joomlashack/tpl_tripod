@@ -67,24 +67,24 @@ defined('_JEXEC') or die('Restricted access');
             <?php if ($tripodSlideshow) : ?>
                 <div class="tripod-slideshow-wrapper-icons">
                     <?php if ($iconOne != "-1") : ?>
-                        <div class="tripod-slideshow-icon">
+                        <a href="#" class="tripod-slideshow-icon">
                             <img src="<?php  echo JURI::root(true) . $iconOne; ?>" alt="">
-                        </div>
+                        </a>
                     <?php endif; ?>
                     <?php if ($iconTwo != "-1") : ?>
-                        <div class="tripod-slideshow-icon">
+                        <a href="#" class="tripod-slideshow-icon">
                             <img src="<?php  echo JURI::root(true) . $iconTwo; ?>" alt="">
-                        </div>
+                        </a>
                     <?php endif; ?>
                     <?php if ($iconThree != "-1") : ?>
-                        <div class="tripod-slideshow-icon">
+                        <a href="#" class="tripod-slideshow-icon">
                             <img src="<?php  echo JURI::root(true) . $iconThree; ?>" alt="">
-                        </div>
+                        </a>
                     <?php endif; ?>
                     <?php if ($iconFour != "-1") : ?>
-                        <div class="tripod-slideshow-icon">
+                        <a href="#" class="tripod-slideshow-icon">
                             <img src="<?php  echo JURI::root(true) . $iconFour; ?>" alt="">
-                        </div>
+                        </a>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>

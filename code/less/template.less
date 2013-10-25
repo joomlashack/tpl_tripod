@@ -1220,14 +1220,78 @@ div:first-child+.panel{
 // ------------------------
 .tripod-portfolio{
 	.clearfix();
-	[class*="span"]{
-		margin-left: 0 !important;
+	.span12{
+		width: 100% !important;
+	}
+	.span11{
+		width: 91.66666667% !important;
+	}
+	.span10{
+		width: 83.3333% !important;
+	}
+	.span9{
+		width: 75% !important;
+	}
+	.span8{
+		width: 66.66666667% !important;
+	}
+	.span7{
+		width: 58.3333% !important;
 	}
 	.span6{
 		width: 50% !important;
 	}
+	.span5{
+		width: 41.66666667% !important;
+	}
+	.span4{
+		width: 33.3333% !important;
+	}
 	.span3{
 		width: 25% !important;
+	}
+	.span2{
+		width: 16.66666667% !important;
+	}
+	.span1{
+		width: 8.3333% !important;
+	}
+	[class*="span"] ,[class*=" span"]{
+		cursor: pointer;
+		margin-left: 0 !important;
+		.desc-text{
+			display: none;
+		}
+	}
+	.row{
+		margin-left: 0 !important;
+	}
+	.container-fluid.active{
+		background-color: @color_three;
+		color : @white;
+		font-size: @baseFontSize + 1;
+		line-height: @baseLineHeight;
+		padding-bottom: 1.7em;
+		padding-top: 1.7em;
+
+		[class*="span"] ,[class*=" span"]{
+			cursor : auto;
+			width: 100% !important;
+
+			.desc-text{
+				display: block;
+				margin-top: 15px;
+				p:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.icon-remove{
+			color : #888888;
+			cursor: pointer;
+			font-size: 40px;
+		}
 	}
 }
 // Single Page

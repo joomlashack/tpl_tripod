@@ -107,12 +107,8 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="singlepage_pagefirst">
                     <?php if ($this->countModules('featured')) : ?>
                         <!-- featured -->
-                        <div id="featured" class="<?php echo $containerClass; ?>">
-                            <div class="<?php echo $gridMode; ?>">
-                                <div class="span12">
-                                    <w:module type="none" name="featured" chrome="xhtml" />
-                                </div>
-                            </div>
+                        <div id="featured">
+                            <w:module type="none" name="featured" chrome="xhtml" />
                         </div>
                     <?php endif; ?>
                     <?php if ($this->countModules('grid-top')) : ?>

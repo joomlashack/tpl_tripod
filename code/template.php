@@ -66,26 +66,28 @@ defined('_JEXEC') or die('Restricted access');
 
             <?php if ($tripodSlideshow) : ?>
                 <div class="tripod-slideshow-wrapper-icons">
-                    <?php if ($iconOne != "-1") : ?>
-                        <a href="#" class="tripod-slideshow-icon">
-                            <img src="<?php  echo JURI::root(true) . $iconOne; ?>" alt="">
-                        </a>
-                    <?php endif; ?>
-                    <?php if ($iconTwo != "-1") : ?>
-                        <a href="#" class="tripod-slideshow-icon">
-                            <img src="<?php  echo JURI::root(true) . $iconTwo; ?>" alt="">
-                        </a>
-                    <?php endif; ?>
-                    <?php if ($iconThree != "-1") : ?>
-                        <a href="#" class="tripod-slideshow-icon">
-                            <img src="<?php  echo JURI::root(true) . $iconThree; ?>" alt="">
-                        </a>
-                    <?php endif; ?>
-                    <?php if ($iconFour != "-1") : ?>
-                        <a href="#" class="tripod-slideshow-icon">
-                            <img src="<?php  echo JURI::root(true) . $iconFour; ?>" alt="">
-                        </a>
-                    <?php endif; ?>
+                   <div class="row-fluid">
+                        <?php if ($iconOne != "-1") : ?>
+                           <a href="#" class="tripod-slideshow-icon span3">
+                               <img src="<?php  echo JURI::root(true) . $iconOne; ?>" alt="">
+                           </a>
+                       <?php endif; ?>
+                       <?php if ($iconTwo != "-1") : ?>
+                           <a href="#" class="tripod-slideshow-icon span3">
+                               <img src="<?php  echo JURI::root(true) . $iconTwo; ?>" alt="">
+                           </a>
+                       <?php endif; ?>
+                       <?php if ($iconThree != "-1") : ?>
+                           <a href="#" class="tripod-slideshow-icon span3">
+                               <img src="<?php  echo JURI::root(true) . $iconThree; ?>" alt="">
+                           </a>
+                       <?php endif; ?>
+                       <?php if ($iconFour != "-1") : ?>
+                           <a href="#" class="tripod-slideshow-icon span3">
+                               <img src="<?php  echo JURI::root(true) . $iconFour; ?>" alt="">
+                           </a>
+                       <?php endif; ?>
+                   </div>
                 </div>
             <?php endif; ?>
 

@@ -16,9 +16,6 @@ jQuery(function() {
 
         var c = jQuery(resizeClass).length + jQuery(resizeClass2).length;
 
-        console.log(jQuery(resizeClass));
-        console.log(jQuery(resizeClass2));
-
         if (c > 0) {
             var elems = [];
             var j = 0;
@@ -39,31 +36,34 @@ jQuery(function() {
             jQuery('ul li#nav_singlepage_subcategories a').html(singlepage_titles['subcategories']);
             jQuery('ul li#nav_singlepage_pagelast a').html(singlepage_titles['bottom']);
 
+            var ppost = 0;
             if (jQuery('#singlepage_pagefirst').length) {
+                if (ppost%2 == 0)
+                    class2 = 'color_one';
+                else
+                    class2 = 'color_two';
                 jQuery('#nav_singlepage_pagefirst').css('display','block');
-                jQuery('#singlepage_pagefirst').addClass('singlepage_section');
-            }
-            if (jQuery('#singlepage_pagelast').length) {
-                jQuery('#nav_singlepage_pagelast').css('display','block');
-                jQuery('#singlepage_pagelast').addClass('singlepage_section');
+                jQuery('#singlepage_pagefirst').addClass('singlepage_section')
+                        .addClass(class2);
+                ppost++;
             }
             if (jQuery('.category-desc').length) {
                 jQuery('#nav_singlepage_catdesc').css('display','block');
                 jQuery('.category-desc').addClass('singlepage_section')
                         .attr('id','singlepage_catdesc');
             }
-            if (jQuery('.items-more').length) {
-                jQuery('#nav_singlepage_morearticles').css('display','block');
-                jQuery('.items-more').addClass('singlepage_section')
-                        .attr('id','singlepage_morearticles');
-            }
-            if (jQuery('.cat-children').length) {
-                jQuery('#nav_singlepage_subcategories').css('display','block');
-                jQuery('.cat-children').addClass('singlepage_section')
-                        .attr('id','singlepage_subcategories');
-            }
 
-            var ppost = 0;
+            var class2 = '';
+            jQuery(resizeClass).each(function (post) {
+                if (ppost%2 == 0)
+                    class2 = 'color_one';
+                else
+                    class2 = 'color_two';
+                jQuery(this).attr('id','singlepage_post_' + ppost)
+                        .addClass('singlepage_section')
+                        .addClass(class2);
+                ppost++;
+            });
             jQuery(resizeClass2).each(function (post) {
                 if (ppost%2 == 0)
                     class2 = 'color_one';
@@ -74,6 +74,39 @@ jQuery(function() {
                         .addClass(class2);
                 ppost++;
             });
+
+            if (jQuery('.items-more').length) {
+                if (ppost%2 == 0)
+                    class2 = 'color_one';
+                else
+                    class2 = 'color_two';
+                jQuery('#nav_singlepage_morearticles').css('display','block');
+                jQuery('.items-more').addClass('singlepage_section')
+                        .attr('id','singlepage_morearticles')
+                        .addClass(class2);
+                ppost++;
+            }
+            if (jQuery('.cat-children').length) {
+                if (ppost%2 == 0)
+                    class2 = 'color_one';
+                else
+                    class2 = 'color_two';
+                jQuery('#nav_singlepage_subcategories').css('display','block');
+                jQuery('.cat-children').addClass('singlepage_section')
+                        .attr('id','singlepage_subcategories')
+                        .addClass(class2);
+                ppost++;
+            }
+            if (jQuery('#singlepage_pagelast').length) {
+                if (ppost%2 == 0)
+                    class2 = 'color_one';
+                else
+                    class2 = 'color_two';
+                jQuery('#nav_singlepage_pagelast').css('display','block');
+                jQuery('#singlepage_pagelast').addClass('singlepage_section')
+                        .addClass(class2);
+                ppost++;
+            }
 
             singlepage_navmenu_scroll_speed = parseInt(singlepage_navmenu_scroll_speed);
             jQuery('#singlepage_blog_titles_wrapper ul li a').click(function () {

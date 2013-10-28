@@ -1,4 +1,24 @@
-@media (max-width: 979px) {
+@media (min-width: 1200px){
+	.pixelMode{
+		#featured{
+			[class^="module"]{
+				> h3{
+					width: 1170px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 979px) and (min-width: 768px){
+	.pixelMode{
+		#featured{
+			[class^="module"]{
+				> h3{
+					width: 724px;
+				}
+			}
+		}
+	}
 
 	.navbar{
 		.nav{
@@ -204,5 +224,24 @@
 	.bottom-page{
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	.pixelMode{
+		#featured{
+			[class^="module"]{
+				> h3{
+					width: auto;
+				}
+			}
+		}
+	}
+	.fluidMode{
+		#featured{
+			[class^="module"]{
+				> h3{
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
 	}
 }

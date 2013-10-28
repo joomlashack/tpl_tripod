@@ -22,7 +22,7 @@ defined('_JEXEC') or die('Restricted access');
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
 </head>
 
-<body class="<?php echo $responsive . $tripodFtBlogClass . $tripodToolbarDisplayedClass?>">
+<body class="<?php echo $responsive . $tripodFtBlogClass . $tripodToolbarDisplayedClass .$pixelClass?>">
     <?php if ($this->countModules('toolbar')) : ?>
             <!-- toolbar -->
             <div class="toolbar <?php echo ($tripodToolbarDisplayed ? '' : 'collapse'); ?>">

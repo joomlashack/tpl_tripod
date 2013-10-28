@@ -2,10 +2,6 @@
 // Tripod
 // ------------------------
 
-body{
-	font-weight: 300;
-}
-
 // Headings
 // ------------------------
 h1{	font-size: 2.3em; }
@@ -18,6 +14,16 @@ h6{	font-size: 1.1em; }
 h1, h2, h3 {  margin: 10px 0; }
 
 h1, h2{ line-height: 40px; }
+
+h6 {
+	font-family: @sansFontFamily;
+	font-weight: normal;
+}
+#grid-bottom2 {
+	h6 {
+		color: @color_two;
+	}
+}
 
 .item-page{
 	overflow: visible;
@@ -655,7 +661,6 @@ select{
 
 .hero-unit{
 	border-radius: 0 0 0 0;
-	font-weight: 300;
 	h1{
 		.big-heading();
 	}
@@ -703,6 +708,15 @@ select{
 		text-transform: uppercase;
 	}
 }
+#grid-bottom2 {
+	.module_ms3, .moduletable_ms3, .moduletext_ms3 {
+		> h3 {
+			text-transform: none;
+			font-weight: normal;
+			font-size: 24px;
+		}
+	}
+}
 .module_ms4, .moduletable_ms4, .moduletext_ms4{
 	> h3{
 		border-bottom: 1px solid @white;
@@ -723,7 +737,7 @@ select{
 }
 .share-with-us{
 	color : @color_two;
-	font-weight: 600;
+	font-weight: 700;
 	a{
 		font-weight: 400;
 		margin-left: 10px;
@@ -1324,7 +1338,6 @@ p.img_caption{
 // ------------------------
 .mod-articles-category-date{
 	color : @color_two;
-	font-weight: 700;
 	line-height: 40px;
 	min-height: 40px;
 	padding-left: 16px;
@@ -1394,7 +1407,7 @@ mod-articles-category-introtext{
 	h1,h2,h3,h4,h5,h6{
 		color : @color_two;
 		font-family: @sansFontFamily;
-		font-weight: 600;
+		font-weight: 700;
 		margin-bottom: 5px;
 	}
 	[class*="newsflash-title"]{

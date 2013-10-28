@@ -1593,11 +1593,38 @@ mod-articles-category-introtext{
 #spanScrollingMenuWrapper{
 	z-index: 1001;
 }
-
 .img-intro-left,
 .img-intro-right{
-	width: 50%;
-	.img_caption {
-		width: 100%;
+	max-width: 50%;
+}
+.items-leading {
+	.singlepage_section {
+		.big-text();
+		.leading-content{
+			> h2{
+				.big-heading();
+				border-bottom-color: @color_two;
+				color : @color_two;
+
+				a{
+					&:hover,
+					&:focus{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		&.color_two{
+			.leading-content{
+				> h2{
+					border-bottom-color: @color_one;
+					color : @color_one;
+				}
+			}
+		}
 	}
+}
+.category-desc.singlepage_section{
+	padding-top: 1em;
+	padding-bottom: 1em;
 }

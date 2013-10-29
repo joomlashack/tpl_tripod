@@ -1085,7 +1085,7 @@ span.content_rating{
 
 // Scrolling menu
 
-#nav_singlepage_pagefirst, #nav_singlepage_pagelast, #nav_singlepage_catdesc, #nav_singlepage_morearticles, #nav_singlepage_subcategories {
+#nav_singlepage_pagefirst, #nav_singlepage_pagelast, #nav_singlepage_pagebottom, #nav_singlepage_catdesc, #nav_singlepage_morearticles, #nav_singlepage_subcategories {
 	display: none;
 }
 div#singlepage_blog_titles {
@@ -1417,6 +1417,9 @@ mod-articles-category-introtext{
 [class*="newsflash"]{
 	font-size: 14px;
 	.clearfix();
+	li {
+		list-style: none;
+	}
 	h1,h2,h3,h4,h5,h6{
 		color : @color_two;
 		font-family: @sansFontFamily;

@@ -76,8 +76,11 @@ if (sizeof($this->intro_items)) {
                     <li id="nav_singlepage_subcategories">
                             <a href="#" rel="singlepage_subcategories">Subcategories</a>
                     </li>
+                    <li id="nav_singlepage_pagebottom">
+                            <a href="#" rel="singlepage_pagebottom">Bottom</a>
+                    </li>
                     <li id="nav_singlepage_pagelast">
-                            <a href="#" rel="singlepage_pagelast">Bottom</a>
+                            <a href="#" rel="singlepage_pagelast">Last</a>
                     </li>
                 </ul>
             </div>

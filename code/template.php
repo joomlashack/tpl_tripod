@@ -68,22 +68,22 @@ defined('_JEXEC') or die('Restricted access');
                 <div class="tripod-slideshow-wrapper-icons">
                    <div class="row-fluid">
                         <?php if ($iconOne != "-1") : ?>
-                           <a href="#" class="tripod-slideshow-icon span3">
+                           <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagefirst">
                                <img src="<?php  echo JURI::root(true) . $iconOne; ?>" alt="">
                            </a>
                        <?php endif; ?>
                        <?php if ($iconTwo != "-1") : ?>
-                           <a href="#" class="tripod-slideshow-icon span3">
+                           <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_post_0">
                                <img src="<?php  echo JURI::root(true) . $iconTwo; ?>" alt="">
                            </a>
                        <?php endif; ?>
                        <?php if ($iconThree != "-1") : ?>
-                           <a href="#" class="tripod-slideshow-icon span3">
+                           <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagebottom">
                                <img src="<?php  echo JURI::root(true) . $iconThree; ?>" alt="">
                            </a>
                        <?php endif; ?>
                        <?php if ($iconFour != "-1") : ?>
-                           <a href="#" class="tripod-slideshow-icon span3">
+                           <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagelast">
                                <img src="<?php  echo JURI::root(true) . $iconFour; ?>" alt="">
                            </a>
                        <?php endif; ?>
@@ -170,25 +170,28 @@ defined('_JEXEC') or die('Restricted access');
             </div>
 
 
-            <?php if ($this->countModules('grid-bottom') || $this->countModules('grid-bottom2')) : ?>
-                <div id="singlepage_pagelast" class="bottom-page">
+            <?php if ($this->countModules('grid-bottom')) : ?>
+                <div id="singlepage_pagebottom" class="bottom-page">
 
-                    <?php if ($this->countModules('grid-bottom')) : ?>
                         <!-- grid-bottom -->
                         <div id="grid-bottom" >
                             <div class="<?php echo $containerClass; ?>">
                                 <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
                             </div>
                         </div>
-                    <?php endif; ?>
-                    <?php if ($this->countModules('grid-bottom2')) : ?>
+
+                </div>
+            <?php endif; ?>
+
+            <?php if ($this->countModules('grid-bottom2')) : ?>
+                <div id="singlepage_pagelast" class="last-page">
+
                         <!-- grid-bottom2 -->
                         <div id="grid-bottom2" >
                             <div class="<?php echo $containerClass; ?>">
                                 <w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
                             </div>
                         </div>
-                    <?php endif; ?>
 
                 </div>
             <?php endif; ?>

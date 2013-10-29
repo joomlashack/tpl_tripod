@@ -34,7 +34,8 @@ jQuery(function() {
             jQuery('ul li#nav_singlepage_catdesc a').html(singlepage_titles['category_description']);
             jQuery('ul li#nav_singlepage_morearticles a').html(singlepage_titles['more_articles']);
             jQuery('ul li#nav_singlepage_subcategories a').html(singlepage_titles['subcategories']);
-            jQuery('ul li#nav_singlepage_pagelast a').html(singlepage_titles['bottom']);
+            jQuery('ul li#nav_singlepage_pagebottom a').html(singlepage_titles['bottom']);
+            jQuery('ul li#nav_singlepage_pagelast a').html(singlepage_titles['last']);
 
             var ppost = 0;
             if (jQuery('#singlepage_pagefirst').length) {
@@ -54,13 +55,13 @@ jQuery(function() {
             }
 
             var class2 = '';
+            var postno = 0;
             jQuery(resizeClass).each(function (post) {
                 if (ppost%2 == 0)
                     class2 = 'color_one';
                 else
                     class2 = 'color_two';
-                jQuery(this).attr('id','singlepage_post_' + ppost)
-                        .addClass('singlepage_section')
+                jQuery(this).addClass('singlepage_section')
                         .addClass(class2);
                 ppost++;
             });
@@ -69,10 +70,11 @@ jQuery(function() {
                     class2 = 'color_one';
                 else
                     class2 = 'color_two';
-                jQuery(this).attr('id','singlepage_post_' + ppost)
+                jQuery(this).attr('id','singlepage_post_' + postno)
                         .addClass('singlepage_section')
                         .addClass(class2);
                 ppost++;
+                postno++;
             });
 
             if (jQuery('.items-more').length) {
@@ -97,19 +99,30 @@ jQuery(function() {
                         .addClass(class2);
                 ppost++;
             }
-            if (jQuery('#singlepage_pagelast').length) {
+            if (jQuery('#singlepage_pagebottom').length) {
                 if (ppost%2 == 0)
                     class2 = 'color_one';
                 else
                     class2 = 'color_two';
-                jQuery('#nav_singlepage_pagelast').css('display','block');
-                jQuery('#singlepage_pagelast').addClass('singlepage_section')
+                jQuery('#nav_singlepage_pagebottom').css('display','block');
+                jQuery('#singlepage_pagebottom').addClass('singlepage_section')
                         .addClass(class2);
                 ppost++;
+            }
+            if (jQuery('#singlepage_pagelast').length) {
+                jQuery('#nav_singlepage_pagelast').css('display','block');
+                jQuery('#singlepage_pagelast').addClass('singlepage_section');
             }
 
             singlepage_navmenu_scroll_speed = parseInt(singlepage_navmenu_scroll_speed);
             jQuery('#singlepage_blog_titles_wrapper ul li a').click(function () {
+                if (jQuery(this).attr('rel') != '')
+                    jQuery('html, body').animate({
+                        scrollTop: (jQuery(this).attr('rel') == 'top' ? 0 : jQuery('#' + jQuery(this).attr('rel')).offset().top) - htoolbar
+                    }, singlepage_navmenu_scroll_speed);
+                return false;
+            });
+            jQuery('.tripod-slideshow-wrapper-icons a.tripod-slideshow-icon').click(function () {
                 if (jQuery(this).attr('rel') != '')
                     jQuery('html, body').animate({
                         scrollTop: (jQuery(this).attr('rel') == 'top' ? 0 : jQuery('#' + jQuery(this).attr('rel')).offset().top) - htoolbar

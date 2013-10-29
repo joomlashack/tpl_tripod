@@ -133,6 +133,7 @@
 			    <field name="navmenu_more_articles" type="text" default="More articles" label="TPL_JS_TRIPOD_NAVMENU_MOREARTICLES" description="TPL_JS_TRIPOD_NAVMENU_MOREARTICLES_DESC" />
 			    <field name="navmenu_subcategories" type="text" default="Subcategories" label="TPL_JS_TRIPOD_NAVMENU_SUBCATS" description="TPL_JS_TRIPOD_NAVMENU_SUBCATS_DESC" />
 			    <field name="navmenu_bottom" type="text" default="Bottom" label="TPL_JS_TRIPOD_NAVMENU_BOTTOM" description="TPL_JS_TRIPOD_NAVMENU_BOTTOM_DESC" />
+			    <field name="navmenu_last" type="text" default="Last" label="TPL_JS_TRIPOD_NAVMENU_LAST" description="TPL_JS_TRIPOD_NAVMENU_LAST_DESC" />
 			    <field name="navmenu_scroll_speed" type="text" default="2000" label="TPL_JS_TRIPOD_NAVMENU_SPEED" description="TPL_JS_TRIPOD_NAVMENU_SPEED_DESC" />
 		    </fieldset>
 		</fields>

@@ -123,7 +123,7 @@
 		    </fieldset>
 
 		    <fieldset name="TPL_JS_TRIPOD_SINGLESCROLLING_OPTIONS">
-			    <field name="singleScrollingPage" type="list" default="1" label="TPL_JS_TRIPOD_SINGLE_SCROLLING_PAGE" description="TPL_JS_TRIPOD_SINGLE_SCROLLING_PAGE_DESC">
+			    <field name="singleScrollingPage" type="list" default="0" label="TPL_JS_TRIPOD_SINGLE_SCROLLING_PAGE" description="TPL_JS_TRIPOD_SINGLE_SCROLLING_PAGE_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>

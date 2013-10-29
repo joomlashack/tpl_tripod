@@ -271,7 +271,7 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
 
        <script type="text/javascript">
-        var singlescrollingpage = <?php echo ($this->params->get("singleScrollingPage","1") == "1" ? "true" : "false"); ?>;
+        var singlescrollingpage = <?php echo ($this->params->get("singleScrollingPage","0") == "1" ? "true" : "false"); ?>;
         var singlepage_titles = new Array();
         singlepage_titles['top'] = '<?php echo $this->params->get('navmenu_top','' ); ?>';
         singlepage_titles['featured'] = '<?php echo $this->params->get('navmenu_featured','' ); ?>';

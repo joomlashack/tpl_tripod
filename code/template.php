@@ -195,15 +195,14 @@ defined('_JEXEC') or die('Restricted access');
 
         </div>
 
-    <?php if ($this->countModules('bottom-menu')) : ?>
-        <!-- bottom-menu -->
-        <w:nav containerClass="bottom-menu" name="bottom-menu" />
-    <?php endif; ?>
-
     <!-- footer -->
     <div class="wrapper-footer">
         <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
-             <div class="<?php echo $containerClass ?> footer-content">
+            <?php if ($this->countModules('bottom-menu')) : ?>
+                <!-- bottom-menu -->
+                <w:nav containerClass="bottom-menu" name="bottom-menu" />
+            <?php endif; ?>
+            <div class="<?php echo $containerClass ?> footer-content">
                 <?php if ($this->countModules('footer')) : ?>
                     <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
                 <?php endif; ?>

@@ -1200,8 +1200,15 @@ div:first-child+.panel{
 		a{
 			color : @color_five;
 		}
-		.navbar .nav > li:hover > a:before, .navbar .nav > li:hover > a:after{
-			content: none;
+		.navbar .nav > li{
+			&:hover, &.active {
+				> a{
+					&:before,
+					&:after{
+						content: none;
+					}
+				}
+			}
 		}
 	}
 	&.sticky{

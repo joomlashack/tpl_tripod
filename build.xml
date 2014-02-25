@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="template" default="autobuild" basedir="wright">
+    <import file="build.xml"/>
+</project>

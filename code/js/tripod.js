@@ -135,6 +135,12 @@ jQuery(function() {
         }
     }
 
+        setSinglePageTitles();
+
+});
+
+jQuery(document).load(function($) {
+
     var tripodHeader = jQuery('#header');
     var tripodToolbar = jQuery('.toolbar');
 
@@ -176,7 +182,6 @@ jQuery(function() {
 
     }
 
-    setSinglePageTitles();
     headerResize();
 
     jQuery(window).resize(function() {
@@ -184,3 +189,4 @@ jQuery(function() {
     });
 
 });
+

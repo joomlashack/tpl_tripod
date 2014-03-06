@@ -141,52 +141,46 @@ jQuery(function() {
     function headerResize() {
 
         if (jQuery('#supersized').length) {
-            if (tripodHeader.length) {
-                var tripodHeaderHeight = jQuery(window).height() - tripodToolbar.height();
+            if (jQuery(window).height() > tripodHeader.height()){
+                if (tripodHeader.length) {
+                    var tripodHeaderHeight = jQuery(window).height() - tripodToolbar.height();
+
+                    tripodHeader.css({
+                        'height' : tripodHeaderHeight + 'px'
+                    });
+                }
+                else{
+                    tripodHeader.css({
+                        'height' : jQuery(window).height() + 'px'
+                    });
+                }
+
+                var tripodHeaderInner = tripodHeader.children('.header-inner');
+                var paddingHeader = 0;
+
+                if (tripodHeader.length) {
+                    paddingHeader = jQuery(window).height() - tripodHeaderInner.height() - tripodToolbar.height();
+                    paddingHeader /=  2;
+                }
+                else{
+                    paddingHeader = jQuery(window).height() - tripodHeaderInner.height();
+                    paddingHeader /=  2;
+                }
 
                 tripodHeader.css({
-                    'height' : tripodHeaderHeight + 'px'
+                    'padding-bottom' : paddingHeader + 'px',
+                    'padding-top' : paddingHeader + 'px'
                 });
             }
-            else{
-                tripodHeader.css({
-                    'height' : jQuery(window).height() + 'px'
-                });
-            }
-        }
-
-    }
-
-    function setPaddingHeader(){
-
-        if (jQuery('#supersized').length) {
-            var tripodHeaderInner = tripodHeader.children('.header-inner');
-            var paddingHeader = 0;
-
-            if (tripodHeader.length) {
-                paddingHeader = jQuery(window).height() - tripodHeaderInner.height() - tripodToolbar.height();
-                paddingHeader /=  2;
-            }
-            else{
-                paddingHeader = jQuery(window).height() - tripodHeaderInner.height();
-                paddingHeader /=  2;
-            }
-
-            tripodHeader.css({
-                'padding-bottom' : paddingHeader + 'px',
-                'padding-top' : paddingHeader + 'px'
-            });
         }
 
     }
 
     setSinglePageTitles();
     headerResize();
-    setPaddingHeader();
 
     jQuery(window).resize(function() {
         headerResize();
-        setPaddingHeader();
     });
 
 });

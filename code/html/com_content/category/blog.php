@@ -46,8 +46,8 @@ if (sizeof($this->intro_items)) {
 
 ?>
         <div id="singlepage_blog_titles">
-            <div class="navbar-inner menu-big-items hidden-phone">
-                <ul class="scrolling nav">
+            <div class="navbar-inner menu-big-items">
+                <ul class="scrolling hidden-phone nav">
                     <li id="nav_singlepage_top">
                             <a href="#" rel="top">Top</a>
                     </li>

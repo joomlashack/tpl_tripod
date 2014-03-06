@@ -279,6 +279,7 @@ defined('_JEXEC') or die('Restricted access');
         singlepage_titles['more_articles'] = '<?php echo $this->params->get('navmenu_more_articles','' ); ?>';
         singlepage_titles['subcategories'] = '<?php echo $this->params->get('navmenu_subcategories','' ); ?>';
         singlepage_titles['bottom'] = '<?php echo $this->params->get('navmenu_bottom','' ); ?>';
+        singlepage_titles['last'] = '<?php echo $this->params->get('navmenu_last','' ); ?>';
         var singlepage_navmenu_scroll_speed = '<?php echo $this->params->get('navmenu_scroll_speed','2000' ); ?>';
     </script>
 

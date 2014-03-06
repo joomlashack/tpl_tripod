@@ -135,6 +135,62 @@ jQuery(function() {
         }
     }
 
+    var tripodHeader = jQuery('#header');
+    var tripodToolbar = jQuery('.toolbar');
+
+    function headerResize() {
+
+        if (jQuery('#supersized').length) {
+            if (tripodHeader.length) {
+                var tripodHeaderHeight = jQuery(window).height() - tripodToolbar.height();
+
+                tripodHeader.css({
+                    'height' : tripodHeaderHeight + 'px'
+                });
+            }
+            else{
+                tripodHeader.css({
+                    'height' : jQuery(window).height() + 'px'
+                });
+            }
+        }
+
+    }
+
+    function setPaddingHeader(){
+
+        if (jQuery('#supersized').length) {
+            var tripodHeaderInner = tripodHeader.children('.header-inner');
+            var paddingHeader = 0;
+
+            if (tripodHeader.length) {
+                paddingHeader = jQuery(window).height() - tripodHeaderInner.height() - tripodToolbar.height();
+                console.log(paddingHeader);
+                paddingHeader /=  2;
+                console.log(paddingHeader);
+            }
+            else{
+                paddingHeader = jQuery(window).height() - tripodHeaderInner.height();
+                console.log(paddingHeader);
+                paddingHeader /=  2;
+                console.log(paddingHeader);
+            }
+
+            tripodHeader.css({
+                'padding-bottom' : paddingHeader + 'px',
+                'padding-top' : paddingHeader + 'px'
+            });
+        }
+
+    }
+
     setSinglePageTitles();
+    headerResize();
+    setPaddingHeader();
+
+    jQuery(window).resize(function() {
+        headerResize();
+        setPaddingHeader();
+    });
 
 });

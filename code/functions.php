@@ -149,3 +149,4 @@ $tripodToolbarDisplayedClass = "";
 if (!$tripodToolbarDisplayed){
     $tripodToolbarDisplayedClass = " tollbarNoDisplayed";
 }
+

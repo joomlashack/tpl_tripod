@@ -165,15 +165,11 @@ jQuery(function() {
 
             if (tripodHeader.length) {
                 paddingHeader = jQuery(window).height() - tripodHeaderInner.height() - tripodToolbar.height();
-                console.log(paddingHeader);
                 paddingHeader /=  2;
-                console.log(paddingHeader);
             }
             else{
                 paddingHeader = jQuery(window).height() - tripodHeaderInner.height();
-                console.log(paddingHeader);
                 paddingHeader /=  2;
-                console.log(paddingHeader);
             }
 
             tripodHeader.css({

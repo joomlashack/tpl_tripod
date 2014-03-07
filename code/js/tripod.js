@@ -135,11 +135,8 @@ jQuery(function() {
         }
     }
 
-        setSinglePageTitles();
 
-});
-
-jQuery(document).load(function($) {
+    setSinglePageTitles();
 
     var tripodHeader = jQuery('#header');
     var tripodToolbar = jQuery('.toolbar');
@@ -148,6 +145,8 @@ jQuery(document).load(function($) {
 
         if (jQuery('#supersized').length) {
             if (jQuery(window).height() > tripodHeader.height()){
+                console.log(jQuery(window).height());
+                console.log(tripodHeader.height());
                 if (tripodHeader.length) {
                     var tripodHeaderHeight = jQuery(window).height() - tripodToolbar.height();
 
@@ -182,11 +181,12 @@ jQuery(document).load(function($) {
 
     }
 
-    headerResize();
+    jQuery(window).load(function() {
+        headerResize();
+    });
 
     jQuery(window).resize(function() {
         headerResize();
     });
 
 });
-

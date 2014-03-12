@@ -40,7 +40,7 @@ defined('_JEXEC') or die('Restricted access');
             <?php endif; ?>
     <?php endif; ?>
     <!-- header -->
-    <header id="header" class="clearfix <?php echo (!$tripodSlideshow ? '' : 'tripodSlideshow');  ?>">
+    <header id="header" class="<?php echo (!$tripodSlideshow ? '' : 'tripodSlideshow');  ?>">
         <?php if ($bg && !$tripodSlideshow) : ?>
             <div class="bg-wrapp">
                 <div class="bg-wrapp-inner">

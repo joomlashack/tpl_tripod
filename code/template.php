@@ -50,7 +50,7 @@ defined('_JEXEC') or die('Restricted access');
             <div class="bg-filter"></div>
         <?php endif ?>
 
-        <?php if ($tripodSlideshow) : ?>
+        <?php if ($tripodSlideshow && $tripodSlides) : ?>
             <!--Arrow Navigation-->
             <a id="prevslide" class="load-item"></a>
             <a id="nextslide" class="load-item"></a>
@@ -286,10 +286,22 @@ defined('_JEXEC') or die('Restricted access');
                     thumbnail_navigation    :   0,          // Thumbnail navigation
 
                     slides                  :   [           // Slideshow Images
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>'},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>'},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>'},
+
+                                                    <?php if ($slideshowImageOneRute != -1) : ?>
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>'}
+                                                    <?php endif; ?>
+                                                    <?php if ($slideshowImageTwoRute != -1) : ?>
+                                                        ,
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>'}
+                                                    <?php endif; ?>
+                                                    <?php if ($slideshowImageThreeRute != -1) : ?>
+                                                        ,
+                                                        {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>'}
+                                                    <?php endif; ?>
+                                                    <?php if ($slideshowImageFourRute != -1) : ?>
+                                                        ,
                                                         {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>'}
+                                                    <?php endif; ?>
                                                 ],
                     // Theme Options
                     progress_bar            :   0,          // Timer for each slide

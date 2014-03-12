@@ -9,6 +9,9 @@
 		}
 	}
 }
+
+// Only Tablet
+
 @media (max-width: 979px) and (min-width: 768px){
 	.pixelMode{
 		#featured{
@@ -47,22 +50,13 @@
 		}
 
 		.nav-collapse{
-			&.in.collapse{
+			&.collapse{
 			 	padding-top: 40px;
 			}
 		}
 		#toolbar .navbar-inner .collapsedToolbarInner {
 			height: auto;
 			overflow: inherit;
-		}
-	}
-
-	.toolbar.collapse{
-		height: auto;
-		overflow: visible;
-		position: relative;
-		.navbar-inner{
-			min-height: @navbarHeight;
 		}
 	}
 	.menu-big-items{
@@ -101,6 +95,24 @@
 	}
 
 }
+
+// Only Tablet
+
+@media (max-width: 979px) {
+
+	.toolbar.collapse{
+		height: auto;
+		overflow: visible;
+		position: relative;
+		.navbar-inner{
+			min-height: @navbarHeight;
+		}
+	}
+
+}
+
+// Mobile
+
 @media (max-width:767px) {
 	.tripod-portfolio{
 		[class*="span"]{
@@ -121,7 +133,11 @@
 		padding-left: 2%;
 		padding-right: 2%;
 	}
-	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top , #footer{
+	#footer,
+	.menu-big-items,
+	.navbar-fixed-top,
+	.navbar-static-top,
+	.navbar-fixed-bottom{
 		margin-left: -2%;
 		margin-right: -2%;
 	}

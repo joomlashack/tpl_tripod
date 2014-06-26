@@ -633,6 +633,31 @@ select{
 		padding: 1em;
 	}
 }
+.tabs-left,
+.tabs-right{
+	> .nav-tabs > li{
+		> a{
+			.caret{
+				border-top-color: @color_one !important;
+				right: 15px;
+				top: 15px;
+			}
+		}
+		&.dropdown .dropdown-menu li {
+			&.active > a{
+				color: @color_four;
+				&:hover,
+				&:focus{
+					color: @color_four !important;
+				}
+			}
+			a {
+				color: @color_four;
+			    text-align: center;
+			}
+		}
+	}
+}
 // Modules
 // ------------------------
 

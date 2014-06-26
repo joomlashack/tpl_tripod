@@ -102,3 +102,21 @@ blockquote{
 #header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon,#header.tripodSlideshow #logo{
 	background-color: rgba(60, 38, 23,0.7);
 }
+.tabs-left,
+.tabs-right{
+	> .nav-tabs > li{
+
+		&.dropdown .dropdown-menu li {
+			&.active > a{
+				color: @color_five;
+				&:hover,
+				&:focus{
+					color: @color_five !important;
+				}
+			}
+			a {
+				color: @color_five;
+			}
+		}
+	}
+}

@@ -2,6 +2,14 @@
 // Tripod
 // ------------------------
 
+.rm-margin-child{
+	*:first-child {
+		margin-top: 0;
+	}
+	*:last-child {
+		margin-bottom: 0;
+	}
+}
 // Headings
 // ------------------------
 h1{	font-size: 2.3em; }
@@ -731,6 +739,9 @@ select{
 		line-height: 40px;
 		text-align: right;
 		text-transform: uppercase;
+		~ *:last-child{
+			margin-bottom: 5px;
+		}
 	}
 }
 #grid-bottom2 {
@@ -1112,6 +1123,13 @@ span.content_rating{
 
 #nav_singlepage_pagefirst, #nav_singlepage_pagelast, #nav_singlepage_pagebottom, #nav_singlepage_catdesc, #nav_singlepage_morearticles, #nav_singlepage_subcategories {
 	display: none;
+}
+[id*="singlepage_"] {
+	> div{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		.rm-margin-child();
+	}
 }
 div#singlepage_blog_titles {
 	display: none;
@@ -1501,7 +1519,6 @@ mod-articles-category-introtext{
 	}
 	#main-content{
 		margin-bottom: 0;
-		padding-bottom: 20px;
 	}
 }
 #header{
@@ -1638,6 +1655,7 @@ mod-articles-category-introtext{
 	max-width: 50%;
 }
 .items-leading {
+	display: block;
 	.singlepage_section {
 		.big-text();
 		.leading-content{

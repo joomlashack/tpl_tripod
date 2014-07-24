@@ -145,8 +145,6 @@ jQuery(function() {
 
         if (jQuery('#supersized').length) {
             if (jQuery(window).height() > tripodHeader.height()){
-                console.log(jQuery(window).height());
-                console.log(tripodHeader.height());
                 if (tripodHeader.length) {
                     var tripodHeaderHeight = jQuery(window).height() - tripodToolbar.height();
 

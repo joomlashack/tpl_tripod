@@ -32,9 +32,12 @@
 		}
 	}
 
-	.nav-collapse .dropdown-menu a:hover,
-	.nav-collapse .dropdown-menu a:focus{
-		color : @color_one;
+	.nav-collapse .dropdown-menu a{
+		color: @color_five !important;
+		&:hover,
+		&:focus{
+			color : @color_one;
+		}
 	}
 
 	.wrapper-toolbar{
@@ -84,11 +87,11 @@
 				.navbar-inner{
 					background-image: none;
 					filter:none;
-					background-color: transparent;
+					// background-color: transparent;
 					padding-top: 0;
-					.nav-collapse{
-						background-color: @navbarBackground;
-					}
+					// .nav-collapse{
+					// 	background-color: @navbarBackground;
+					// }
 				}
 			}
 		}
@@ -104,6 +107,7 @@
 		height: auto;
 		overflow: visible;
 		position: relative;
+		z-index: 100;
 		.navbar-inner{
 			min-height: @navbarHeight;
 		}
@@ -124,6 +128,8 @@
 		margin-left: 2%;
 		a{
 			max-width: 100%;
+			width: 100%;
+			margin-left: 0;
 			img{
 				max-width: none;
 			}
@@ -140,6 +146,11 @@
 	.navbar-fixed-bottom{
 		margin-left: -2%;
 		margin-right: -2%;
+	}
+	#footer{
+		&.sticky{
+			width: auto;
+		}
 	}
 	.tripodFtBlog{
 		#header{
@@ -237,10 +248,16 @@
 	#prevslide{
 		left: -13px;
 	}
-	.bottom-page,
-	.last-page{
-		padding-left: 10px;
-		padding-right: 10px;
+	[id*="singlepage_post_"],
+	#singlepage_pagebottom,
+	#grid-bottom2{
+		margin-left: -2%;
+		margin-right: -2%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	[class*="newsflash-vert"]{
+		margin-left: 0;
 	}
 	.pixelMode{
 		#featured{

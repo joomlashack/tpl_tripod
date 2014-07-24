@@ -99,6 +99,10 @@
 					<option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
 					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
 				</field>
+                <field name="documentationMode" type="list" default="0" label="TPL_JS_WRIGHT_DOCUMENTATION_MODE" description="TPL_JS_WRIGHT_DOCUMENTATION_MODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_TRIPOD_OPTIONS">

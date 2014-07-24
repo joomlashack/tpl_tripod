@@ -179,12 +179,32 @@ jQuery(function() {
 
     }
 
+    var header        = jQuery('#header'),
+        bg              = jQuery("#bg-header"),
+        aspectRatio      = bg.width() / bg.height();
+
+    function resizeBg() {
+
+        if ( (header.width() / header.height()) < aspectRatio ) {
+            bg
+                .removeClass()
+                .addClass('full-height');
+        } else {
+            bg
+                .removeClass()
+                .addClass('full-width');
+        }
+
+    }
+    resizeBg();
+
     jQuery(window).load(function() {
         headerResize();
     });
 
     jQuery(window).resize(function() {
         headerResize();
+        resizeBg();
     });
 
 });

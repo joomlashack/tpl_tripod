@@ -184,18 +184,19 @@ jQuery(function() {
         aspectRatio      = bg.width() / bg.height();
 
     function resizeBg() {
-
-        if ( (header.width() / header.height()) < aspectRatio ) {
-            bg
-                .removeClass()
-                .addClass('full-height');
-        } else {
-            bg
-                .removeClass()
-                .addClass('full-width');
+        if (bg.length) {
+            if ( (header.width() / header.height()) < aspectRatio ) {
+                bg
+                    .removeClass()
+                    .addClass('full-height');
+            } else {
+                bg
+                    .removeClass()
+                    .addClass('full-width');
+            }
         }
-
     }
+
     resizeBg();
 
     jQuery(window).load(function() {

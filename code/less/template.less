@@ -47,16 +47,35 @@ h6 {
 // For Documentation
 // ------------------------
 
-div .bs-docs-example{
-	background-color: transparent;
-	border-color: @grayDark;
-	&:after{
-		background-color: @color_two;
-		color: @color_one;
-		pre{
-			background-color: @color_three;
-			color: @white;
+div{
+	.bs-docs-example{
+		background-color: transparent;
+		border-color: @grayDark;
+		&:after{
+			background-color: @color_two;
+			border: 0;
+			color: @color_one;
+			pre{
+				background-color: @color_three;
+				color: @white;
+			}
 		}
+		+ .prettyprint{
+		 	margin-top: -15px;
+		}
+	}
+	.show-grid [class*="span"]{
+		background: @grayDark;
+		&:hover{
+			background: @grayDark;
+		}
+		[class*="span"]{
+			background: @grayDarker;
+		}
+	}
+	.responsive-utilities td.is-hidden{
+		background: @grayDarker !important;
+		color : @grayDark;
 	}
 }
 // code
@@ -334,6 +353,7 @@ select{
 }
 
 .nav.nav-pills> li.active>a, .nav.nav-pills> li.active>a:hover, .nav.nav-pills> li.active>a:focus{
+	background-color: @linkColor;
 	color : @color_one;
 	.caret {
 		border-top-color: @color_one;
@@ -373,7 +393,7 @@ select{
 	}
 }
 
-.module {
+[id*="sidebar"]{
 	.nav.nav-pills {
 		li.active{
 			>a{
@@ -387,14 +407,14 @@ select{
 					color: @color_one;
 				}
 				&:hover, &:focus{
-					color : @color_two;
+					color : @color_one;
 					.caret {
-						border-top-color: @color_two;
-						border-bottom-color: @color_two;
+						border-top-color: @color_one;
+						border-bottom-color: @color_one;
 					}
 					[class^="icon-"],
 					[class*=" icon-"]{
-						color: @color_two;
+						color: @color_one;
 					}
 				}
 			}
@@ -406,26 +426,52 @@ select{
 			}
 		}
 	}
-}
-.module .nav.nav-stacked.nav-list li.active>a{
-	color: @color_one;
-	.caret {
-		border-top-color: @color_one;
-		border-bottom-color: @color_one;
-	}
-	[class^="icon-"],
-	[class*=" icon-"]{
+	.nav.nav-list  > li.active>a{
 		color: @color_one;
-	}
-	&:hover,&:focus{
-		color: @color_two;
 		.caret {
-			border-top-color: @color_two;
-			border-bottom-color: @color_two;
+			border-top-color: @color_one;
+			border-bottom-color: @color_one;
 		}
 		[class^="icon-"],
 		[class*=" icon-"]{
-			color: @color_two;
+			color: @color_one;
+		}
+		&:hover,&:focus{
+			background-color: @linkColor;
+			color: @color_one;
+			.caret {
+				border-top-color: @color_one;
+				border-bottom-color: @color_one;
+			}
+			[class^="icon-"],
+			[class*=" icon-"]{
+				color: @color_one;
+			}
+		}
+	}
+	.nav{
+		li.dropdown{
+			&.active{
+				> a{
+					background: @linkColor;
+					color: @color_two;
+				}
+			}
+			.dropdown-menu{
+				> li{
+					> a{
+						&:hover,
+						&:focus{
+							background-color: transparent;
+						}
+					}
+					&.active{
+						> a{
+							background-color: transparent;
+						}
+					}
+				}
+			}
 		}
 	}
 }

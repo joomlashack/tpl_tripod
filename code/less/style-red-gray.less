@@ -144,3 +144,47 @@ blockquote{
 		}
 	}
 }
+
+.nav{
+	&.nav-pills{
+		> li {
+			> a{
+				&:hover,
+				&:focus{
+					color: @white;
+					.caret {
+						border-top-color: @white;
+						border-bottom-color: @white;
+					}
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: @white;
+					}
+				}
+			}
+		}
+	}
+}
+
+[id*="sidebar"]{
+	.nav{
+		&.nav-pills{
+			> li {
+				> a{
+					&:hover,
+					&:focus{
+						color: @white;
+						.caret {
+							border-top-color: @white;
+							border-bottom-color: @white;
+						}
+						[class^="icon-"],
+						[class*=" icon-"] {
+							color: @white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

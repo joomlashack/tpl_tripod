@@ -168,3 +168,52 @@ legend{
 		color:@grayLighter;
 	}
 }
+
+// Navs in sidebar
+
+[id*="sidebar"]{
+	.well{
+		.nav {
+			> li{
+				> a{
+					.caret {
+						border-top-color: @white;
+					}
+					[class^="icon-"],
+					[class*=" icon-"]{
+						color: @white;
+					}
+				}
+			}
+			&.nav-pills{
+				> li{
+					> a{
+						&:hover,
+						&:focus{
+							color: @white;
+							.caret {
+								border-top-color: @white;
+							}
+							[class^="icon-"],
+							[class*=" icon-"]{
+								color: @white;
+							}
+						}
+					}
+					&.active{
+						> a{
+							color: @color_one;
+							.caret {
+								border-top-color: @color_one;
+							}
+							[class^="icon-"],
+							[class*=" icon-"]{
+								color: @color_one;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

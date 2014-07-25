@@ -47,9 +47,17 @@ h6 {
 // For Documentation
 // ------------------------
 
-.bs-docs-example:after{
-	background-color: @color_two;
-	color: @color_one;
+div .bs-docs-example{
+	background-color: transparent;
+	border-color: @grayDark;
+	&:after{
+		background-color: @color_two;
+		color: @color_one;
+		pre{
+			background-color: @color_three;
+			color: @white;
+		}
+	}
 }
 // code
 
@@ -84,12 +92,6 @@ body {
 
 	ol.linenums li{
 		text-shadow: none;
-	}
-}
-.bs-docs-example{
-	pre{
-		background-color: @color_three;
-		color: @white;
 	}
 }
 
@@ -1131,12 +1133,18 @@ span.content_rating{
 		.rm-margin-child();
 	}
 }
+div#singlepage_blog_titles_wrapper{
+	> div{
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+	&.affix {
+		top: 40px;
+		position: fixed;
+	}
+}
 div#singlepage_blog_titles {
 	display: none;
-}
-div#singlepage_blog_titles_wrapper.affix {
-	top: 40px;
-	position: fixed;
 }
 div#blog_titles {
 	bottom: 20px;

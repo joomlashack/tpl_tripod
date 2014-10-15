@@ -1,0 +1,192 @@
+{
+  "excluded": [
+    {
+      "table_name": "y7fiv_core_log_searches"
+    },
+    {
+      "table_name": "y7fiv_finder_filters"
+    },
+    {
+      "table_name": "y7fiv_finder_links"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms0"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms1"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms2"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms3"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms4"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms5"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms6"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms7"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms8"
+    },
+    {
+      "table_name": "y7fiv_finder_links_terms9"
+    },
+    {
+      "table_name": "y7fiv_finder_links_termsa"
+    },
+    {
+      "table_name": "y7fiv_finder_links_termsb"
+    },
+    {
+      "table_name": "y7fiv_finder_links_termsc"
+    },
+    {
+      "table_name": "y7fiv_finder_links_termsd"
+    },
+    {
+      "table_name": "y7fiv_finder_links_termse"
+    },
+    {
+      "table_name": "y7fiv_finder_links_termsf"
+    },
+    {
+      "table_name": "y7fiv_finder_taxonomy"
+    },
+    {
+      "table_name": "y7fiv_finder_taxonomy_map"
+    },
+    {
+      "table_name": "y7fiv_finder_terms"
+    },
+    {
+      "table_name": "y7fiv_finder_terms_common"
+    },
+    {
+      "table_name": "y7fiv_finder_tokens"
+    },
+    {
+      "table_name": "y7fiv_finder_tokens_aggregate"
+    },
+    {
+      "table_name": "y7fiv_finder_types"
+    },
+    {
+      "table_name": "y7fiv_messages"
+    },
+    {
+      "table_name": "y7fiv_messages_cfg"
+    },
+    {
+      "table_name": "y7fiv_overrider"
+    },
+    {
+      "table_name": "y7fiv_redirect_links"
+    },
+    {
+      "table_name": "y7fiv_session"
+    },
+    {
+      "table_name": "y7fiv_user_notes"
+    },
+    {
+      "table_name": "y7fiv_user_profiles"
+    },
+    {
+      "table_name": "y7fiv_user_usergroup_map"
+    },
+    {
+      "table_name": "y7fiv_usergroups"
+    },
+    {
+      "table_name": "y7fiv_users"
+    },
+    {
+      "table_name": "y7fiv_viewlevels"
+    }
+  ],
+  "included": [
+    {
+      "table_name": "y7fiv_assets"
+    },
+    {
+      "table_name": "y7fiv_associations"
+    },
+    {
+      "table_name": "y7fiv_banner_clients"
+    },
+    {
+      "table_name": "y7fiv_banner_tracks"
+    },
+    {
+      "table_name": "y7fiv_banners"
+    },
+    {
+      "table_name": "y7fiv_categories"
+    },
+    {
+      "table_name": "y7fiv_contact_details"
+    },
+    {
+      "table_name": "y7fiv_content"
+    },
+    {
+      "table_name": "y7fiv_content_frontpage"
+    },
+    {
+      "table_name": "y7fiv_content_rating"
+    },
+    {
+      "table_name": "y7fiv_extensions"
+    },
+    {
+      "table_name": "y7fiv_languages"
+    },
+    {
+      "table_name": "y7fiv_menu"
+    },
+    {
+      "table_name": "y7fiv_menu_types"
+    },
+    {
+      "table_name": "y7fiv_modules"
+    },
+    {
+      "table_name": "y7fiv_modules_menu"
+    },
+    {
+      "table_name": "y7fiv_newsfeeds"
+    },
+    {
+      "table_name": "y7fiv_schemas"
+    },
+    {
+      "table_name": "y7fiv_template_styles"
+    },
+    {
+      "table_name": "y7fiv_update_categories"
+    },
+    {
+      "table_name": "y7fiv_update_sites"
+    },
+    {
+      "table_name": "y7fiv_update_sites_extensions"
+    },
+    {
+      "table_name": "y7fiv_updates"
+    },
+    {
+      "table_name": "y7fiv_weblinks"
+    },
+    {
+      "table_name": "y7fiv_wf_profiles"
+    }
+  ]
+}

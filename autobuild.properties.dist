@@ -1,2 +1,2 @@
-www.dir=/var/www/parallax
+www.dir=/var/www/tripod
 node.skip=false

@@ -349,10 +349,25 @@ select{
 		a{
 			font-weight: 700;
 		}
+
+		> a{
+			&:hover, &:focus{
+				.caret {
+					border-top-color: @color_two;
+					border-bottom-color: @color_two;
+				}
+				[class^="icon-"],
+				[class*=" icon-"]{
+					color: @color_two;
+				}
+			}
+		}
 	}
 }
 
-.nav.nav-pills> li.active>a, .nav.nav-pills> li.active>a:hover, .nav.nav-pills> li.active>a:focus{
+.nav.nav-pills> li.active>a,
+.nav.nav-pills> li.active>a:hover,
+.nav.nav-pills> li.active>a:focus{
 	background-color: @linkColor;
 	color : @color_one;
 	.caret {
@@ -372,23 +387,6 @@ select{
 		[class^="icon-"],
 		[class*=" icon-"] {
 			color: @color_one;
-		}
-	}
-}
-
-.nav.nav-pills {
-	li {
-		> a{
-			&:hover, &:focus{
-				.caret {
-					border-top-color: @color_two;
-					border-bottom-color: @color_two;
-				}
-				[class^="icon-"],
-				[class*=" icon-"]{
-					color: @color_two;
-				}
-			}
 		}
 	}
 }
@@ -505,6 +503,7 @@ select{
 		border-bottom: 0;
 	}
 }
+
 .nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus{
 	text-shadow: none;
 	color : @color_one;

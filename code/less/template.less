@@ -380,6 +380,38 @@ select{
 			}
 		}
 	}
+
+	ul.submenu {
+		> li {
+			a {
+				&:hover, &:focus{
+					color: lighten(@color_two, 25%);
+
+					.caret {
+						border-top-color: lighten(@color_two, 25%);
+					}
+				}
+			}
+
+			&.active {
+				> a {
+					color: lighten(@color_two, 25%);
+
+					.caret {
+						border-top-color: lighten(@color_two, 25%);
+					}
+
+					&:hover, &:focus{
+						color: lighten(@color_two, 25%);
+
+						.caret {
+							border-top-color: lighten(@color_two, 25%);
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .well {

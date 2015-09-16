@@ -16,7 +16,6 @@
 	}
 }
 
-
 // Breadcrumb
 // ------------------------
 
@@ -55,6 +54,7 @@ blockquote{
 }
 
 // Navbar
+
 .navbar {
 	.nav {
 		> li {
@@ -69,7 +69,24 @@ blockquote{
 		}
 	}
 }
+
+.navbar-inverse {
+	.nav {
+		> li {
+			> a{
+			&:before{
+				background-image: url(../images/black-darkgray/breadcrumb-item-active-left.png);
+			}
+			&:after{
+				background-image: url(../images/black-darkgray/breadcrumb-item-active-right.png);
+			}
+			}
+		}
+	}
+}
+
 // mod-articles-category-date
+
 .mod-articles-category-date{
 	&:before{
 		background-image: url(../images/black-darkgray/breadcrumb-item-active-left.png);
@@ -78,17 +95,23 @@ blockquote{
 		background-image: url(../images/black-darkgray/breadcrumb-item-active-right.png);
 	}
 }
+
+
 // slideshow
+
 #nextslide{
 	background-image: url(../images/black-darkgray/slideshow-nav-next.png);
 }
+
 #prevslide {
 	background-image: url(../images/black-darkgray/slideshow-nav-prev.png);
 }
+
 .toolbar-collapse-btn .icon-bar ,.navbar .btn-navbar .icon-bar{
 	background-color: #8D8D8D;
 }
-.btn{
+
+.btn {
 	&.btn-primary{
 		color :@white;
 		&:hover{
@@ -104,7 +127,8 @@ blockquote{
 		}
 	}
 }
-#header{
+
+#header {
 	.bg-filter{
 		background-color: rgba(255, 255, 255,0.6);
 	}
@@ -114,7 +138,8 @@ blockquote{
 		}
 	}
 }
-#header{
+
+#header {
 	&.tripodSlideshow{
 		#logo{
 			background-color: rgba(255, 255, 255,0.6);
@@ -155,63 +180,27 @@ blockquote{
 	border-color: @color_three;
 	color : @white;
 }
+
 .table.table-striped tbody>tr td, .table.table-striped tbody>tr th{
 	a{
 		color : @white;
 	}
 }
+
 legend{
 	color: @textColor;
 }
+
 .well{
 	a{
 		color:@grayLighter;
 	}
-}
 
-// Navs in sidebar
-
-[id*="sidebar"]{
-	.well{
-		.nav {
-			> li{
-				> a{
-					.caret {
-						border-top-color: @white;
-					}
-					[class^="icon-"],
-					[class*=" icon-"]{
-						color: @white;
-					}
-				}
-			}
-			&.nav-pills{
-				> li{
-					> a{
-						&:hover,
-						&:focus{
-							color: @white;
-							.caret {
-								border-top-color: @white;
-							}
-							[class^="icon-"],
-							[class*=" icon-"]{
-								color: @white;
-							}
-						}
-					}
-					&.active{
-						> a{
-							color: @color_one;
-							.caret {
-								border-top-color: @color_one;
-							}
-							[class^="icon-"],
-							[class*=" icon-"]{
-								color: @color_one;
-							}
-						}
-					}
+	.nav-list, .nav-pills {
+		> li {
+			> .dropdown-toggle {
+				.caret {
+					border-top-color: @grayLighter;
 				}
 			}
 		}

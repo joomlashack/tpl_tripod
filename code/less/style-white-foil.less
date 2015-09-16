@@ -54,6 +54,7 @@ blockquote{
 }
 
 // Navbar
+
 .navbar {
 	.nav {
 		> li {
@@ -68,7 +69,24 @@ blockquote{
 		}
 	}
 }
+
+.navbar-inverse {
+	.nav {
+		> li {
+			> a{
+			&:before{
+				background-image: url(../images/white-foil/breadcrumb-item-active-left.png);
+			}
+			&:after{
+				background-image: url(../images/white-foil/breadcrumb-item-active-right.png);
+			}
+			}
+		}
+	}
+}
+
 // mod-articles-category-date
+
 .mod-articles-category-date{
 	&:before{
 		background-image: url(../images/white-foil/breadcrumb-item-active-left.png);
@@ -77,16 +95,21 @@ blockquote{
 		background-image: url(../images/white-foil/breadcrumb-item-active-right.png);
 	}
 }
+
 // slideshow
+
 #nextslide{
 	background-image: url(../images/white-foil/slideshow-nav-next.png);
 }
+
 #prevslide {
 	background-image: url(../images/white-foil/slideshow-nav-prev.png);
 }
+
 .toolbar-collapse-btn .icon-bar,.navbar .btn-navbar .icon-bar {
 	background-color: #BFB0A3;
 }
+
 .btn{
 	&.btn-primary{
 		&:hover{
@@ -94,19 +117,23 @@ blockquote{
 		}
 	}
 }
+
 [class*="category-module"]{
 	li a{
 		color : #313140;
 	}
 }
+
 #header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon,#header.tripodSlideshow #logo{
 	background-color: rgba(142, 115, 89,0.3);
 }
+
 .module_ms3, .moduletable_ms3, .moduletext_ms3{
 	> h3{
 		border-bottom-color:#313140;
 	}
 }
+
 .module_ms4, .moduletable_ms4, .moduletext_ms4{
 	> h3{
 		border-bottom-color:#313140;
@@ -163,6 +190,7 @@ blockquote{
 
 //Portfolio
 // ------------------------
+
 .tripod-portfolio{
 	.container-fluid.active{
 		color : #313140;

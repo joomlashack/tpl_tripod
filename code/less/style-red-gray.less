@@ -54,6 +54,7 @@ blockquote{
 }
 
 // Navbar
+
 .navbar {
 	.nav {
 		> li {
@@ -68,7 +69,24 @@ blockquote{
 		}
 	}
 }
+
+.navbar-inverse {
+	.nav {
+		> li {
+			> a{
+			&:before{
+				background-image: url(../images/red-gray/breadcrumb-item-active-left.png);
+			}
+			&:after{
+				background-image: url(../images/red-gray/breadcrumb-item-active-right.png);
+			}
+			}
+		}
+	}
+}
+
 // mod-articles-category-date
+
 .mod-articles-category-date{
 	&:before{
 		background-image: url(../images/red-gray/breadcrumb-item-active-left.png);
@@ -77,16 +95,21 @@ blockquote{
 		background-image: url(../images/red-gray/breadcrumb-item-active-right.png);
 	}
 }
+
 // slideshow
+
 #nextslide{
 	background-image: url(../images/red-gray/slideshow-nav-next.png);
 }
+
 #prevslide {
 	background-image: url(../images/red-gray/slideshow-nav-prev.png);
 }
+
 .toolbar-collapse-btn .icon-bar,.navbar .btn-navbar .icon-bar {
 	background-color: #892010;
 }
+
 .btn{
 	&.btn-primary{
 		&:hover{
@@ -94,6 +117,7 @@ blockquote{
 		}
 	}
 }
+
 [class*="category-module"]{
 	li a{
 		color : @white;
@@ -145,42 +169,32 @@ blockquote{
 	}
 }
 
-.nav{
-	&.nav-pills{
+.nav-list, .nav-pills {
+	ul.submenu {
 		> li {
-			> a{
-				&:hover,
-				&:focus{
-					color: @white;
+			a {
+				&:hover, &:focus{
+					color: lighten(@color_two, 20%);
+
 					.caret {
-						border-top-color: @white;
-						border-bottom-color: @white;
-					}
-					[class^="icon-"],
-					[class*=" icon-"] {
-						color: @white;
+						border-top-color: lighten(@color_two, 20%);
 					}
 				}
 			}
-		}
-	}
-}
 
-[id*="sidebar"]{
-	.nav{
-		&.nav-pills{
-			> li {
-				> a{
-					&:hover,
-					&:focus{
-						color: @white;
+			&.active {
+				> a {
+					color: lighten(@color_two, 20%);
+
+					.caret {
+						border-top-color: lighten(@color_two, 20%);
+					}
+
+					&:hover, &:focus{
+						color: lighten(@color_two, 20%);
+
 						.caret {
-							border-top-color: @white;
-							border-bottom-color: @white;
-						}
-						[class^="icon-"],
-						[class*=" icon-"] {
-							color: @white;
+							border-top-color: lighten(@color_two, 20%);
 						}
 					}
 				}
@@ -191,4 +205,8 @@ blockquote{
 
 .page-header {
 	border-bottom-color: @red;
+}
+
+.well {
+	border-color: #434343;
 }

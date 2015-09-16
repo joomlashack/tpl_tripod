@@ -349,6 +349,14 @@ select{
 			}
 		}
 
+		> .dropdown-toggle {
+			&:hover, &:focus{
+				.caret {
+					border-top-color: @color_two;
+				}
+			}
+		}
+
 		&.active {
 			> a {
 				color: @color_one;
@@ -372,8 +380,6 @@ select{
 			}
 		}
 	}
-
-
 }
 
 .well {
@@ -622,7 +628,7 @@ select{
 	}
 }
 
-.nav-tabs{
+.nav-tabs {
 	ul.submenu {
 		> li {
 			a {
@@ -658,7 +664,6 @@ select{
 		}
 	}
 }
-
 
 // Modules
 // ------------------------

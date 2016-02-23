@@ -442,7 +442,6 @@ defined('_JEXEC') or die('Restricted access');
 			}
 
 			$tripodSlidesString = substr($tripodSlidesString, 0, -1);
-			echo $tripodSlidesString;
 		?>
         <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_tripod/js/jquery.easing.min.js"></script>
         <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_tripod/js/supersized.min.js"></script>

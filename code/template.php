@@ -158,11 +158,21 @@ defined('_JEXEC') or die('Restricted access');
                         <?php
 							if ($iconTwo != "-1")
 								:
+									if ($blogs)
+										:
 						?>
                             <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_post_0">
-                                <img src="<?php  echo JURI::root(true) . $iconTwo; ?>" alt="">
-                            </a>
+									<?php
+										endif;
+									?>
+						        <img src="<?php  echo JURI::root(true) . $iconTwo; ?>" alt="">
+								<?php
+									if ($blogs)
+										:
+								?>
+							</a>
                         <?php
+									endif;
 							endif;
 						?>
                         <?php

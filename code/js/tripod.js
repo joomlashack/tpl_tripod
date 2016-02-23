@@ -78,6 +78,13 @@ jQuery(function() {
                 ppost++;
                 postno++;
             });
+			jQuery(resizeClass3).each(function (post) {
+				jQuery(this).attr('id','singlepage_post_' + postno)
+						.addClass('singlepage_section')
+						.addClass(class2);
+				ppost++;
+				postno++;
+			});
 
             if (jQuery('.items-more').length) {
                 if (ppost%2 == 0)

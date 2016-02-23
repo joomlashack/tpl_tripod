@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_tripod</name>
-	<creationDate>September 2015</creationDate>
+	<creationDate>February 2016</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
@@ -112,10 +112,7 @@
 	                    <option value="1">JYES</option>
 	                    <option value="0">JNO</option>
 	            </field>
-	            <field name="slideshowImageOne" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_ONE" description="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_ONE_DESC" />
-	            <field name="slideshowImageTwo" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_TWO" description="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_TWO_DESC" />
-	            <field name="slideshowImageThree" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_THREE" description="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_THREE_DESC" />
-	            <field name="slideshowImageFour" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_FOUR" description="TPL_JS_TRIPOD_SLIDESHOW_IMAGE_FOUR_DESC" />
+				<field name="imagesFolder" type="folderlist" directory="images" label="TPL_JS_TRIPOD_IMAGES_FOLDER" description="TPL_JS_TRIPOD_IMAGES_FOLDER_DESC" />
 	            <field name="iconOne" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_ONE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
 	            <field name="iconTwo" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_TWO" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
 	            <field name="iconThree" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_THREE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />

@@ -338,7 +338,7 @@ defined('_JEXEC') or die('Restricted access');
 						?>
                             <!-- breadcrumbs -->
                             <?php
-								if ($blogs)
+								if ($blogs && !$sidebarExists)
 								{
 									$breadcrumbsClass = $containerClass;
 								}

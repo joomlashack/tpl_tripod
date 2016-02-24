@@ -219,7 +219,7 @@ if (!$tripodToolbarDisplayed)
 }
 
 $useSlider = ($this->params->get('useSlider', '1') == '1');
-$imagesFolder = $this->params->get('imagesFolder', '');
+$imagesFolder = $this->params->get('imagesFolder', 'banners');
 
 if ($imagesFolder == '' || $imagesFolder == '-1')
 {
@@ -235,7 +235,13 @@ $sliderImages = Array();
 if ($useSlider)
 {
 	// Looks out for mp4 files in the videos folder, and equivalent file names (.jpg or .png) in the images folder
-	$rimages = preg_find('/\.jpg$/D', $imagesFolder, PREG_FIND_SORTKEYS);
+
+	$rimagesjpg = preg_find('/\.jpg$/D', $imagesFolder, PREG_FIND_SORTKEYS);
+	$rimagesJPG = preg_find('/\.JPG$/D', $imagesFolder, PREG_FIND_SORTKEYS);
+	$rimagespng = preg_find('/\.png$/D', $imagesFolder, PREG_FIND_SORTKEYS);
+	$rimagesPNG = preg_find('/\.PNG$/D', $imagesFolder, PREG_FIND_SORTKEYS);
+
+	$rimages = array_unique(array_merge($rimagesjpg, $rimagesJPG, $rimagespng, $rimagesPNG));
 
 	if ($rimages)
 	{
@@ -244,6 +250,26 @@ if ($useSlider)
 			$pinfo = pathinfo($rimage);
 			$bname = $pinfo['filename'];
 			$image = $imagesFolder . '/' . $bname . '.jpg';
+
+			if (!file_exists($image))
+			{
+				$image = $imagesFolder . '/' . $bname . '.JPG';
+
+				if (!file_exists($image))
+				{
+					$image = '';
+				}
+			}
+
+			if (!file_exists($image))
+			{
+				$image = $imagesFolder . '/' . $bname . '.PNG';
+
+				if (!file_exists($image))
+				{
+					$image = '';
+				}
+			}
 
 			if (!file_exists($image))
 			{

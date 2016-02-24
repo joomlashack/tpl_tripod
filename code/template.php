@@ -158,19 +158,27 @@ defined('_JEXEC') or die('Restricted access');
                         <?php
 							if ($iconTwo != "-1")
 								:
-									if ($blogs)
+									if ($blogs && $tripodFullWidthBg)
 										:
 						?>
                             <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_post_0">
+									<?php
+										else :
+									?>
+							<div class="tripod-slideshow-icon span3">
 									<?php
 										endif;
 									?>
 						        <img src="<?php  echo JURI::root(true) . $iconTwo; ?>" alt="">
 								<?php
-									if ($blogs)
+									if ($blogs && $tripodFullWidthBg)
 										:
 								?>
 							</a>
+								<?php
+									else :
+								?>
+							</div>
                         <?php
 									endif;
 							endif;

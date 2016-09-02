@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_tripod</name>
-	<creationDate>February 2016</creationDate>
+	<creationDate>September 2016</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
-	<authorUrl>http://www.joomlashack.com</authorUrl>
-	<copyright>Copyright Joomlashack 2015. All rights reserved</copyright>
+	<authorUrl>https://www.joomlashack.com</authorUrl>
+	<copyright>Copyright Joomlashack 2016. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.4</version>
+	<version>1.1.0</version>
     <description>TPL_JS_TRIPOD_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -37,23 +37,24 @@
 	</files>
 
 	<positions>
-		<position>toolbar</position>
-		<position>logo</position>
-		<position>top</position>
-		<position>top2</position>
-		<position>menu</position>
-		<position>featured</position>
-		<position>grid-top</position>
-		<position>grid-top2</position>
 		<position>above-content</position>
+		<position>below-content</position>
+		<position>bottom-menu</position>
 		<position>breadcrumbs</position>
+		<position>debug</position>
+		<position>featured</position>
+		<position>footer</position>
+		<position>grid-bottom2</position>
+		<position>grid-bottom</position>
+		<position>grid-top2</position>
+		<position>grid-top</position>
+		<position>logo</position>
+		<position>menu</position>
 		<position>sidebar1</position>
 		<position>sidebar2</position>
-		<position>below-content</position>
-		<position>grid-bottom</position>
-		<position>grid-bottom2</position>
-		<position>bottom-menu</position>
-		<position>footer</position>
+		<position>toolbar</position>
+		<position>top2</position>
+		<position>top</position>
 	</positions>
 
 	<config>

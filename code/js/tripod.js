@@ -3,10 +3,12 @@ jQuery(function() {
     if (singlescrollingpage) {
         var resizeClass = "div.blog > div.category-desc";
         var resizeClass2 = "div.blog > div.items-leading > [class^=leading-]";
+        var resizeClass3 = "div.blog > div.container > .items-row";
 
         if (!jQuery('div.blog').length) {
             resizeClass = "div.blog-featured > div.category-desc";
             resizeClass2 = "div.blog-featured > div.items-leading > [class^=leading-]";
+			resizeClass3 = "div.blog-featured > div.container > .items-row";
         }
     }
 
@@ -14,7 +16,7 @@ jQuery(function() {
         var htoolbar = jQuery('div.wrapper-toolbar').height();
         var htop = jQuery('#header').height() + jQuery('div.wrapper-toolbar').height();
 
-        var c = jQuery(resizeClass).length + jQuery(resizeClass2).length;
+        var c = jQuery(resizeClass).length + jQuery(resizeClass2).length + jQuery(resizeClass3).length;
 
         if (c > 0) {
             var elems = [];
@@ -76,6 +78,13 @@ jQuery(function() {
                 ppost++;
                 postno++;
             });
+			jQuery(resizeClass3).each(function (post) {
+				jQuery(this).attr('id','singlepage_post_' + postno)
+						.addClass('singlepage_section')
+						.addClass(class2);
+				ppost++;
+				postno++;
+			});
 
             if (jQuery('.items-more').length) {
                 if (ppost%2 == 0)

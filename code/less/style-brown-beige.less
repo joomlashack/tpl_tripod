@@ -54,6 +54,7 @@ blockquote{
 }
 
 // Navbar
+
 .navbar {
 	.nav {
 		> li {
@@ -68,7 +69,24 @@ blockquote{
 		}
 	}
 }
+
+.navbar-inverse {
+	.nav {
+		> li {
+			> a{
+			&:before{
+				background-image: url(../images/brown-beige/breadcrumb-item-active-left.png);
+			}
+			&:after{
+				background-image: url(../images/brown-beige/breadcrumb-item-active-right.png);
+			}
+			}
+		}
+	}
+}
+
 // mod-articles-category-date
+
 .mod-articles-category-date{
 	&:before{
 		background-image: url(../images/brown-beige/breadcrumb-item-active-left.png);
@@ -77,16 +95,21 @@ blockquote{
 		background-image: url(../images/brown-beige/breadcrumb-item-active-right.png);
 	}
 }
+
 // slideshow
+
 #nextslide{
 	background-image: url(../images/brown-beige/slideshow-nav-next.png);
 }
+
 #prevslide {
 	background-image: url(../images/brown-beige/slideshow-nav-prev.png);
 }
+
 .toolbar-collapse-btn .icon-bar,.navbar .btn-navbar .icon-bar {
 	background-color: #8F8471;
 }
+
 .btn{
 	&.btn-primary{
 		&:hover{
@@ -94,14 +117,17 @@ blockquote{
 		}
 	}
 }
+
 [class*="category-module"]{
 	li a{
 		color : @white;
 	}
 }
+
 #header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon,#header.tripodSlideshow #logo{
 	background-color: rgba(60, 38, 23,0.7);
 }
+
 .tabs-left,
 .tabs-right{
 	> .nav-tabs > li{
@@ -116,6 +142,49 @@ blockquote{
 			}
 			a {
 				color: @color_five;
+			}
+		}
+	}
+}
+
+.page-header {
+	border-bottom-color: #41494c;
+}
+
+// Navs
+
+.nav-tabs {
+	ul.submenu {
+		> li {
+			a {
+				color: lighten(@color_one, 30%);
+				text-align: center;
+
+				&:hover, &:focus{
+					color: lighten(@color_one, 15%);
+
+					.caret {
+						border-top-color: lighten(@color_one, 15%);
+					}
+				}
+			}
+
+			&.active {
+				> a {
+					color: lighten(@color_one, 15%);
+
+					.caret {
+						border-top-color: lighten(@color_one, 15%);
+					}
+
+					&:hover, &:focus{
+						color: lighten(@color_one, 15%);
+
+						.caret {
+							border-top-color: lighten(@color_one, 15%);
+						}
+					}
+				}
 			}
 		}
 	}

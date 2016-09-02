@@ -15,7 +15,6 @@
 	}
 }
 
-
 // Breadcrumb
 // ------------------------
 
@@ -54,6 +53,7 @@ blockquote{
 }
 
 // Navbar
+
 .navbar {
 	.nav {
 		> li:hover {
@@ -68,7 +68,24 @@ blockquote{
 		}
 	}
 }
+
+.navbar-inverse {
+	.nav {
+		> li {
+			> a{
+			&:before{
+				background-image: url(../images/white-gray/breadcrumb-item-active-left.png);
+			}
+			&:after{
+				background-image: url(../images/white-gray/breadcrumb-item-active-right.png);
+			}
+			}
+		}
+	}
+}
+
 // mod-articles-category-date
+
 .mod-articles-category-date{
 	&:before{
 		background-image: url(../images/white-gray/breadcrumb-item-active-left.png);
@@ -77,16 +94,21 @@ blockquote{
 		background-image: url(../images/white-gray/breadcrumb-item-active-right.png);
 	}
 }
+
 // slideshow
+
 #nextslide{
 	background-image: url(../images/white-gray/slideshow-nav-next.png);
 }
+
 #prevslide {
 	background-image: url(../images/white-gray/slideshow-nav-prev.png);
 }
+
 .toolbar-collapse-btn .icon-bar,.navbar .btn-navbar .icon-bar {
 	background-color: #A9A9A9;
 }
+
 .btn{
 	&.btn-primary{
 		color :@white;
@@ -103,6 +125,7 @@ blockquote{
 		}
 	}
 }
+
 #header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon, #header.tripodSlideshow #logo{
 	background-color: rgba(255,255,255,0.6);
 }
@@ -113,19 +136,23 @@ blockquote{
 		color :@color_one;
 	}
 }
+
 .module_ms3>h3, .moduletable_ms3>h3, .moduletext_ms3>h3,
 .module_ms4>h3, .moduletable_ms4>h3, .moduletext_ms4>h3{
 	border-bottom-color: #666;
 }
+
 #grid-bottom{
 	.module_ms3>h3, .moduletable_ms3>h3, .moduletext_ms3>h3,
 	.module_ms4>h3, .moduletable_ms4>h3, .moduletext_ms4>h3{
 		border-bottom-color: @color_one;
 	}
 }
+
 .pager li>a, .pager li>span{
 	border-color: @color_three;
 }
+
 .table.table-striped tbody>tr>td, .table.table-striped tbody>tr>th{
 	a{
 		color : @textColor;
@@ -186,4 +213,10 @@ blockquote{
 	.container-fluid.active{
 		color : @textColor;
 	}
+}
+
+// ------------------------
+
+.page-header {
+	border-bottom-color: #41494c;
 }

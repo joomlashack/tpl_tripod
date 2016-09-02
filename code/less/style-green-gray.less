@@ -32,6 +32,8 @@
 	}
 }
 
+// ------------------------
+
 blockquote{
 	background-image: url(../images/green-gray/blockquote.png);
 }
@@ -54,6 +56,8 @@ blockquote{
 }
 
 // Navbar
+// ------------------------
+
 .navbar {
 	.nav {
 		> li {
@@ -68,7 +72,24 @@ blockquote{
 		}
 	}
 }
+
+.navbar-inverse {
+	.nav {
+		> li {
+			> a{
+			&:before{
+				background-image: url(../images/green-gray/breadcrumb-item-active-left.png);
+			}
+			&:after{
+				background-image: url(../images/green-gray/breadcrumb-item-active-right.png);
+			}
+			}
+		}
+	}
+}
+
 // mod-articles-category-date
+
 .mod-articles-category-date{
 	&:before{
 		background-image: url(../images/green-gray/breadcrumb-item-active-left.png);
@@ -77,16 +98,21 @@ blockquote{
 		background-image: url(../images/green-gray/breadcrumb-item-active-right.png);
 	}
 }
+
 // slideshow
+
 #nextslide{
 	background-image: url(../images/green-gray/slideshow-nav-next.png);
 }
+
 #prevslide {
 	background-image: url(../images/green-gray/slideshow-nav-prev.png);
 }
+
 .toolbar-collapse-btn .icon-bar,.navbar .btn-navbar .icon-bar {
 	background-color: #B2B2BA;
 }
+
 .btn{
 	&.btn-primary{
 		color :@white;
@@ -106,6 +132,7 @@ blockquote{
 		}
 	}
 }
+
 #header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon,#header.tripodSlideshow #logo{
 	background-color: rgba(192, 216, 197,0.5);
 }
@@ -185,6 +212,7 @@ legend{
 
 //Portfolio
 // ------------------------
+
 .tripod-portfolio{
 	.container-fluid.active{
 		color : @black;

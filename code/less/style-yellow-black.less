@@ -53,6 +53,7 @@ blockquote{
 }
 
 // Navbar
+
 .navbar {
 	.nav {
 		> li {
@@ -67,7 +68,24 @@ blockquote{
 		}
 	}
 }
+
+.navbar-inverse {
+	.nav {
+		> li {
+			> a{
+			&:before{
+				background-image: url(../images/yellow-black/breadcrumb-item-active-left.png);
+			}
+			&:after{
+				background-image: url(../images/yellow-black/breadcrumb-item-active-right.png);
+			}
+			}
+		}
+	}
+}
+
 // mod-articles-category-date
+
 .mod-articles-category-date{
 	&:before{
 		background-image: url(../images/yellow-black/breadcrumb-item-active-left.png);
@@ -95,6 +113,49 @@ blockquote{
 			}
 			.top-position{
 				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B2000000', endColorstr='#B2000000');
+			}
+		}
+	}
+}
+
+.page-header {
+	border-bottom-color: #41494c;
+}
+
+// Navs
+
+.nav-tabs {
+	ul.submenu {
+		> li {
+			a {
+				color: darken(@linkColor, 20%);
+				text-align: center;
+
+				&:hover, &:focus{
+					color: darken(@linkColor, 30%);
+
+					.caret {
+						border-top-color: darken(@linkColor, 30%);
+					}
+				}
+			}
+
+			&.active {
+				> a {
+					color: darken(@linkColor, 30%);
+
+					.caret {
+						border-top-color: darken(@linkColor, 30%);
+					}
+
+					&:hover, &:focus{
+						color: darken(@linkColor, 30%);
+
+						.caret {
+							border-top-color: darken(@linkColor, 30%);
+						}
+					}
+				}
 			}
 		}
 	}

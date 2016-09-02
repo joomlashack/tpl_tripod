@@ -142,21 +142,6 @@ function slideshowSetRutDefult($slideItem)
 	return $slideItemRute;
 }
 
-$slideshowImageOneRute = slideshowSetRutDefult($slideshowImageOne);
-$slideshowImageTwoRute = slideshowSetRutDefult($slideshowImageTwo);
-$slideshowImageThreeRute = slideshowSetRutDefult($slideshowImageThree);
-$slideshowImageFourRute = slideshowSetRutDefult($slideshowImageFour);
-
-$tripodSlides = false;
-
-if ($slideshowImageOneRute != -1)
-{
-	if ($slideshowImageTwoRute != -1 || $slideshowImageThreeRute != -1 || $slideshowImageFourRute != -1)
-	{
-		$tripodSlides = true;
-	}
-}
-
 // Icons
 $style = JRequest::getVar('templateTheme', $user->getParam('theme', $this->params->get('style', 'diagonals-hot')));
 

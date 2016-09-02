@@ -411,6 +411,7 @@ defined('_JEXEC') or die('Restricted access');
 				endif;
 			?>
         </div>
+    <w:module type="none" name="debug" chrome="none" />
     <!-- footer -->
     <div class="wrapper-footer">
         <footer id="footer"

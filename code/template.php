@@ -66,7 +66,7 @@ defined('_JEXEC') or die('Restricted access');
 		?>
 
         <?php
-			if ($tripodSlideshow && $tripodSlides)
+			if ($tripodSlideshow)
 				:
 		?>
             <!--Arrow Navigation-->

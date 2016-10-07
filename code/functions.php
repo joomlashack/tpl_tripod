@@ -127,10 +127,6 @@ if ($tripodFullWidthBg && $sidebarExists == '' && $blogs)
 
 // Slideshow
 $tripodSlideshow = ($this->params->get('enableSlideshow', '0') == '1' ? true : false);
-$slideshowImageOne = checkImage($this->params->get("slideshowImageOne", ""), "templates/js_tripod/images/default-bg-one.jpg");
-$slideshowImageTwo = checkImage($this->params->get("slideshowImageTwo", ""), "templates/js_tripod/images/default-bg-two.jpg");
-$slideshowImageThree = checkImage($this->params->get("slideshowImageThree", ""), "templates/js_tripod/images/default-bg-three.jpg");
-$slideshowImageFour = checkImage($this->params->get("slideshowImageFour", ""), "templates/js_tripod/images/default-bg-four.jpg");
 
 /**
  * Slide show set rut default
@@ -144,21 +140,6 @@ function slideshowSetRutDefult($slideItem)
 	$slideItemRute = str_replace(JPATH_BASE, '', $slideItem);
 
 	return $slideItemRute;
-}
-
-$slideshowImageOneRute = slideshowSetRutDefult($slideshowImageOne);
-$slideshowImageTwoRute = slideshowSetRutDefult($slideshowImageTwo);
-$slideshowImageThreeRute = slideshowSetRutDefult($slideshowImageThree);
-$slideshowImageFourRute = slideshowSetRutDefult($slideshowImageFour);
-
-$tripodSlides = false;
-
-if ($slideshowImageOneRute != -1)
-{
-	if ($slideshowImageTwoRute != -1 || $slideshowImageThreeRute != -1 || $slideshowImageFourRute != -1)
-	{
-		$tripodSlides = true;
-	}
 }
 
 // Icons
@@ -234,8 +215,6 @@ $sliderImages = Array();
 
 if ($useSlider)
 {
-	// Looks out for mp4 files in the videos folder, and equivalent file names (.jpg or .png) in the images folder
-
 	$rimagesjpg = preg_find('/\.jpg$/D', $imagesFolder, PREG_FIND_SORTKEYS);
 	$rimagesJPG = preg_find('/\.JPG$/D', $imagesFolder, PREG_FIND_SORTKEYS);
 	$rimagespng = preg_find('/\.png$/D', $imagesFolder, PREG_FIND_SORTKEYS);

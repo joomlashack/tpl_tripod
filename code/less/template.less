@@ -228,6 +228,11 @@ select{
 .form-actions{
 	border-top-color: @grayDarker;
 }
+
+.icons-actions li [class*="icon-"] {
+	margin-right: 4px;
+}
+
 // Buttons
 // ------------------------
 
@@ -322,6 +327,8 @@ select{
 .pager li>a, .pager li>span{
 	background-color: darken(@bodyBackground, 10%);
 	border-color: @grayDarker;
+	.border-radius(0);
+
 	&:hover{
 		background-color: darken(@bodyBackground, 20%);
 	}
@@ -423,17 +430,7 @@ select{
 					color: @color_one;
 				}
 			}
-
 			> .dropdown-toggle {
-				.caret {
-					border-top-color: @linkColor;
-				}
-
-				&:hover, &:focus{
-					.caret {
-						border-top-color: @color_one;
-					}
-				}
 			}
 		}
 	}
@@ -880,10 +877,9 @@ select{
 // ------------------------
 dl.article-info{
 	color : @color_two;
-	font-size: 20px;
 	font-style: italic;
-	line-height: 25px;
 	margin-bottom: 10px;
+
 	dd{
 		margin-left: 2px;
 		margin-right: 2px;
@@ -1239,6 +1235,15 @@ div:first-child+.panel{
 		margin-right: 3px;
 	}
 }
+
+#archive-items > [class*="row"] {
+	margin-bottom: 25px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 // Pagination
 // ------------------------
 
@@ -1261,8 +1266,7 @@ div:first-child+.panel{
 	.counter{
 		color : @textColor;
 		line-height: 30px;
-		margin-bottom: 0;
-		min-height: 30px;
+		margin-left: 10px;
 	}
 }
 // ------------------------
@@ -1804,7 +1808,4 @@ p.img_caption{
 .img-intro-left{
 	float: left;
 	margin: 0 25px 0 0;
-}
-.counter.pull-right{
-	float: left;
 }

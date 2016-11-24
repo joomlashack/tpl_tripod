@@ -3,13 +3,25 @@
 // ------------------------
 
 .nav-tabs{
-	h3 , p , > li {
-		a{
-			&:before{
+
+	h3,
+	p,
+	> li {
+
+		a {
+
+			&:before {
 				background-image: url(../images/white-gray/nav-tabs-item-hover-left.png);
 			}
-			&:after{
+
+			&:after {
 				background-image: url(../images/white-gray/nav-tabs-item-hover-right.png);
+			}
+
+			&:before,
+			&:after {
+				background-size: 12px auto;
+				background-position: center center;
 			}
 		}
 	}
@@ -19,12 +31,16 @@
 // ------------------------
 
 .breadcrumb{
+
 	> li {
-		&:last-child{
-			&:before{
+
+		&:last-child {
+
+			&:before {
 				background-image: url(../images/white-gray/breadcrumb-item-active-left.png);
 			}
-			&:after{
+
+			&:after {
 				background-image: url(../images/white-gray/breadcrumb-item-active-right.png);
 			}
 		}
@@ -55,14 +71,25 @@ blockquote{
 // Navbar
 
 .navbar {
+
 	.nav {
+
 		> li {
-			> a{
-				&:before{
+
+			> a {
+
+				&:before {
 					background-image: url(../images/white-gray/nav-tabs-item-hover-left.png);
 				}
-				&:after{
+
+				&:after {
 					background-image: url(../images/white-gray/nav-tabs-item-hover-right.png);
+				}
+
+				&:before,
+				&:after {
+					background-size: 12px auto;
+					background-position: center center;
 				}
 			}
 		}

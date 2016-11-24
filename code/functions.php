@@ -145,51 +145,10 @@ function slideshowSetRutDefult($slideItem)
 // Icons
 $style = JRequest::getVar('templateTheme', $user->getParam('theme', $this->params->get('style', 'diagonals-hot')));
 
-$iconOne = checkImage($this->params->get("iconOne", ""), "templates/js_tripod/images/$style/icon-default-one.png");
-$iconTwo = checkImage($this->params->get("iconTwo", ""), "templates/js_tripod/images/$style/icon-default-two.png");
-$iconThree = checkImage($this->params->get("iconThree", ""), "templates/js_tripod/images/$style/icon-default-three.png");
-$iconFour = checkImage($this->params->get("iconFour", ""), "templates/js_tripod/images/$style/icon-default-four.png");
-
-if ($iconOne == "-1")
-{
-	$iconOne = "/templates/js_tripod/images/icon-default-one.png";
-}
-
-if ($iconTwo == "-1")
-{
-	$iconTwo = "/templates/js_tripod/images/icon-default-two.png";
-}
-
-if ($iconThree == "-1")
-{
-	$iconThree = "/templates/js_tripod/images/icon-default-three.png";
-}
-
-if ($iconFour == "-1")
-{
-	$iconFour = "/templates/js_tripod/images/icon-default-four.png";
-}
-
-if ($iconOne != "-1")
-{
-	$iconOne = str_replace(JPATH_BASE, '', $iconOne);
-}
-
-if ($iconTwo != "-1")
-{
-	$iconTwo = str_replace(JPATH_BASE, '', $iconTwo);
-}
-
-if ($iconThree != "-1")
-{
-	$iconThree = str_replace(JPATH_BASE, '', $iconThree);
-}
-
-if ($iconFour != "-1")
-{
-	$iconFour = str_replace(JPATH_BASE, '', $iconFour);
-}
-
+$iconOne    = $this->params->get("iconOne", "icon-camera");
+$iconTwo    = $this->params->get("iconTwo", "icon-user");
+$iconThree  = $this->params->get("iconThree", "icon-cogs");
+$iconFour   = $this->params->get("iconFour", "icon-envelope-o");
 
 $tripodToolbarDisplayed = ($this->params->get('tripod_toolbar_displayed', '1') == '1' ? true : false);
 $tripodToolbarDisplayedClass = "";

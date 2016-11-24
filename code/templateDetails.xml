@@ -122,10 +122,10 @@
                 <option value="0">JNO</option>
         </field>
 				<field name="imagesFolder" type="folderlist" directory="images" default="banners" label="TPL_JS_TRIPOD_IMAGES_FOLDER" description="TPL_JS_TRIPOD_IMAGES_FOLDER_DESC" />
-	            <field name="iconOne" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_ONE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
-	            <field name="iconTwo" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_TWO" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
-	            <field name="iconThree" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_THREE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
-				<field name="iconFour" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_FOUR" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
+	            <field name="iconOne" type="text" default="icon-camera" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_ONE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
+	            <field name="iconTwo" type="text" default="icon-user" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_TWO" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
+	            <field name="iconThree" type="text" default="icon-cogs" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_THREE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
+				<field name="iconFour" type="text" default="icon-envelope-o" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_FOUR" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
 	      <field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_BACKGROUND_IMAGE" description="TPL_JS_TRIPOD_BACKGROUND_IMAGE_DESC" />
 				<field name="tripod_toolbar_displayed" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_TRIPOD_TOOLBAR_DISPLAYED" description="TPL_JS_TRIPOD_TOOLBAR_DISPLAYED_DESC">
 					<option value="0">JNo</option>

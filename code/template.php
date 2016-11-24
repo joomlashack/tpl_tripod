@@ -95,152 +95,63 @@ defined('_JEXEC') or die('Restricted access');
 			?>
                 <div class="tripod-slideshow-wrapper-icons">
                    <div class="row-fluid">
-                        <?php
-							if ($iconOne != "-1")
-								:
-						?>
-                            <?php
-								if ($tripodFullWidthBg)
-									:
-							?>
-                                <?php
-									if (($this->countModules('featured') || $this->countModules('grid-top') || $this->countModules('grid-top2')) && $blogs)
-										:
-								?>
-                                    <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagefirst">
-								<?php
-									else :
-								?>
-                                    <div class="tripod-slideshow-icon span3">
-                                <?php
-									endif;
-								?>
-                            <?php
-								else :
-									?>
+
+                        <?php if ($tripodFullWidthBg) : ?>
+                            <?php if (($this->countModules('featured') || $this->countModules('grid-top') || $this->countModules('grid-top2')) && $blogs) : ?>
+                                <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagefirst">
+                            <?php else : ?>
                                 <div class="tripod-slideshow-icon span3">
-                            <?php
-								endif;
-							?>
-                                    <img src="<?php  echo JURI::root(true) . $iconOne; ?>" alt="">
-                            <?php
-								if ($tripodFullWidthBg)
-									:
-							?>
-                                <?php
-									if (($this->countModules('featured') || $this->countModules('grid-top') || $this->countModules('grid-top2')) && $blogs)
-										:
-								?>
-                                    </a>
-                                <?php
-									else :
-								?>
-                                    </div>
-                                <?php
-									endif;
-								?>
-                            <?php
-								else :
-							?>
+                            <?php endif; ?>
+                        <?php else : ?>
+                            <div class="tripod-slideshow-icon span3">
+                        <?php endif; ?>
+                                <i class="<?php echo $iconOne; ?> icon-3x"></i>
+                        <?php if ($tripodFullWidthBg) : ?>
+                            <?php if (($this->countModules('featured') || $this->countModules('grid-top') || $this->countModules('grid-top2')) && $blogs) : ?>
+                                </a>
+                            <?php else : ?>
                                 </div>
-                            <?php
-								endif;
-							?>
-                        <?php
-							endif;
-						?>
-                        <?php
-							if ($iconTwo != "-1")
-								:
-									if ($blogs && $tripodFullWidthBg)
-										:
-						?>
+                            <?php endif; ?>
+                        <?php else : ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if ($blogs && $tripodFullWidthBg) : ?>
                             <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_post_0">
-									<?php
-										else :
-									?>
+									<?php else : ?>
 							<div class="tripod-slideshow-icon span3">
-									<?php
-										endif;
-									?>
-						        <img src="<?php  echo JURI::root(true) . $iconTwo; ?>" alt="">
-								<?php
-									if ($blogs && $tripodFullWidthBg)
-										:
-								?>
+									<?php endif; ?>
+                                <i class="<?php echo $iconTwo; ?> icon-3x"></i>
+								<?php if ($blogs && $tripodFullWidthBg) : ?>
 							</a>
-								<?php
-									else :
-								?>
+								<?php else : ?>
 							</div>
-                        <?php
-									endif;
-							endif;
-						?>
-                        <?php
-							if ($iconThree != "-1")
-								:
-						?>
-                            <?php
-								if ($tripodFullWidthBg && $this->countModules('grid-bottom'))
-									:
-							?>
-                                <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagebottom">
-                            <?php
-								else :
-							?>
-                                <div class="tripod-slideshow-icon span3">
-                            <?php
-								endif;
-							?>
-                                    <img src="<?php  echo JURI::root(true) . $iconThree; ?>" alt="">
-                            <?php
-								if ($tripodFullWidthBg && $this->countModules('grid-bottom'))
-									:
-							?>
-                                </a>
-                            <?php
-								else :
-							?>
-                                </div>
-                            <?php
-								endif;
-							?>
-                        <?php
-							endif;
-						?>
-                        <?php
-							if ($iconFour != "-1")
-								:
-						?>
-                            <?php
-								if ($tripodFullWidthBg && $this->countModules('grid-bottom2'))
-									:
-							?>
-                                <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagelast">
-                            <?php
-								else :
-							?>
-                                <div class="tripod-slideshow-icon span3">
-                            <?php
-								endif;
-							?>
-                                    <img src="<?php  echo JURI::root(true) . $iconFour; ?>" alt="">
-                            <?php
-								if ($tripodFullWidthBg && $this->countModules('grid-bottom2'))
-									:
-							?>
-                                </a>
-                            <?php
-								else :
-							?>
-                                </div>
-                            <?php
-								endif;
-							?>
-                        <?php
-							endif;
-						?>
+                        <?php endif; ?>
+
+                        <?php if ($tripodFullWidthBg && $this->countModules('grid-bottom')) : ?>
+                            <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagebottom">
+                        <?php else : ?>
+                            <div class="tripod-slideshow-icon span3">
+                        <?php endif; ?>
+                            <i class="<?php echo $iconThree; ?> icon-3x"></i>
+                        <?php if ($tripodFullWidthBg && $this->countModules('grid-bottom')) : ?>
+                            </a>
+                        <?php else : ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if ($tripodFullWidthBg && $this->countModules('grid-bottom2')) : ?>
+                            <a href="#" class="tripod-slideshow-icon span3" rel="singlepage_pagelast">
+                        <?php else : ?>
+                            <div class="tripod-slideshow-icon span3">
+                        <?php endif; ?>
+                            <i class="<?php echo $iconFour; ?> icon-3x"></i>
+                        <?php if ($tripodFullWidthBg && $this->countModules('grid-bottom2')) : ?>
+                            </a>
+                        <?php else : ?>
+                            </div>
+                        <?php endif; ?>
+
                    </div>
                 </div>
             <?php

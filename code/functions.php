@@ -240,3 +240,9 @@ else
 {
 	$featuredSpace = false;
 }
+
+// Top menu label
+$topMenuLabel = $this->params->get('mobile_menu_text', '');
+if ( $topMenuLabel == '' ) {
+    $topMenuLabel = '<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>';
+}

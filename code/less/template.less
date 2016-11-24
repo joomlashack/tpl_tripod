@@ -1568,20 +1568,45 @@ p.img_caption{
 .load-item{
 	background-repeat: no-repeat;
 	cursor: pointer;
-	height: 168px;
+	height: 56px;
 	position: absolute;
-	top: ~"calc(50% - 84px)";
-	width: 63px;
+	top: ~"calc(50% - 41px)";
+	width: 36px;
 	z-index: 5;
 }
-#nextslide{
-	background-image: url(../images/yellow-black/slideshow-nav-next.png);
-	right: -3px;
+
+#nextslide {
+	right: 40px;
+
+	&:after {
+		content: '\f105';
+	}
 }
-#prevslide{
-	background-image: url(../images/yellow-black/slideshow-nav-prev.png);
-	left: -3px;
+
+#prevslide {
+	left: 40px;
+
+	&:after {
+		content: '\f104';
+	}
 }
+
+#nextslide,
+#prevslide {
+
+	&:after {
+		font-family: FontAwesome;
+		font-size: 100px;
+		display: block;
+		margin-top: 15px;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
 #singlepage_blog_titles_wrapper{
 	margin-bottom: 0;
 }
@@ -1867,4 +1892,34 @@ p.img_caption{
 .img-intro-left{
 	float: left;
 	margin: 0 25px 0 0;
+}
+
+// Tripod
+
+.nav-tabs {
+
+	h3,
+	p,
+	> li {
+
+		a {
+
+			&:before,
+			&:after {
+				background-size: 12px auto;
+				background-position: center center;
+			}
+		}
+	}
+}
+
+// Navbar
+
+.navbar .nav > li > a {
+
+	&:before,
+	&:after {
+		background-size: 12px auto;
+		background-position: center center;
+	}
 }

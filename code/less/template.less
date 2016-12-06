@@ -27,6 +27,20 @@ h6 {
 	font-family: @sansFontFamily;
 	font-weight: normal;
 }
+
+a {
+	transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-webkit-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
 #grid-bottom2 {
 	h6 {
 		color: @color_two;
@@ -700,9 +714,9 @@ select{
 .big-heading(){
 	border-bottom-style: solid;
 	border-bottom-width: 10px;
-	font-size: 70px;
+	font-size: 60px;
 	font-weight: 700;
-	line-height: 80px;
+	line-height: 70px;
 	margin-bottom: 15px;
 	margin-top: 0;
 	text-transform: uppercase;
@@ -900,6 +914,25 @@ dl.article-info{
 }
 span.content_rating{
 	font-size: 0.9em;
+}
+
+// Custom
+// ------------------------
+
+.no-margin-top {
+	margin-top: 0;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+h4 {
+
+	&.no-margin-top,
+	&.no-margin-bottom {
+		line-height: 22px;
+	}
 }
 
 // Navbar

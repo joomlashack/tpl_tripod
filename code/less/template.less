@@ -1837,6 +1837,28 @@ p.img_caption{
 	max-width: 50%;
 }
 
+.block-article() {
+	.item-image {
+		margin-bottom: 0 !important;
+
+		&.pull-right {
+			margin-left: 30px !important;
+		}
+
+		&.pull-left {
+			margin-right: 30px !important;
+		}
+	}
+
+	.block-intro {
+		padding: 30px;
+
+		p {
+			margin: 0 0 30px;
+		}
+	}
+}
+
 .items-leading {
 	display: block;
 
@@ -1874,51 +1896,7 @@ p.img_caption{
 	.block-article {
 		background: rgba(0, 0, 0, 0.2);
 
-		.item-image {
-			margin-bottom: 0 !important;
-
-			&.pull-right {
-				margin-left: 30px !important;
-			}
-
-			&.pull-left {
-				margin-right: 30px !important;
-			}
-		}
-
-		.block-intro {
-			padding: 30px;
-
-			p {
-				margin: 0 0 30px;
-			}
-		}
-	}
-}
-
-.items-row {
-
-	.block-article {
-
-		.item-image {
-			margin-bottom: 20px !important;
-
-			&.pull-right {
-				margin-left: 30px !important;
-			}
-
-			&.pull-left {
-				margin-right: 30px !important;
-			}
-		}
-
-		.block-intro {
-			padding: 30px;
-
-			p {
-
-			}
-		}
+		.block-article();
 	}
 }
 

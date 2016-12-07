@@ -252,16 +252,15 @@ select{
 // Buttons
 // ------------------------
 
-.btn{
-	border-color: @btnBackground;
-	border-bottom: 3px solid @btnBackground;
+.btn {
+	.border-radius(0);
+	border-bottom: 2px solid @btnBackground;
 	border-left: 0;
-	border-radius: 0 0 0 0;
 	border-right: 0;
+	border-top: 0;
 	box-shadow: none;
 	color : @black;
 	font-family: @sansFontFamilyTwo;
-	font-size: 13px;
 	font-weight: 700;
 	text-shadow: none;
 
@@ -1063,7 +1062,6 @@ span.content_rating{
 }
 #spanRestScrollingMenuWrapper{
 	background-color: @color_one;
-	padding-top: 20px;
 }
 // Dropdown Menu
 // ------------------------
@@ -1180,8 +1178,8 @@ span.content_rating{
 }
 [id*="singlepage_"] {
 	> div{
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-top: 60px;
+		padding-bottom: 60px;
 		.rm-margin-child();
 	}
 }
@@ -1311,9 +1309,27 @@ div:first-child+.panel{
 }
 // ------------------------
 .wrapper-footer{
-	border-bottom: 10px solid @bodyBackground;
-	border-top: 10px solid @bodyBackground;
+
+	footer {
+		padding: 40px 0;
+	}
 }
+
+#breadcrumbs {
+	padding-top: 40px;
+	margin-bottom: 40px;
+
+	.breadcrumb {
+		margin-bottom: 0;
+		padding: 15px 30px;
+		background: rgba(0, 0, 0, 0.1);
+
+		&> li {
+			height: auto;
+		}
+	}
+}
+
 #footer{
 	background-color: @color_two;
 	background-image: none;
@@ -1356,10 +1372,6 @@ div:first-child+.panel{
 				}
 			}
 		}
-	}
-	&.sticky{
-		border-bottom: 10px solid @bodyBackground;
-		border-top: 10px solid @bodyBackground;
 	}
 }
 
@@ -1440,10 +1452,33 @@ div:first-child+.panel{
 			font-size: 40px;
 		}
 	}
+
+	[class*="span"] {
+		overflow: hidden;
+
+		img {
+			transition: transform 1s ease-in-out 0s;
+			-moz-transition: transform 1s ease-in-out 0s;
+			-webkit-transition: transform 1s ease-in-out 0s;
+			-o-transition: transform 1s ease-in-out 0s;
+
+			&:hover {
+				transform: scale(1.3);
+				-moz-transform: scale(1.3);
+				-webkit-transform: scale(1.3);
+				-o-transform: scale(1.3);
+			}
+		}
+	}
 }
 // Single Page
 // ------------------------
-.color_one{
+
+.color {
+	color: @color_two;
+}
+
+.color_one {
 	background-color: @color_one;
 }
 .color_two{
@@ -1990,5 +2025,33 @@ p.img_caption{
 	&:after {
 		background-size: 15px auto;
 		background-position: center center;
+	}
+}
+
+.footer1,
+.footer2 {
+	color: @white;
+}
+
+// Easy Social icons
+
+div {
+	.jssocialicons-horizontal{
+		.clearfix();
+		margin-left: 0;
+
+		> li {
+			display: inline-block;
+			float: none;
+		}
+	}
+}
+
+.is_iphone.v_7,
+.is_iphone.v_8,
+.is_iphone.v_9{
+
+	.text-center-medium ul.jssocialicons-horizontal > li {
+		float: none;
 	}
 }

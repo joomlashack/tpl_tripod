@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700';
+@import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,700';
 
 // Tripod
 // ------------------------
@@ -262,7 +264,7 @@ select{
 	font-size: 13px;
 	font-weight: 700;
 	text-shadow: none;
-	text-transform: uppercase;
+
 	&:hover{
 		background-color: #FDFDFD;
 		background-image: none;
@@ -725,19 +727,24 @@ select{
 		line-height: 48px;
 	}
 }
-.big-text(){
-	font-size: 24px;
-	line-height: 30px;
-	@media (max-width:767px) {
-		font-size: 21px;
-		line-height: 27px;
-	}
-}
 
 .hero-unit{
 	border-radius: 0 0 0 0;
 	h1{
 		.big-heading();
+	}
+}
+
+.big-text() {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.big-text {
+	.big-text();
+
+	.btn {
+		.big-text();
 	}
 }
 
@@ -748,7 +755,7 @@ select{
 	}
 }
 .module_ms1, .moduletable_ms1, .moduletext_ms1{
-	.big-text();
+
 	> h3{
 		.big-heading();
 		border-bottom-color: @color_two;
@@ -763,7 +770,7 @@ select{
 	}
 }
 .module_ms2, .moduletable_ms2, .moduletext_ms2{
-	.big-text();
+
 	background-color: @color_two;
 	color : @color_one;
 	padding: @paddingSmall;
@@ -1833,7 +1840,6 @@ p.img_caption{
 	display: block;
 
 	.singlepage_section {
-		.big-text();
 
 		.leading-content{
 
@@ -1885,10 +1891,6 @@ p.img_caption{
 			p {
 				margin: 0 0 30px;
 			}
-		}
-
-		.btn {
-			.big-text();
 		}
 	}
 }

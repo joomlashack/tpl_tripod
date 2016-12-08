@@ -1039,7 +1039,9 @@ span.content_rating{
 		border-top: 10px solid @bodyBackground;
 	}
 }
-.wrapper-menu,.wrapper-bottom-menu{
+.wrapper-menu,
+.wrapper-bottom-menu{
+
 	.navbar{
  		margin-bottom: 0;
 	}
@@ -1308,10 +1310,19 @@ div:first-child+.panel{
 	line-height: 17px;
 }
 // ------------------------
+
 .wrapper-footer{
 
 	footer {
-		padding: 40px 0;
+		padding: 0 0 40px;
+
+		.wrapper-bottom-menu {
+			margin-bottom: 30px;
+
+			.navbar-inner {
+				background: rgba(0, 0, 0, 0.7);
+			}
+		}
 	}
 }
 

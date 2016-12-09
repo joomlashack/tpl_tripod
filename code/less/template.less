@@ -470,7 +470,7 @@ select{
 			margin-top: 0;
 		}
 	}
-	
+
 	h3 , p, > li {
 		> a{
 			border: 0;
@@ -944,6 +944,8 @@ span.content_rating{
 				font-weight: 700;
 				line-height: 26px;
 				min-height: 26px;
+				text-shadow: none;
+				
 				&:before,
 				&:after{
 					background-repeat: no-repeat;
@@ -1325,7 +1327,7 @@ div:first-child+.panel{
 			margin-bottom: 30px;
 
 			.navbar-inner {
-				background: rgba(0, 0, 0, 0.7);
+				background: darken(@color_two, 5%);
 			}
 		}
 	}

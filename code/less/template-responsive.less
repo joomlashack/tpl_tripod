@@ -93,6 +93,32 @@
 
 @media (max-width: 979px) {
 
+	#nav-menu,
+	#nav-toolbar,
+	#nav-bottom-menu {
+
+		.nav > li > a {
+			display: inline-block;
+		}
+
+		.dropdown-menu .active > a {
+			background: transparent !important;
+		}
+	}
+
+	#toolbar,
+	#menu,
+	#bottom-menu {
+
+		.btn-navbar {
+			background: transparent !important;
+
+			.icon-bar {
+				background: @color_one;
+			}
+		}
+	}
+
 	#nextslide,
 	#prevslide {
 

@@ -447,6 +447,8 @@ select{
 }
 
 .well {
+	padding: 30px;
+
 	.nav-list, .nav-pills {
 		> li {
 			> a {
@@ -909,9 +911,11 @@ select{
 
 // Articles
 // ------------------------
+
 dl.article-info{
 	color : @color_two;
 	margin-bottom: 10px;
+	padding: 8px 13px;
 
 	dd{
 		margin-left: 2px;
@@ -941,9 +945,28 @@ span.content_rating{
 
 // Navbar
 // ------------------------
+
+#nav-menu,
+#nav-toolbar,
+#nav-bottom-menu {
+
+	&.nav-collapse .nav > li > a,
+	&.nav-collapse .dropdown-menu,
+	.dropdown-menu .active > a {
+		background: transparent !important;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background: transparent !important;
+		}
+	}
+}
+
 .navbar-inner{
 	box-shadow: none;
 }
+
 .navbar {
 	.nav {
 		display: table;
@@ -1041,8 +1064,7 @@ span.content_rating{
 .menu-big-items{
 	.nav {
 		> li {
-			margin-left: 0.8em;
-			margin-right: 0.8em;
+
 			> a{
 				font-size: 20px;
 				text-transform: uppercase;
@@ -1050,7 +1072,7 @@ span.content_rating{
 		}
 		.dropdown-toggle{
 			.caret{
-				margin-top: 14px;
+				margin-top: 11px;
 			}
 		}
 	}
@@ -1086,6 +1108,12 @@ span.content_rating{
 }
 // Dropdown Menu
 // ------------------------
+
+.btn-group .dropdown-toggle {
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
 .dropdown-menu{
 	border-radius: 0 0 0 0;
 	li {

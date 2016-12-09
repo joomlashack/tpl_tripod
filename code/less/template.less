@@ -458,15 +458,19 @@ select{
 }
 
 // ------------------------
-.nav.nav-tabs{
+.nav.nav-tabs {
 	background-color: @color_two;
 	border-bottom: 0;
 	margin-bottom: 0;
-	dt{
-		h3{
+	padding: 10px;
+
+	dt {
+
+		h3 {
 			margin-top: 0;
 		}
 	}
+	
 	h3 , p, > li {
 		> a{
 			border: 0;
@@ -483,6 +487,7 @@ select{
 			&:before,
 			&:after{
 				background-repeat: no-repeat;
+				background-size: 16px auto;
 				content: none;
 				height: 47px;
 				position: absolute;
@@ -1940,7 +1945,7 @@ p.img_caption{
 	}
 
 	.block-article {
-		background: rgba(0, 0, 0, 0.2);
+		background: rgba(255, 255, 255, 0.2);
 
 		.block-article();
 	}

@@ -2,6 +2,42 @@
 // Tripod
 // ------------------------
 
+body {
+
+	#header.tripodSlideshow {
+
+		#logo,
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon,
+		#prevslide,
+		#nextslide {
+			color: @color_two;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: lighten(@color_two, 10%);
+			}
+		}
+	}
+
+	.toolbar-collapse-btn .icon-bar {
+		background: @white;
+	}
+
+	.joomlashack img {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.footer1,
+	.footer2 {
+		color: @white;
+	}
+}
+
 .nav-tabs{
 
 	h3,
@@ -117,10 +153,6 @@ blockquote{
 
 // slideshow
 
-.toolbar-collapse-btn .icon-bar,.navbar .btn-navbar .icon-bar {
-	background-color: #A9A9A9;
-}
-
 .btn{
 	&.btn-primary{
 		color :@white;
@@ -136,10 +168,6 @@ blockquote{
 			}
 		}
 	}
-}
-
-#header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon, #header.tripodSlideshow #logo{
-	background-color: rgba(255,255,255,0.7);
 }
 
 .module_ms2, .moduletable_ms2, .moduletext_ms2{

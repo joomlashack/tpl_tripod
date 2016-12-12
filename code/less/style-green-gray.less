@@ -15,6 +15,32 @@
 	}
 }
 
+body {
+
+	#header.tripodSlideshow {
+
+		#logo,
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon,
+		#prevslide,
+		#nextslide {
+			color: @color_two;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: @color_one;
+			}
+		}
+	}
+
+	.joomlashack img {
+		background: rgba(255, 255, 255, 0.2);
+	}
+}
 
 // Breadcrumb
 // ------------------------
@@ -125,9 +151,6 @@ blockquote{
 	}
 }
 
-#header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon,#header.tripodSlideshow #logo{
-	background-color: rgba(192, 216, 197,0.5);
-}
 .module_ms1>h3, .moduletable_ms1>h3, .moduletext_ms1>h3 {
 	color: #0B1B4F;
 }

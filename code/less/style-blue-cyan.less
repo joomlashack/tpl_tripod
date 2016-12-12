@@ -2,6 +2,35 @@
 // Tripod
 // ------------------------
 
+body {
+
+	#header.tripodSlideshow {
+
+		#logo,
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	.toolbar-collapse-btn,
+	.navbar .btn-navbar {
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: @color_one;
+		}
+
+		.icon-bar {
+			background-color: @white;
+		}
+	}
+
+	.wrapper-bottom-menu .navbar .btn-navbar {
+		background-color: @cyan;
+	}
+}
+
 .nav-tabs{
 	h3 , p , > li {
 		a{
@@ -235,4 +264,8 @@ blockquote{
 			}
 		}
 	}
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+
 }

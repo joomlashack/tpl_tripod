@@ -2,13 +2,55 @@
 // Tripod
 // ------------------------
 
+body {
+
+	#header.tripodSlideshow {
+
+		#logo,
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon,
+		#prevslide,
+		#nextslide {
+			color: @color_two;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: lighten(@color_two, 10%);
+			}
+		}
+	}
+
+	.toolbar-collapse-btn .icon-bar {
+		background: @white;
+	}
+
+	.joomlashack img {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.footer1,
+	.footer2 {
+		color: @white;
+	}
+}
+
 .nav-tabs{
-	h3 , p , > li {
-		a{
-			&:before{
+
+	h3,
+	p,
+	> li {
+
+		a {
+
+			&:before {
 				background-image: url(../images/white-gray/nav-tabs-item-hover-left.png);
 			}
-			&:after{
+
+			&:after {
 				background-image: url(../images/white-gray/nav-tabs-item-hover-right.png);
 			}
 		}
@@ -19,12 +61,16 @@
 // ------------------------
 
 .breadcrumb{
+
 	> li {
-		&:last-child{
-			&:before{
+
+		&:last-child {
+
+			&:before {
 				background-image: url(../images/white-gray/breadcrumb-item-active-left.png);
 			}
-			&:after{
+
+			&:after {
 				background-image: url(../images/white-gray/breadcrumb-item-active-right.png);
 			}
 		}
@@ -55,13 +101,18 @@ blockquote{
 // Navbar
 
 .navbar {
+
 	.nav {
+
 		> li {
-			> a{
-				&:before{
+
+			> a {
+
+				&:before {
 					background-image: url(../images/white-gray/nav-tabs-item-hover-left.png);
 				}
-				&:after{
+
+				&:after {
 					background-image: url(../images/white-gray/nav-tabs-item-hover-right.png);
 				}
 			}
@@ -70,15 +121,20 @@ blockquote{
 }
 
 .navbar-inverse {
+
 	.nav {
+
 		> li {
-			> a{
-			&:before{
-				background-image: url(../images/white-gray/breadcrumb-item-active-left.png);
-			}
-			&:after{
-				background-image: url(../images/white-gray/breadcrumb-item-active-right.png);
-			}
+
+			> a {
+
+				&:before {
+					background-image: url(../images/white-gray/breadcrumb-item-active-left.png);
+				}
+
+				&:after {
+					background-image: url(../images/white-gray/breadcrumb-item-active-right.png);
+				}
 			}
 		}
 	}
@@ -97,23 +153,11 @@ blockquote{
 
 // slideshow
 
-#nextslide{
-	background-image: url(../images/white-gray/slideshow-nav-next.png);
-}
-
-#prevslide {
-	background-image: url(../images/white-gray/slideshow-nav-prev.png);
-}
-
-.toolbar-collapse-btn .icon-bar,.navbar .btn-navbar .icon-bar {
-	background-color: #A9A9A9;
-}
-
 .btn{
 	&.btn-primary{
 		color :@white;
 		&:hover{
-			background-color: lighten(@color_two, 6%);
+			background-color: lighten(@color_two, 7%);
 		}
 		&.toolbar-collapse-btn{
 			background-color: #666;
@@ -124,10 +168,6 @@ blockquote{
 			}
 		}
 	}
-}
-
-#header .tripod-slideshow-wrapper-icons .tripod-slideshow-icon, #header.tripodSlideshow #logo{
-	background-color: rgba(255,255,255,0.6);
 }
 
 .module_ms2, .moduletable_ms2, .moduletext_ms2{
@@ -161,11 +201,11 @@ blockquote{
 
 #header{
 	.bg-filter{
-		background-color: fade(@color_one, 60%);
+		background-color: fade(@color_one, 70%);
 	}
 	.tripod-slideshow-wrapper-icons{
 		.tripod-slideshow-icon{
-			background-color: fade(@color_one, 60%);
+			background-color: fade(@color_one, 70%);
 		}
 	}
 	.top-position{
@@ -176,10 +216,10 @@ blockquote{
 #header{
 	&.tripodSlideshow{
 		#logo{
-			background-color: fade(@color_one, 60%);
+			background-color: fade(@color_one, 70%);
 		}
 		.top-position{
-			background-color: fade(@color_one, 60%);
+			background-color: fade(@color_one, 70%);
 		}
 	}
 }

@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_tripod</name>
-	<creationDate>October 2016</creationDate>
+	<creationDate>December 2016</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>https://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2016. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.1.0</version>
+	<version>2.0.0</version>
     <description>TPL_JS_TRIPOD_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -112,13 +112,9 @@
 					<option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
 					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
 				</field>
-
-				<field name="browserspacer" label="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_TITLE" description="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_TITLE_DESC" type="spacer" />
-				<field name="browsercompatibilityswitch" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_SWITCH" description="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_SWITCH_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-      <!-- End of default Wright params -->
+                <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
+                <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
+        <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_TRIPOD_OPTIONS">
         <field name="enableSlideshow" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_TRIPOD_ENABLE_SLIDESHOW" description="TPL_JS_TRIPOD_ENABLE_SLIDESHOW_DESC">
@@ -126,10 +122,10 @@
                 <option value="0">JNO</option>
         </field>
 				<field name="imagesFolder" type="folderlist" directory="images" default="banners" label="TPL_JS_TRIPOD_IMAGES_FOLDER" description="TPL_JS_TRIPOD_IMAGES_FOLDER_DESC" />
-	            <field name="iconOne" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_ONE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
-	            <field name="iconTwo" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_TWO" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
-	            <field name="iconThree" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_THREE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
-				<field name="iconFour" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_FOUR" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
+	            <field name="iconOne" type="text" default="icon-camera" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_ONE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
+	            <field name="iconTwo" type="text" default="icon-user" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_TWO" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
+	            <field name="iconThree" type="text" default="icon-cogs" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_THREE" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
+				<field name="iconFour" type="text" default="icon-envelope-o" label="TPL_JS_TRIPOD_SLIDESHOW_ICON_FOUR" description="TPL_JS_TRIPOD_SLIDESHOW_ICONS_DESC" />
 	      <field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_TRIPOD_BACKGROUND_IMAGE" description="TPL_JS_TRIPOD_BACKGROUND_IMAGE_DESC" />
 				<field name="tripod_toolbar_displayed" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_TRIPOD_TOOLBAR_DISPLAYED" description="TPL_JS_TRIPOD_TOOLBAR_DISPLAYED_DESC">
 					<option value="0">JNo</option>

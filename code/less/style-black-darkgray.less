@@ -2,6 +2,29 @@
 // Tripod
 // ------------------------
 
+body {
+
+	#header.tripodSlideshow {
+
+		#logo,
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon,
+		#prevslide,
+		#nextslide {
+			color: @color_one;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: @color_two;
+			}
+		}
+	}
+}
+
 .nav-tabs{
 	h3 , p , > li {
 		a{
@@ -98,14 +121,6 @@ blockquote{
 
 
 // slideshow
-
-#nextslide{
-	background-image: url(../images/black-darkgray/slideshow-nav-next.png);
-}
-
-#prevslide {
-	background-image: url(../images/black-darkgray/slideshow-nav-prev.png);
-}
 
 .toolbar-collapse-btn .icon-bar ,.navbar .btn-navbar .icon-bar{
 	background-color: #8D8D8D;

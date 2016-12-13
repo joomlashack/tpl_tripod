@@ -102,19 +102,35 @@ if (sizeof($this->intro_items)) {
 
 
         $this->wrightLeadingItemElementsStructure = Array(
-                'div.' . $containerClass,
-                    'div.' . $gridMode,
-                        'div.span12',
-                            'div.leading-content',
-                                'title',
-                                'icons',
-                                'article-info',
+            'div.' . $containerClass,
+                'div.' . $gridMode,
+                    'div.span12',
+                        'div.leading-content',
+                            'title',
+                            'icons',
+                            'article-info',
+                            'div.block-article',
                                 'image',
-                                'content',
+                                'div.block-intro',
+                                    'content',
+                                '/div',
                             '/div',
                         '/div',
                     '/div',
                 '/div',
+            '/div',
+        );
+
+        $this->wrightIntroItemElementsStructure = Array(
+            'div.block-article',
+                'image',
+                'div.block-intro',
+                    'title',
+                    'icons',
+                    'article-info',
+                    'content',
+                '/div',
+            '/div',
         );
 
         $this->wrightIntroItemsClass = $containerClass;  // Class added to the intro articles (adds an extra wrapper)

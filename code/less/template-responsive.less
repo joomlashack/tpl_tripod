@@ -10,6 +10,17 @@
 	}
 }
 
+@media (min-width: 980px) {
+
+	.top-menu-toggler .toolbar-collapse-btn {
+		.border-radius(0 0 3px 3px);
+	}
+
+	.dropdown-menu {
+		border-top: 2px solid @color_one !important;
+	}
+}
+
 // Only Tablet
 
 @media (max-width: 979px) and (min-width: 768px){
@@ -34,16 +45,6 @@
 
 
 	.wrapper-toolbar{
-		.navbar .btn-navbar{
-			height: 19px;
-			margin: 0;
-			padding: 14px 6px 7px;
-			position: absolute;
-			right: 20px;
-			width: 28px;
-			z-index: 4;
-			border-radius: 3px;
-		}
 
 		.nav-collapse{
 			&.collapse{
@@ -96,6 +97,72 @@
 
 @media (max-width: 979px) {
 
+	#nav-menu,
+	#nav-toolbar,
+	#nav-bottom-menu {
+
+		.nav > li > a {
+			display: inline-block;
+		}
+
+		.dropdown-menu .active > a {
+			background: transparent !important;
+		}
+
+		&.nav-collapse .nav > li > a,
+		&.nav-collapse .dropdown-menu,
+		.dropdown-menu .active > a {
+			background: transparent !important;
+
+			&:hover,
+			&:focus,
+			&:active {
+				background: transparent !important;
+			}
+		}
+	}
+
+	#toolbar,
+	#menu,
+	#bottom-menu {
+
+		.btn-navbar {
+			background: transparent !important;
+
+			.icon-bar {
+				background: @color_one;
+			}
+		}
+	}
+
+	#nextslide,
+	#prevslide {
+
+		&:after {
+			font-size: 50px;
+		}
+	}
+
+	#nextslide {
+		right: 10px;
+	}
+
+	#prevslide {
+		left: 10px;
+	}
+
+	.wrapper-toolbar {
+
+		.navbar .btn-navbar {
+			margin: 0;
+			position: absolute;
+			right: 20px;
+			z-index: 4;
+			top: 5px;
+			.border-radius(3px);
+		}
+	}
+
 	.toolbar.collapse{
 		height: auto;
 		overflow: visible;
@@ -122,9 +189,66 @@
 
 }
 
+@media (max-width: 830px) {
+
+	#nextslide {
+		right: -5px;
+	}
+
+	#prevslide {
+		left: -5px;
+	}
+}
+
 // Mobile
 
 @media (max-width:767px) {
+
+	.items-leading .block-article .item-image {
+
+		&.pull-left,
+		&.pull-right,
+		&.pull-none {
+			margin-bottom: 10px !important;
+			float: none;
+			margin-right: 0 !important;
+			max-width: 100%;
+		}
+	}
+
+	.text-center-medium {
+		text-align: center;
+	}
+
+	.text-center-medium ul.jssocialicons-horizontal > li {
+		float: unset !important;
+	}
+
+	#nextslide,
+	#prevslide {
+		top: 50px;
+
+		&:after {
+			margin-top: 0;
+		}
+	}
+
+	#nextslide {
+		right: 10px;
+	}
+
+	#prevslide {
+		left: 10px;
+	}
+
+	.wrapper-toolbar {
+
+		.navbar .btn-navbar {
+			right: 0;
+			top: 8px;
+		}
+	}
+
 	.tripod-portfolio{
 		[class*="span"]{
 			width: 100% !important;
@@ -147,9 +271,8 @@
 		}
 	}
 
-	#logo{max-width: 90%;}
-
 	#header{
+
 		.bg-filter,
 		.bg-wrapp{
 			width: ~"-webkit-calc( 100% + 40px)";
@@ -158,7 +281,17 @@
 	             width: ~"-o-calc( 100% + 40px)";
 	   	            width: ~"calc( 100% + 40px)";
 		}
+
+		.tripod-slideshow-wrapper-icons .tripod-slideshow-icon i {
+			font-size: 2em;
+			padding: 20px 0;
+		}
+
+		#logo img {
+			max-width: 250px;
+		}
 	}
+
 	#header .bg-filter,
 	#header .bg-wrapp,
 	#footer,
@@ -267,12 +400,7 @@
 		-webkit-background-size: cover;
 				background-size: cover;
 	}
-	#nextslide{
-		right: -13px;
-	}
-	#prevslide{
-		left: -13px;
-	}
+
 	#sidebar1,
 	#sidebar2,
 	#singlepage_pagefirst,

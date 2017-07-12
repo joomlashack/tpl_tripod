@@ -71,6 +71,10 @@ if ($bg != "-1")
 {
 	$bg = str_replace(JPATH_BASE, '', $bg);
 }
+else
+{
+    $bg = false;
+}
 
 // Check if there's a sidebar at all
 $sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));

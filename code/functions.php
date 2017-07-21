@@ -79,19 +79,21 @@ else
 // Check if there's a sidebar at all
 $sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));
 
-$blog = (JRequest::getVar('layout', '') == 'blog' ? JRequest::getVar('layout', '') : '');
-$blogFtOption = (JRequest::getVar('option', '') == 'com_content' ? JRequest::getVar('option', '') : '');
+$app = JFactory::getApplication();
+
+$blog = ($app->input->getCmd('layout') == 'blog' ? $app->input->getCmd('layout') : '');
+$blogFtOption = ($app->input->getCmd('option') == 'com_content' ? $app->input->getCmd('option') : '');
 $blogFt = false;
 $viewFt = '';
 
 if ($blogFtOption == "com_content")
 {
-	$viewFt = (JRequest::getVar('view', '') == 'featured' ? JRequest::getVar('view', '') : '');
+    $viewFt = ($app->input->getCmd('view') == 'featured' ? $app->input->getCmd('view') : '');
 
-	if ($viewFt == 'featured')
-	{
-		$blogFt = true;
-	}
+    if ($viewFt == 'featured')
+    {
+        $blogFt = true;
+    }
 }
 
 $blogs = false;

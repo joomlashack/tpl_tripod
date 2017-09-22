@@ -115,7 +115,12 @@
                 <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
                 <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
         <!-- End of default Wright params -->
-			</fieldset>
+			                
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_tripod" />
+            </fieldset>
 			<fieldset name="TPL_JS_TRIPOD_OPTIONS">
         <field name="enableSlideshow" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_TRIPOD_ENABLE_SLIDESHOW" description="TPL_JS_TRIPOD_ENABLE_SLIDESHOW_DESC">
                 <option value="1">JYES</option>
@@ -149,4 +154,42 @@
 		    </fieldset>
 		</fields>
 	</config>
+
+    <scriptfile>script.installer.php</scriptfile>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Tripod"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/tpl_js_tripod]]></server>
+    </updateservers>
+
+    <variant>PRO</variant>
+
+    <alledia>
+        <element>tpl_js_tripod</element>
+        <namespace>JS_Tripod</namespace>
+        <name>JS Tripod</name>
+        <license>pro</license>
+        <targetplatform>3.*</targetplatform>
+
+        <relatedExtensions>
+            <extension
+                type="library"
+                element="allediaframework">AllediaFramework</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="ossystem"
+                publish="true"
+                ordering="first">OSSystem</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="osmylicensesmanager"
+                publish="true"
+                ordering="last">OSMyLicensesManager</extension>
+        </relatedExtensions>
+
+        <include>AllediaFreeDefaultFiles</include>
+    </alledia>
 </extension>

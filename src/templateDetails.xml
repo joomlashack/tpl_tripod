@@ -35,6 +35,9 @@
 		<folder>images</folder>
 		<folder>js</folder>
 		<folder>wright</folder>
+		<folder>library</folder>
+		<folder>views</folder>
+		<folder>form</folder>
 	</files>
 
 	<positions>
@@ -154,6 +157,12 @@
 		    </fieldset>
 		</fields>
 	</config>
+
+	<media destination="tpl_js_tripod" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+    </media>
 
     <scriptfile>script.installer.php</scriptfile>
 

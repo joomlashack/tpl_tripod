@@ -1,9 +1,8 @@
-def getRepo() {
-    return 'git@github.com:OSTraining/tpl_tripod.git'
-}
+def repo_name = 'tpl_tripod'
+def slack_channel = '#joomlashacktemplates'
 
 def getManifestPath() {
-    return 'code/templateDetails.xml'
+    return 'src/templateDetails.xml'
 }
 
 def version(String path) {
@@ -36,9 +35,9 @@ def bumpVersion(String path) {
     
 node {
     stage('fetching') {
-        slackSend channel: '#joomlashacktemplates', message: "Started building ${env.JOB_NAME} #${env.BUILD_NUMBER}"
+        slackSend channel: slack_channel, message: "Started building ${env.JOB_NAME} #${env.BUILD_NUMBER}"
         
-        git url: getRepo(), credentialsId: "ostraining-jenkins-github", branch: 'master'   
+        git url: "git@github.com:OSTraining/${repo_name}.git", credentialsId: "ostraining-jenkins-github", branch: 'master'   
     }
     
     stage('updating') {
@@ -64,11 +63,11 @@ node {
                 sh("git tag -a \"v${newVersion}\" -m \"Releasing v${newVersion} after updating Wright framework.\"")
                 sh("git push origin \"v${newVersion}\"")
                 
-                slackSend channel: '#joomlashacktemplates', color: 'warning', message: "${env.JOB_NAME} #${env.BUILD_NUMBER}: Updated Wright framework and bumped the patch version to ${newVersion}."
+                slackSend channel: slack_channel, color: 'warning', message: "${env.JOB_NAME} #${env.BUILD_NUMBER}: Updated Wright framework and bumped the patch version to ${newVersion}."
             }
         } else {
             println 'No changes found in the Wright framework'
-            slackSend channel: '#joomlashacktemplates', color: 'good', message: "${env.JOB_NAME} #${env.BUILD_NUMBER}: No changes found in the Wright framework."
+            slackSend channel: slack_channel, color: 'good', message: "${env.JOB_NAME} #${env.BUILD_NUMBER}: No changes found in the Wright framework."
         }   
     }
 }

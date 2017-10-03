@@ -117,12 +117,7 @@
 				</field>
                 <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
                 <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
-        <!-- End of default Wright params -->
-			                
-                <field
-                    type="customfooter"
-                    name="customfooter"
-                    media="tpl_js_tripod" />
+        		<!-- End of default Wright params -->
             </fieldset>
 			<fieldset name="TPL_JS_TRIPOD_OPTIONS">
         <field name="enableSlideshow" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_TRIPOD_ENABLE_SLIDESHOW" description="TPL_JS_TRIPOD_ENABLE_SLIDESHOW_DESC">
@@ -155,6 +150,13 @@
 			    <field name="navmenu_last" type="text" default="Last" label="TPL_JS_TRIPOD_NAVMENU_LAST" description="TPL_JS_TRIPOD_NAVMENU_LAST_DESC" />
 			    <field name="navmenu_scroll_speed" type="text" default="2000" label="TPL_JS_TRIPOD_NAVMENU_SPEED" description="TPL_JS_TRIPOD_NAVMENU_SPEED_DESC" />
 		    </fieldset>
+
+		    <fieldset name="footer" addfieldpath="/templates/js_tripod/form/fields">     
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_tripod" />
+            </fieldset>
 		</fields>
 	</config>
 

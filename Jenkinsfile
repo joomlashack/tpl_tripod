@@ -63,7 +63,7 @@ node {
                 sh("git tag -a \"v${newVersion}\" -m \"Releasing v${newVersion} after updating Wright framework.\"")
                 sh("git push origin \"v${newVersion}\"")
                 // Create the release
-                sh("source ~/.bashrc && /var/lib/jenkins/go/bin/github-release release --user ostraining --repo ${repo_name} --tag ${newVersion} --name \"${newVersion} - Maintenance Release\" --description \"Updated the wright framework. Created by Jenkins job.\"")
+                sh("source ~/.bashrc && /var/lib/jenkins/go/bin/github-release release --user ostraining --repo ${repo_name} --tag v${newVersion} --name \"v${newVersion} - Maintenance Release\" --description \"Updated the wright framework. Created by Jenkins job.\"")
                 
                 slackSend channel: slack_channel, color: 'warning', message: "${env.JOB_NAME} #${env.BUILD_NUMBER}: Updated Wright framework and bumped the patch version to ${newVersion}."
             }

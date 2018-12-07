@@ -97,6 +97,32 @@
 
 @media (max-width: 979px) {
 
+	// Override native menu
+	.nav-collapse {
+
+		&#nav-bottom-menu,
+		&#nav-toolbar,
+		&#nav-menu {
+
+			.nav {
+
+				> li.dropdown {
+
+					.dropdown-toggle {
+
+						.caret {
+							margin-left: 0;
+
+							&:after {
+								margin-left: 18px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	#nav-menu,
 	#nav-toolbar,
 	#nav-bottom-menu {

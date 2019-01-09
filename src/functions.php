@@ -180,12 +180,7 @@ $sliderImages = Array();
 
 if ($useSlider)
 {
-	$rimagesjpg = preg_find('/\.jpg$/D', $imagesFolder, PREG_FIND_SORTKEYS);
-	$rimagesJPG = preg_find('/\.JPG$/D', $imagesFolder, PREG_FIND_SORTKEYS);
-	$rimagespng = preg_find('/\.png$/D', $imagesFolder, PREG_FIND_SORTKEYS);
-	$rimagesPNG = preg_find('/\.PNG$/D', $imagesFolder, PREG_FIND_SORTKEYS);
-
-	$rimages = array_unique(array_merge($rimagesjpg, $rimagesJPG, $rimagespng, $rimagesPNG));
+	$rimages = wGetImages($imagesFolder);
 
 	if ($rimages)
 	{

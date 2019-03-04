@@ -279,7 +279,7 @@ select{
 	&.btn-primary{
 		border-color: @btnPrimaryBackground;
 		&:hover{
-			background-color: #FFDD77;
+			background-color: lighten(saturate(spin(@color_two, 0.0588), 0.0000), 23.3333);
 		}
 		.caret{
 			border-top-color: @black;
@@ -1902,7 +1902,7 @@ p.img_caption{
 	min-width: 20px;
 	z-index: 1031;
 	.icon-bar{
-		background-color: #8f6b00;
+		background-color: darken(saturate(spin(@color_two, -0.0461), 0.0000), 21.9608);
 		display: block;
 		height: 2px;
 		margin-top: 2px;

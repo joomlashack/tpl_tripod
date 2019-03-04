@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.0" type="template" method="upgrade" client="site">
 	<name>js_tripod</name>
-	<creationDate>January 09 2019</creationDate>
+	<creationDate>March 04 2019</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>https://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2019. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>2.2.20</version>
+	<version>2.3.0</version>
     <description>TPL_JS_TRIPOD_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -21,6 +21,7 @@
 
 	<files>
 		<filename>component.php</filename>
+		<filename>render.php</filename>
 		<filename>favicon.ico</filename>
 		<filename>functions.php</filename>
 		<filename>index.php</filename>
@@ -30,6 +31,7 @@
 		<filename>template_thumbnail.png</filename>
 		<filename>wrighttemplate.php</filename>
 		<folder>css</folder>
+		<folder>less</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>js</folder>
@@ -63,12 +65,18 @@
 	<config>
 		<fields name="params" addfieldpath="/templates/js_tripod/wright/parameters/joomla_3.0">
 			<fieldset name="basic">
-        <!-- Start of default Wright params -->
+				<!-- Start of default Wright params -->
 				<field name="rebrand" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC">
 				    <option value="1">JYES</option>
 				    <option value="0">JNO</option>
  				</field>
 				<field name="style" type="styles" default="white-gray" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+				<field name="styleVariation" type="list" default="black" class="wCustomColor" label="TPL_JS_WRIGHT_FIELD_STYLE_VARIATION_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_VARIATION_DESC" showon="style:custom">
+				    <option value="black">TPL_JS_WRIGHT_FIELD_STYLE_VARIATION_BLACK</option>
+				    <option value="white">TPL_JS_WRIGHT_FIELD_STYLE_VARIATION_WHITE</option>
+				</field>
+				<field name="color_two" type="color" default="#FFBF00" class="wCustomColor" label="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_TWO_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_COLOR_TWO_DESC" showon="style:custom" />
+				<field name="compileCss" type="compilecss" showon="style:custom"/>
 				<field name="modal" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>

@@ -10,21 +10,7 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
-if(JFactory::getApplication()->input->get('c') == 1) {
+$app = JFactory::getApplication();
 
-    // Include the framework
-    require_once dirname(__FILE__) . '/wright/wright.php';
-
-    // Initialize the framework and render custom style
-    $tpl = Wright::getInstance();
-    $tpl->renderCustomStyle();
-}
+require_once(JPATH_THEMES.'/'.$app->getTemplate().'/wright/build/render.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="robots" content="noindex,nofollow">
-</head>
-<body>
-</body>
-</html>
